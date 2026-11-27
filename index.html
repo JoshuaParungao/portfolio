@@ -9,6 +9,9 @@
   <!-- Bootstrap CSS -->
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet" />
 
+  <!-- Bootstrap Icons -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css" />
+
   <!-- Google Fonts: Orbitron + Rajdhani -->
   <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@700&family=Rajdhani:wght@400;600&display=swap"
     rel="stylesheet" />
@@ -62,25 +65,160 @@
 
     /* Landing */
     #landing {
-      min-height: 100vh;
+      width: 100%;
+      max-width: 100% !important;
+      min-height: 85vh;
       display: flex;
       align-items: center;
       justify-content: center;
-      background: #111;
+      background: #0d0f12;
       color: #fff;
-      text-align: center;
-      padding: 2rem;
+      padding: 3.5rem 1.5rem;
+      border-bottom: 2px solid #222;
     }
 
-    #landing img {
-      width: 200px;
-      height: 200px;
+    .landing-container {
+      max-width: 1100px;
+      width: 100%;
+      margin: auto;
+    }
+
+    .hero-avatar {
+      width: 210px;
+      height: 210px;
       object-fit: cover;
-      object-position: top center;
+      object-position: center 10%;
       border-radius: 50%;
       border: 4px solid #f4c900;
-      box-shadow: 0 0 15px #f4c900bb;
-      margin-bottom: 1rem;
+      box-shadow: 0 0 25px rgba(244, 201, 0, 0.4);
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+    }
+
+    .hero-avatar:hover {
+      transform: scale(1.03);
+      box-shadow: 0 0 35px rgba(244, 201, 0, 0.65);
+    }
+
+    .terminal-window {
+      background: #090b10;
+      border: 1px solid rgba(244, 201, 0, 0.35);
+      border-radius: 8px;
+      box-shadow: 0 12px 35px rgba(0, 0, 0, 0.6);
+      overflow: hidden;
+      text-align: left;
+    }
+
+    .terminal-header {
+      background: #141722;
+      border-bottom: 1px solid #202433;
+      padding: 8px 14px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+    }
+
+    .terminal-dot {
+      width: 11px;
+      height: 11px;
+      border-radius: 50%;
+      display: inline-block;
+    }
+
+    .dot-red { background: #ff5f56; }
+    .dot-yellow { background: #ffbd2e; }
+    .dot-green { background: #27c93f; }
+
+    .terminal-title {
+      font-size: 0.8rem;
+      color: #8c93a8;
+      font-family: 'Rajdhani', sans-serif;
+      font-weight: 600;
+      letter-spacing: 0.5px;
+    }
+
+    .terminal-body {
+      padding: 16px;
+      font-family: 'Consolas', 'Courier New', monospace;
+      font-size: 0.86rem;
+      line-height: 1.65;
+      color: #b8c0d4;
+      height: 350px;
+      overflow-y: auto;
+      cursor: text;
+    }
+
+    .terminal-body::-webkit-scrollbar {
+      width: 6px;
+    }
+
+    .terminal-body::-webkit-scrollbar-track {
+      background: #090b10;
+    }
+
+    .terminal-body::-webkit-scrollbar-thumb {
+      background: #232738;
+      border-radius: 3px;
+    }
+
+    .terminal-body::-webkit-scrollbar-thumb:hover {
+      background: #f4c900;
+    }
+
+    .terminal-input-line {
+      display: flex;
+      align-items: center;
+      margin-top: 8px;
+    }
+
+    .terminal-input {
+      background: transparent;
+      border: none;
+      outline: none;
+      color: #fff;
+      font-family: 'Consolas', 'Courier New', monospace;
+      font-size: 0.86rem;
+      flex-grow: 1;
+      padding: 0;
+      margin-left: 6px;
+      caret-color: #f4c900;
+    }
+
+    .terminal-input::placeholder {
+      color: #4b5266;
+      font-style: italic;
+    }
+
+    .terminal-footer {
+      background: #0f1118;
+      border-top: 1px solid #1a1e2d;
+      padding: 8px 14px;
+    }
+
+    .terminal-btn {
+      font-size: 0.75rem;
+      border-color: rgba(244, 201, 0, 0.35);
+      color: #f4c900;
+      transition: all 0.2s ease;
+    }
+
+    .terminal-btn:hover {
+      background-color: #f4c900;
+      color: #000;
+      border-color: #f4c900;
+    }
+
+    .terminal-cursor {
+      display: inline-block;
+      width: 8px;
+      height: 14px;
+      background-color: #f4c900;
+      vertical-align: middle;
+      animation: blink 1s step-end infinite;
+    }
+
+    @keyframes blink {
+      0%, 100% { opacity: 1; }
+      50% { opacity: 0; }
     }
 
     /* Section */
@@ -160,14 +298,83 @@
 
   <!-- Landing Section -->
   <section id="landing">
-    <div>
-      <img
-        src="./image/profile.jpg"
-        alt="Joshua Parungao Portrait" />
-      <h1>Joshua Parungao</h1>
-      <p style="font-size:1.2rem; margin-top:0.5rem;">
-        Full-Stack Software Developer & Creative Technologist specialized in Enterprise Cloud ERPs, POS Systems, and Modern Web Applications.
-      </p>
+    <div class="landing-container">
+      <div class="row align-items-center g-4">
+        <!-- Profile Column -->
+        <div class="col-lg-5 text-center text-lg-start">
+          <div class="mb-3">
+            <img
+              src="./image/profile.jpg"
+              alt="Joshua Parungao Portrait"
+              class="hero-avatar" />
+          </div>
+          <h1 class="mb-1" style="font-size: 2.3rem;">Joshua Parungao</h1>
+          <div class="text-warning fw-bold mb-2" style="font-size: 1.15rem; letter-spacing: 0.5px;">
+            Full-Stack Software Developer & Enterprise Systems Architect
+          </div>
+          <p class="text-white-50 small mb-3" style="line-height: 1.55;">
+            Specializing in mission-critical Cloud ERPs, multi-branch POS architecture, strict serialized inventory tracking, and relational database integrity.
+          </p>
+          <div class="d-flex flex-wrap gap-1 justify-content-center justify-content-lg-start">
+            <span class="badge bg-black border border-warning text-warning">Enterprise ERP</span>
+            <span class="badge bg-dark border border-secondary text-light">PostgreSQL</span>
+            <span class="badge bg-dark border border-secondary text-light">Prisma ORM</span>
+            <span class="badge bg-dark border border-secondary text-light">React 18</span>
+            <span class="badge bg-dark border border-secondary text-light">Node.js</span>
+            <span class="badge bg-dark border border-secondary text-light">POS Hardware</span>
+          </div>
+        </div>
+
+        <!-- Terminal / Telemetry Console Column -->
+        <div class="col-lg-7">
+          <div class="terminal-window" id="terminalWindow">
+            <div class="terminal-header">
+              <div class="d-flex align-items-center gap-2">
+                <span class="terminal-dot dot-red"></span>
+                <span class="terminal-dot dot-yellow"></span>
+                <span class="terminal-dot dot-green"></span>
+              </div>
+              <span class="terminal-title">parungao@system-core: ~ (bash)</span>
+              <span class="badge bg-success text-black small fw-bold" style="font-size: 0.68rem; letter-spacing: 0.5px;">SYSTEM ONLINE</span>
+            </div>
+            <div class="terminal-body" id="terminalBody">
+              <div id="terminalOutput">
+                <div class="mb-2">
+                  <span class="text-warning fw-bold">parungao@system-core:~$</span> <span class="text-light">./system-profile --inspect --flagship</span>
+                </div>
+                <div class="text-white-50 mb-2">================ ENTERPRISE SYSTEM TELEMETRY ================</div>
+                <div><strong class="text-warning">[FLAGSHIP]</strong> Arunafeltz Multi-Branch Cloud POS & ERP (Active Production)</div>
+                <div><strong class="text-warning">[STACK]</strong> React 18 • Vite • Tailwind CSS • Node.js • Express REST APIs</div>
+                <div><strong class="text-warning">[DATABASE]</strong> PostgreSQL with Prisma ACID Interactive Transactions</div>
+                <div><strong class="text-warning">[MODULES]</strong> Strict Serialized PO Ingestion, POS Cashiering, Repair Job Orders</div>
+                <div><strong class="text-warning">[HARDWARE]</strong> Direct Thermal ESC/POS Receipt Printing & Serialized Barcodes</div>
+                <div><strong class="text-warning">[SECURITY]</strong> 5-Tier Role-Based Access Control (RBAC) & Audit Logging</div>
+                <div class="text-white-50 mt-2 mb-2">=============================================================</div>
+              </div>
+
+              <!-- Interactive Prompt Row -->
+              <div class="terminal-input-line">
+                <span class="text-warning fw-bold text-nowrap">parungao@system-core:~$</span>
+                <input type="text" id="terminalInput" class="terminal-input" autocomplete="off" spellcheck="false" placeholder="type 'help' or click commands below..." />
+              </div>
+            </div>
+
+            <!-- Quick Command Buttons -->
+            <div class="terminal-footer d-flex flex-wrap align-items-center justify-content-between gap-2">
+              <div class="d-flex flex-wrap align-items-center gap-1">
+                <span class="text-secondary small me-1" style="font-size: 0.75rem;">Commands:</span>
+                <button type="button" class="btn btn-sm terminal-btn py-0 px-2" data-cmd="help">help</button>
+                <button type="button" class="btn btn-sm terminal-btn py-0 px-2" data-cmd="projects">projects</button>
+                <button type="button" class="btn btn-sm terminal-btn py-0 px-2" data-cmd="stack">stack</button>
+                <button type="button" class="btn btn-sm terminal-btn py-0 px-2" data-cmd="experience">experience</button>
+                <button type="button" class="btn btn-sm terminal-btn py-0 px-2" data-cmd="contact">contact</button>
+                <button type="button" class="btn btn-sm terminal-btn py-0 px-2" data-cmd="clear">clear</button>
+              </div>
+              <span class="text-secondary small font-monospace d-none d-sm-inline" style="font-size: 0.72rem;">Press Enter ↵</span>
+            </div>
+          </div>
+        </div>
+      </div>
     </div>
   </section>
 
@@ -181,7 +388,7 @@
 
   <!-- Past Work Section -->
   <section id="pastwork">
-    <h2>Work Experince</h2>
+    <h2>Work Experience</h2>
     <p>
       I have worked as a freelance graphic artist and team leader in the graphic industry for 5 years, managing projects
       and delivering creative design solutions using tools like Adobe Photoshop, Illustrator, and CorelDraw.
@@ -194,70 +401,20 @@
       <div class="tools-track">
         <!-- Tool Logos (First set) -->
         <div class="tool-card">
-          <img src="https://upload.wikimedia.org/wikipedia/commons/a/af/Adobe_Photoshop_CC_icon.svg" alt="Photoshop">
-          <span>Photoshop</span>
-        </div>
-        <div class="tool-card">
-          <img src="https://upload.wikimedia.org/wikipedia/commons/f/fb/Adobe_Illustrator_CC_icon.svg"
-            alt="Illustrator">
-          <span>Illustrator</span>
-        </div>
-        <div class="tool-card">
-          <img src="./image/LR.png" alt="Lightroom">
-          <span>Lightroom</span>
-        </div>
-        <div class="tool-card">
-          <img src="https://upload.wikimedia.org/wikipedia/commons/4/40/Adobe_Premiere_Pro_CC_icon.svg"
-            alt="Premiere Pro">
-          <span>Premiere Pro</span>
-        </div>
-        <div class="tool-card">
-          <img src="./image/COREL.png" alt="CorelDraw">
-          <span>CorelDRAW</span>
-        </div>
-        <div class="tool-card">
-          <img src="./image/C++.png" alt="C++">
-          <span>C++</span>
-        </div>
-        <div class="tool-card">
-          <img src="./image/JS.png" alt="JavaScript">
-          <span>JavaScript</span>
-        </div>
-        <div class="tool-card">
-          <img src="https://upload.wikimedia.org/wikipedia/commons/6/61/HTML5_logo_and_wordmark.svg" alt="HTML">
-          <span>HTML</span>
-        </div>
-        <div class="tool-card">
-          <img src="https://upload.wikimedia.org/wikipedia/commons/d/d5/CSS3_logo_and_wordmark.svg" alt="CSS">
-          <span>CSS</span>
-        </div>
-        <div class="tool-card">
-          <img src="https://upload.wikimedia.org/wikipedia/commons/b/b2/Bootstrap_logo.svg" alt="Bootstrap">
-          <span>Bootstrap</span>
-        </div>
-        <div class="tool-card">
-          <img src="https://upload.wikimedia.org/wikipedia/commons/3/33/Figma-logo.svg" alt="Figma">
-          <span>Figma</span>
-        </div>
-        <div class="tool-card">
-          <img src="https://upload.wikimedia.org/wikipedia/commons/9/9a/Visual_Studio_Code_1.35_icon.svg" alt="VS Code">
-          <span>VS Code</span>
-        </div>
-        <div class="tool-card">
-          <img src="./image/WORD.png" alt="Word">
-          <span>MS Word</span>
-        </div>
-        <div class="tool-card">
-          <img src="https://cdn-icons-png.flaticon.com/512/732/732220.png" alt="Excel">
-          <span>MS Excel</span>
-        </div>
-        <div class="tool-card">
-          <img src="https://upload.wikimedia.org/wikipedia/commons/a/a7/React-icon.svg" alt="React">
+          <img src="https://upload.wikimedia.org/wikipedia/commons/a/a7/React-icon.svg" alt="React.js">
           <span>React.js</span>
         </div>
         <div class="tool-card">
           <img src="https://upload.wikimedia.org/wikipedia/commons/d/d9/Node.js_logo.svg" alt="Node.js">
           <span>Node.js</span>
+        </div>
+        <div class="tool-card">
+          <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/express/express-original.svg" alt="Express.js">
+          <span>Express.js</span>
+        </div>
+        <div class="tool-card">
+          <img src="https://upload.wikimedia.org/wikipedia/commons/f/f1/Vitejs-logo.svg" alt="Vite">
+          <span>Vite</span>
         </div>
         <div class="tool-card">
           <img src="https://upload.wikimedia.org/wikipedia/commons/d/d5/Tailwind_CSS_Logo.svg" alt="Tailwind CSS">
@@ -275,15 +432,44 @@
           <img src="./image/MYSQL.png" alt="MySQL">
           <span>MySQL</span>
         </div>
-
-        <!-- Duplicated set for infinite loop -->
+        <div class="tool-card">
+          <img src="./image/JS.png" alt="JavaScript">
+          <span>JavaScript</span>
+        </div>
+        <div class="tool-card">
+          <img src="https://upload.wikimedia.org/wikipedia/commons/6/61/HTML5_logo_and_wordmark.svg" alt="HTML5">
+          <span>HTML5</span>
+        </div>
+        <div class="tool-card">
+          <img src="https://upload.wikimedia.org/wikipedia/commons/d/d5/CSS3_logo_and_wordmark.svg" alt="CSS3">
+          <span>CSS3</span>
+        </div>
+        <div class="tool-card">
+          <img src="https://upload.wikimedia.org/wikipedia/commons/b/b2/Bootstrap_logo.svg" alt="Bootstrap">
+          <span>Bootstrap</span>
+        </div>
+        <div class="tool-card">
+          <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/git/git-original.svg" alt="Git">
+          <span>Git</span>
+        </div>
+        <div class="tool-card">
+          <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/postman/postman-original.svg" alt="Postman">
+          <span>Postman</span>
+        </div>
+        <div class="tool-card">
+          <img src="https://upload.wikimedia.org/wikipedia/commons/9/9a/Visual_Studio_Code_1.35_icon.svg" alt="VS Code">
+          <span>VS Code</span>
+        </div>
+        <div class="tool-card">
+          <img src="https://upload.wikimedia.org/wikipedia/commons/3/33/Figma-logo.svg" alt="Figma">
+          <span>Figma</span>
+        </div>
         <div class="tool-card">
           <img src="https://upload.wikimedia.org/wikipedia/commons/a/af/Adobe_Photoshop_CC_icon.svg" alt="Photoshop">
           <span>Photoshop</span>
         </div>
         <div class="tool-card">
-          <img src="https://upload.wikimedia.org/wikipedia/commons/f/fb/Adobe_Illustrator_CC_icon.svg"
-            alt="Illustrator">
+          <img src="https://upload.wikimedia.org/wikipedia/commons/f/fb/Adobe_Illustrator_CC_icon.svg" alt="Illustrator">
           <span>Illustrator</span>
         </div>
         <div class="tool-card">
@@ -291,8 +477,7 @@
           <span>Lightroom</span>
         </div>
         <div class="tool-card">
-          <img src="https://upload.wikimedia.org/wikipedia/commons/4/40/Adobe_Premiere_Pro_CC_icon.svg"
-            alt="Premiere Pro">
+          <img src="https://upload.wikimedia.org/wikipedia/commons/4/40/Adobe_Premiere_Pro_CC_icon.svg" alt="Premiere Pro">
           <span>Premiere Pro</span>
         </div>
         <div class="tool-card">
@@ -300,32 +485,30 @@
           <span>CorelDRAW</span>
         </div>
         <div class="tool-card">
-          <img src="./image/C++.png" alt="C++">
-          <span>C++</span>
+          <img src="./image/EXCEL.png" alt="MS Excel">
+          <span>MS Excel</span>
         </div>
         <div class="tool-card">
-          <img src="./image/JS.png" alt="JavaScript">
-          <span>JavaScript</span>
+          <img src="./image/WORD.png" alt="MS Word">
+          <span>MS Word</span>
         </div>
+
+        <!-- Duplicated set for infinite loop -->
         <div class="tool-card">
-          <img src="https://upload.wikimedia.org/wikipedia/commons/6/61/HTML5_logo_and_wordmark.svg" alt="HTML">
-          <span>HTML</span>
-        </div>
-        <div class="tool-card">
-          <img src="https://upload.wikimedia.org/wikipedia/commons/d/d5/CSS3_logo_and_wordmark.svg" alt="CSS">
-          <span>CSS</span>
-        </div>
-        <div class="tool-card">
-          <img src="https://upload.wikimedia.org/wikipedia/commons/b/b2/Bootstrap_logo.svg" alt="Bootstrap">
-          <span>Bootstrap</span>
-        </div>
-        <div class="tool-card">
-          <img src="https://upload.wikimedia.org/wikipedia/commons/a/a7/React-icon.svg" alt="React">
+          <img src="https://upload.wikimedia.org/wikipedia/commons/a/a7/React-icon.svg" alt="React.js">
           <span>React.js</span>
         </div>
         <div class="tool-card">
           <img src="https://upload.wikimedia.org/wikipedia/commons/d/d9/Node.js_logo.svg" alt="Node.js">
           <span>Node.js</span>
+        </div>
+        <div class="tool-card">
+          <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/express/express-original.svg" alt="Express.js">
+          <span>Express.js</span>
+        </div>
+        <div class="tool-card">
+          <img src="https://upload.wikimedia.org/wikipedia/commons/f/f1/Vitejs-logo.svg" alt="Vite">
+          <span>Vite</span>
         </div>
         <div class="tool-card">
           <img src="https://upload.wikimedia.org/wikipedia/commons/d/d5/Tailwind_CSS_Logo.svg" alt="Tailwind CSS">
@@ -340,24 +523,68 @@
           <span>Prisma ORM</span>
         </div>
         <div class="tool-card">
-          <img src="https://upload.wikimedia.org/wikipedia/commons/3/33/Figma-logo.svg" alt="Figma">
-          <span>Figma</span>
+          <img src="./image/MYSQL.png" alt="MySQL">
+          <span>MySQL</span>
+        </div>
+        <div class="tool-card">
+          <img src="./image/JS.png" alt="JavaScript">
+          <span>JavaScript</span>
+        </div>
+        <div class="tool-card">
+          <img src="https://upload.wikimedia.org/wikipedia/commons/6/61/HTML5_logo_and_wordmark.svg" alt="HTML5">
+          <span>HTML5</span>
+        </div>
+        <div class="tool-card">
+          <img src="https://upload.wikimedia.org/wikipedia/commons/d/d5/CSS3_logo_and_wordmark.svg" alt="CSS3">
+          <span>CSS3</span>
+        </div>
+        <div class="tool-card">
+          <img src="https://upload.wikimedia.org/wikipedia/commons/b/b2/Bootstrap_logo.svg" alt="Bootstrap">
+          <span>Bootstrap</span>
+        </div>
+        <div class="tool-card">
+          <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/git/git-original.svg" alt="Git">
+          <span>Git</span>
+        </div>
+        <div class="tool-card">
+          <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/postman/postman-original.svg" alt="Postman">
+          <span>Postman</span>
         </div>
         <div class="tool-card">
           <img src="https://upload.wikimedia.org/wikipedia/commons/9/9a/Visual_Studio_Code_1.35_icon.svg" alt="VS Code">
           <span>VS Code</span>
         </div>
         <div class="tool-card">
-          <img src="./image/WORD.png" alt="Word">
-          <span>MS Word</span>
+          <img src="https://upload.wikimedia.org/wikipedia/commons/3/33/Figma-logo.svg" alt="Figma">
+          <span>Figma</span>
         </div>
         <div class="tool-card">
-          <img src="./image/EXCEL.png" alt="Excel">
+          <img src="https://upload.wikimedia.org/wikipedia/commons/a/af/Adobe_Photoshop_CC_icon.svg" alt="Photoshop">
+          <span>Photoshop</span>
+        </div>
+        <div class="tool-card">
+          <img src="https://upload.wikimedia.org/wikipedia/commons/f/fb/Adobe_Illustrator_CC_icon.svg" alt="Illustrator">
+          <span>Illustrator</span>
+        </div>
+        <div class="tool-card">
+          <img src="./image/LR.png" alt="Lightroom">
+          <span>Lightroom</span>
+        </div>
+        <div class="tool-card">
+          <img src="https://upload.wikimedia.org/wikipedia/commons/4/40/Adobe_Premiere_Pro_CC_icon.svg" alt="Premiere Pro">
+          <span>Premiere Pro</span>
+        </div>
+        <div class="tool-card">
+          <img src="./image/COREL.png" alt="CorelDraw">
+          <span>CorelDRAW</span>
+        </div>
+        <div class="tool-card">
+          <img src="./image/EXCEL.png" alt="MS Excel">
           <span>MS Excel</span>
         </div>
         <div class="tool-card">
-          <img src="https://cdn-icons-png.flaticon.com/512/5968/5968313.png" alt="MySQL">
-          <span>MySQL</span>
+          <img src="./image/WORD.png" alt="MS Word">
+          <span>MS Word</span>
         </div>
       </div>
     </div>
@@ -506,9 +733,9 @@
 
     <!-- Arunafeltz ERP Card (Featured) -->
     <div class="card mb-4 border border-warning" style="box-shadow: 0 0 15px rgba(244, 201, 0, 0.35);">
-      <div class="row g-0 align-items-center">
+      <div class="row g-0 align-items-stretch">
         <div class="col-md-5">
-          <img src="./image/arunafeltz/banner.jpg" alt="Arunafeltz Cloud POS & ERP" class="img-fluid rounded-start h-100" style="object-fit: cover; min-height: 240px;" />
+          <img src="./image/arunafeltz/banner.jpg" alt="Arunafeltz Cloud POS & ERP" class="img-fluid rounded-start w-100 h-100" style="object-fit: cover; min-height: 240px;" />
         </div>
         <div class="col-md-7">
           <div class="card-body">
@@ -530,9 +757,14 @@
               <span class="badge bg-black border border-secondary text-secondary">Prisma ORM</span>
               <span class="badge bg-black border border-secondary text-secondary">PostgreSQL</span>
             </div>
-            <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#arunafeltzModal">
-              Explore Project & Architecture
-            </button>
+            <div class="d-flex gap-2 flex-wrap">
+              <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#arunafeltzModal">
+                Explore Full Specs & Modules
+              </button>
+              <a href="https://arunafeltzcomputers.com" target="_blank" rel="noopener noreferrer" class="btn btn-outline-warning fw-bold">
+                Live System Link ↗
+              </a>
+            </div>
           </div>
         </div>
       </div>
@@ -540,9 +772,9 @@
 
     <!-- Systems Card -->
     <div class="card mb-4">
-      <div class="row g-0 align-items-center">
+      <div class="row g-0 align-items-stretch">
         <div class="col-md-4">
-          <img src="https://images.unsplash.com/photo-1555066931-4365d14bab8c?auto=format&fit=crop&w=800&q=80" alt="Systems Project" class="img-fluid rounded-start h-100" style="object-fit: cover; min-height: 200px;" />
+          <img src="https://images.unsplash.com/photo-1555066931-4365d14bab8c?auto=format&fit=crop&w=800&q=80" alt="Systems Project" class="img-fluid rounded-start w-100 h-100" style="object-fit: cover; min-height: 200px;" />
         </div>
         <div class="col-md-8">
           <div class="card-body">
@@ -558,9 +790,9 @@
 
     <!-- Original Design Card -->
     <div class="card mb-4">
-      <div class="row g-0 align-items-center">
+      <div class="row g-0 align-items-stretch">
         <div class="col-md-4">
-          <img src="./image/shot.jpg" alt="Project 1" class="img-fluid rounded-start" />
+          <img src="./image/shot.jpg" alt="Design & Photography Portfolio" class="img-fluid rounded-start w-100 h-100" style="object-fit: cover; min-height: 200px;" />
         </div>
         <div class="col-md-8">
           <div class="card-body">
@@ -581,7 +813,7 @@
     <h2>Certificates</h2>
 
     <div class="card mb-4">
-      <div class="row g-0">
+      <div class="row g-0 align-items-stretch">
         <!-- Text Content on the Left -->
         <div class="col-md-8">
           <div class="card-body">
@@ -595,7 +827,7 @@
 
         <!-- Image on the Right -->
         <div class="col-md-4">
-          <img src="./image/award.jpg" alt="Project 1" class="img-fluid rounded-end h-100" style="object-fit: cover;" />
+          <img src="./image/award.jpg" alt="Certificates & Awards" class="img-fluid rounded-end w-100 h-100" style="object-fit: cover; min-height: 200px;" />
         </div>
       </div>
     </div>
@@ -642,136 +874,283 @@
 <div class="modal fade" id="arunafeltzModal" tabindex="-1" aria-labelledby="arunafeltzModalLabel" aria-hidden="true">
   <div class="modal-dialog modal-xl modal-dialog-centered modal-dialog-scrollable">
     <div class="modal-content bg-black text-light border border-warning shadow-lg">
-      <div class="modal-header border-bottom border-secondary">
+      <div class="modal-header border-bottom border-secondary d-flex justify-content-between align-items-center">
         <div>
-          <span class="badge bg-warning text-dark fw-bold mb-1">ENTERPRISE CLOUD SYSTEM</span>
-          <h4 class="modal-title text-warning fw-bold" id="arunafeltzModalLabel">Arunafeltz — Multi-Branch Cloud POS, Inventory & Service ERP</h4>
+          <div class="d-flex align-items-center gap-2 mb-1 flex-wrap">
+            <span class="badge bg-warning text-dark fw-bold">ENTERPRISE CLOUD SYSTEM</span>
+            <span class="badge bg-success text-white fw-bold">● ACTIVE IN PRODUCTION</span>
+            <span class="badge bg-dark border border-secondary text-secondary">Multi-Branch Architecture</span>
+          </div>
+          <h4 class="modal-title text-warning fw-bold mb-0" id="arunafeltzModalLabel">Arunafeltz — Enterprise Multi-Branch Cloud POS, Inventory & Service ERP</h4>
         </div>
-        <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal" aria-label="Close"></button>
+        <div class="d-flex align-items-center gap-2">
+          <a href="https://arunafeltzcomputers.com" target="_blank" rel="noopener noreferrer" class="btn btn-warning btn-sm fw-bold text-dark d-none d-sm-inline-flex align-items-center gap-1 shadow-sm">
+            <span>Launch Live ERP</span> ↗
+          </a>
+          <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
       </div>
       <div class="modal-body p-4">
-        <!-- Carousel Gallery -->
-        <style>
-          #arunafeltzCarousel .carousel-item img {
-            height: 380px;
-            object-fit: contain;
-            border: 2px solid #FFD700;
-            border-radius: 8px;
-            background-color: #0b0b0b;
-            margin: auto;
-          }
-        </style>
-        <div id="arunafeltzCarousel" class="carousel slide mb-4" data-bs-ride="carousel">
-          <div class="carousel-inner">
-            <div class="carousel-item active">
-              <img src="./image/arunafeltz/banner.jpg" class="d-block w-100" alt="Arunafeltz Platform Banner" />
-              <div class="p-2 text-center bg-dark mt-1 rounded">
-                <span class="text-warning fw-bold">Cloud POS Cashiering & Store Operations Dashboard</span>
-              </div>
-            </div>
-            <div class="carousel-item">
-              <img src="./image/arunafeltz/logo.png" class="d-block w-100" alt="Arunafeltz System Logo" />
-              <div class="p-2 text-center bg-dark mt-1 rounded">
-                <span class="text-warning fw-bold">Arunafeltz Cloud Computer POS & Business Monitoring ERP</span>
-              </div>
-            </div>
-            <div class="carousel-item">
-              <img src="./image/arunafeltz/receipt.png" class="d-block w-100" alt="Receipt & Documentation" />
-              <div class="p-2 text-center bg-dark mt-1 rounded">
-                <span class="text-warning fw-bold">Automated Receipts, Warranty Slips & Statement Exports</span>
-              </div>
-            </div>
+        <!-- Physical Production Storefront Banner -->
+        <div class="mb-4 text-center">
+          <div class="position-relative overflow-hidden rounded-3 border border-warning shadow" style="max-height: 340px; background-color: #0b0b0b;">
+            <img src="./image/arunafeltz/banner.jpg" class="img-fluid w-100" style="object-fit: cover; max-height: 340px;" alt="Arunafeltz Computer Parts & Accessories — San Fernando & Dau Branches" />
           </div>
-          <button class="carousel-control-prev" type="button" data-bs-target="#arunafeltzCarousel" data-bs-slide="prev">
-            <span class="carousel-control-prev-icon"></span>
-            <span class="visually-hidden">Previous</span>
-          </button>
-          <button class="carousel-control-next" type="button" data-bs-target="#arunafeltzCarousel" data-bs-slide="next">
-            <span class="carousel-control-next-icon"></span>
-            <span class="visually-hidden">Next</span>
-          </button>
-        </div>
-
-        <!-- Project Overview & Tech Stack -->
-        <div class="row g-3 mb-4">
-          <div class="col-md-8">
-            <h5 class="text-warning fw-bold">Project Summary</h5>
-            <p class="text-light-50 small mb-2">
-              <strong>Arunafeltz</strong> is a custom, production-grade cloud Enterprise Resource Planning (ERP) and multi-branch Point of Sale (POS) system engineered for computer hardware retailers, custom PC builders, and tech service repair shops.
-            </p>
-            <p class="text-light-50 small mb-0">
-              The platform manages the complete retail lifecycle: from supplier purchase receiving and strict serialized barcode allocations, to real-time counter sales, multi-channel quotations, device repair job orders, warranty tracking, and shift cash-drawer auditing.
-            </p>
-          </div>
-          <div class="col-md-4">
-            <div class="p-3 rounded bg-dark border border-secondary">
-              <h6 class="text-warning fw-bold mb-2">Tech Stack & Infrastructure</h6>
-              <ul class="list-unstyled small mb-0 text-secondary">
-                <li><strong class="text-light">Frontend:</strong> React 18, Vite, Tailwind CSS, Lucide Icons</li>
-                <li><strong class="text-light">Backend:</strong> Node.js, Express.js, REST API</li>
-                <li><strong class="text-light">Database:</strong> PostgreSQL, Prisma ORM</li>
-                <li><strong class="text-light">Exports:</strong> PDF (HTML2Canvas), Excel (ExcelJS)</li>
-                <li><strong class="text-light">Security:</strong> Multi-branch RBAC (5 tiers), Atomic DB Transactions</li>
-              </ul>
-            </div>
+          <div class="p-2 text-center bg-dark border-start border-end border-bottom border-secondary rounded-bottom">
+            <span class="text-warning small fw-bold">Physical Production Deployment: San Fernando & Dau (Mabalacat), Pampanga Branches</span>
           </div>
         </div>
 
-        <!-- Key Engineering Modules -->
-        <h5 class="text-warning fw-bold mb-3">Core Engineering Modules</h5>
+        <!-- Live System Direct Link Callout Banner -->
+        <div class="p-3 mb-4 rounded bg-dark border border-warning d-flex flex-column flex-md-row align-items-md-center justify-content-between gap-3 shadow-sm">
+          <div>
+            <div class="d-flex align-items-center gap-2 mb-1">
+              <span class="badge bg-success text-white fw-bold">● LIVE WEB PLATFORM</span>
+              <span class="text-white-50 small">Production Client Deployment</span>
+            </div>
+            <h6 class="text-warning fw-bold mb-1">Experience the Live Multi-Branch ERP Platform</h6>
+            <p class="small text-white-50 mb-0">
+              Access real-time cashier POS, serialized barcode warehouse operations, technical repair job orders, custom PC builds, and multi-branch inventory logistics.
+            </p>
+          </div>
+          <div class="d-flex gap-2 flex-shrink-0">
+            <a href="https://arunafeltzcomputers.com" target="_blank" rel="noopener noreferrer" class="btn btn-warning fw-bold text-dark px-3 py-2 shadow-sm d-inline-flex align-items-center gap-1">
+              <span>Launch Live System</span> ↗
+            </a>
+          </div>
+        </div>
+
+        <!-- Project Summary & Full Technical Specifications -->
         <div class="row g-3 mb-4">
-          <div class="col-md-6">
+          <div class="col-lg-6">
             <div class="p-3 rounded bg-dark border border-secondary h-100">
-              <h6 class="text-warning fw-bold">1. Point of Sale (POS) & Fast Cashiering</h6>
-              <p class="small text-light-50 mb-0">
-                Supports split payments (Cash, GCash, Bank Transfer), real-time stock deductions, multi-tier pricing (Price 1-5), customer credit/debt monitoring, and instant thermal receipt printing. Features a fast typeahead search and Omnisearch command palette (Ctrl+K).
+              <h5 class="text-warning fw-bold mb-2">System Overview</h5>
+              <p class="text-white-50 small mb-2">
+                <strong>Arunafeltz</strong> is a custom, commercial-grade cloud Enterprise Resource Planning (ERP) and Point of Sale (POS) system engineered for high-volume computer hardware retailers, custom PC builders, and authorized service centers across multiple physical branches.
+              </p>
+              <p class="text-white-50 small mb-0">
+                Unlike generic inventory software, Arunafeltz covers the entire end-to-end computer retail lifecycle: from bulk supplier purchase orders and unit-level serial barcode tracking, to counter cashiering, technical repair ticketing, installment credit financing, and shift cash drawer reconciliation.
               </p>
             </div>
           </div>
-          <div class="col-md-6">
+          <div class="col-lg-6">
             <div class="p-3 rounded bg-dark border border-secondary h-100">
-              <h6 class="text-warning fw-bold">2. Serialized Inventory & Stock Traceability</h6>
-              <p class="small text-light-50 mb-0">
-                Provides 100% auditable lifecycle tracking for serialized units (motherboards, GPUs, CPUs) from Purchase Order receiving, branch stock transfers, to POS checkout and customer warranty replacement, preventing inventory leakage and duplicate serial assignments.
+              <h6 class="text-warning fw-bold mb-2">Full Technical Specifications</h6>
+              <div class="row g-2 small">
+                <div class="col-sm-6">
+                  <div class="text-secondary"><strong class="text-light">Frontend:</strong> React 18 SPA, Vite, Tailwind CSS v4, Lucide Icons</div>
+                </div>
+                <div class="col-sm-6">
+                  <div class="text-secondary"><strong class="text-light">Backend:</strong> Node.js, Express.js (Modular Service Layer), REST API</div>
+                </div>
+                <div class="col-sm-6">
+                  <div class="text-secondary"><strong class="text-light">Database:</strong> PostgreSQL, Prisma ORM, Interactive Transactions</div>
+                </div>
+                <div class="col-sm-6">
+                  <div class="text-secondary"><strong class="text-light">Security:</strong> 5-Tier RBAC, Multi-Branch Isolation, JWT & Bcrypt</div>
+                </div>
+                <div class="col-sm-6">
+                  <div class="text-secondary"><strong class="text-light">Printing:</strong> Direct ESC/POS Thermal 80mm/58mm, Barcode Scanner</div>
+                </div>
+                <div class="col-sm-6">
+                  <div class="text-secondary"><strong class="text-light">Exports:</strong> Client-side Excel (.xlsx via ExcelJS), Vector PDF</div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Full Core Engineering Modules -->
+        <div class="d-flex align-items-center justify-content-between mb-3 flex-wrap gap-2">
+          <h5 class="text-warning fw-bold mb-0">Full System Modules & Operational Capabilities</h5>
+          <span class="badge bg-dark border border-warning text-warning small">12 Integrated Business Domains</span>
+        </div>
+
+        <div class="row g-3 mb-4">
+          <!-- Module 1 -->
+          <div class="col-md-6 col-lg-4">
+            <div class="p-3 rounded bg-dark border border-secondary h-100">
+              <div class="d-flex align-items-center gap-2 mb-2">
+                <span class="badge bg-warning text-dark fw-bold">01</span>
+                <h6 class="text-warning fw-bold mb-0">Point of Sale (POS) Cashiering</h6>
+              </div>
+              <p class="small text-white-50 mb-0">
+                Fast counter checkout supporting split payments (Cash, GCash, Bank Transfer, Cheque, AR Credit), 5-tier pricing (Cash Discount to Wholesale), customer lookup, thermal receipts, and Omnisearch (Ctrl+K).
               </p>
             </div>
           </div>
-          <div class="col-md-6">
+
+          <!-- Module 2 -->
+          <div class="col-md-6 col-lg-4">
             <div class="p-3 rounded bg-dark border border-secondary h-100">
-              <h6 class="text-warning fw-bold">3. Service Center & Repair Job Orders</h6>
-              <p class="small text-light-50 mb-0">
-                Comprehensive repair intake workflow: diagnostics, technician assignment, replacement parts consumption with shop markup tiers, automated technician commission cuts, backjob management, and customer warranty coverage linking.
+              <div class="d-flex align-items-center gap-2 mb-2">
+                <span class="badge bg-warning text-dark fw-bold">02</span>
+                <h6 class="text-warning fw-bold mb-0">Serialized Inventory & WMS</h6>
+              </div>
+              <p class="small text-white-50 mb-0">
+                100% auditable unit-level serial number lifecycle (Available, Sold, Transferred, Defective, Replaced) preventing inventory leakage, serial collisions, and phantom stock across all branches.
               </p>
             </div>
           </div>
-          <div class="col-md-6">
+
+          <!-- Module 3 -->
+          <div class="col-md-6 col-lg-4">
             <div class="p-3 rounded bg-dark border border-secondary h-100">
-              <h6 class="text-warning fw-bold">4. Quotation Engine & Conversion</h6>
-              <p class="small text-light-50 mb-0">
-                Automated customer quotation builder with client-facing printable summaries that mask internal price tiers. Features one-click idempotent quotation-to-sales conversion with settlement tagging and strict stock availability validation.
+              <div class="d-flex align-items-center gap-2 mb-2">
+                <span class="badge bg-warning text-dark fw-bold">03</span>
+                <h6 class="text-warning fw-bold mb-0">Inter-Branch Stock Transfers</h6>
+              </div>
+              <p class="small text-white-50 mb-0">
+                Traceable multi-step logistics state machine: Transfer Request &rarr; Approval &rarr; Dispatch/In-Transit &rarr; Receive with physical serial verification, eliminating cross-branch loss.
+              </p>
+            </div>
+          </div>
+
+          <!-- Module 4 -->
+          <div class="col-md-6 col-lg-4">
+            <div class="p-3 rounded bg-dark border border-secondary h-100">
+              <div class="d-flex align-items-center gap-2 mb-2">
+                <span class="badge bg-warning text-dark fw-bold">04</span>
+                <h6 class="text-warning fw-bold mb-0">Procurement & Receivings (SCM)</h6>
+              </div>
+              <p class="small text-white-50 mb-0">
+                Supplier catalog management, Purchase Orders (PO lifecycle), batch receivings with instant barcode serial allocation, cost basis tracking, and Supplier Returns (RTV) with credit memos.
+              </p>
+            </div>
+          </div>
+
+          <!-- Module 5 -->
+          <div class="col-md-6 col-lg-4">
+            <div class="p-3 rounded bg-dark border border-secondary h-100">
+              <div class="d-flex align-items-center gap-2 mb-2">
+                <span class="badge bg-warning text-dark fw-bold">05</span>
+                <h6 class="text-warning fw-bold mb-0">Service & Repair Job Orders</h6>
+              </div>
+              <p class="small text-white-50 mb-0">
+                Full technical repair ticketing: device intake, diagnostics, technician assignment, replacement parts deduction with markup, repair notes, customer claiming, and backjob tracking.
+              </p>
+            </div>
+          </div>
+
+          <!-- Module 6 -->
+          <div class="col-md-6 col-lg-4">
+            <div class="p-3 rounded bg-dark border border-secondary h-100">
+              <div class="d-flex align-items-center gap-2 mb-2">
+                <span class="badge bg-warning text-dark fw-bold">06</span>
+                <h6 class="text-warning fw-bold mb-0">Quotation Engine & Conversion</h6>
+              </div>
+              <p class="small text-white-50 mb-0">
+                Formal customer quotation builder with client-facing PDF generation (masks internal wholesale tiers), and one-click seamless conversion directly into POS cart with auto-cancellation sync.
+              </p>
+            </div>
+          </div>
+
+          <!-- Module 7 -->
+          <div class="col-md-6 col-lg-4">
+            <div class="p-3 rounded bg-dark border border-secondary h-100">
+              <div class="d-flex align-items-center gap-2 mb-2">
+                <span class="badge bg-warning text-dark fw-bold">07</span>
+                <h6 class="text-warning fw-bold mb-0">Custom PC Builder Matrix</h6>
+              </div>
+              <p class="small text-white-50 mb-0">
+                Interactive rig configurator validating component availability (CPU, Motherboard, GPU, RAM, Storage, PSU, Chassis), single-transaction stock deduction, and builder commission attribution.
+              </p>
+            </div>
+          </div>
+
+          <!-- Module 8 -->
+          <div class="col-md-6 col-lg-4">
+            <div class="p-3 rounded bg-dark border border-secondary h-100">
+              <div class="d-flex align-items-center gap-2 mb-2">
+                <span class="badge bg-warning text-dark fw-bold">08</span>
+                <h6 class="text-warning fw-bold mb-0">Accounts Receivable (AR) & Credit</h6>
+              </div>
+              <p class="small text-white-50 mb-0">
+                Handles in-house customer credit and 3rd-party installment financing (Home Credit, Credit Card), term schedules, Statement of Account (SOA) printing, collection posting, and float absorption.
+              </p>
+            </div>
+          </div>
+
+          <!-- Module 9 -->
+          <div class="col-md-6 col-lg-4">
+            <div class="p-3 rounded bg-dark border border-secondary h-100">
+              <div class="d-flex align-items-center gap-2 mb-2">
+                <span class="badge bg-warning text-dark fw-bold">09</span>
+                <h6 class="text-warning fw-bold mb-0">Warranty & RMA Management</h6>
+              </div>
+              <p class="small text-white-50 mb-0">
+                Serial-linked warranty validation, supplier RMA dispatch tracking, customer replacement unit issuance, and warranty service history linked to original sales receipts.
+              </p>
+            </div>
+          </div>
+
+          <!-- Module 10 -->
+          <div class="col-md-6 col-lg-4">
+            <div class="p-3 rounded bg-dark border border-secondary h-100">
+              <div class="d-flex align-items-center gap-2 mb-2">
+                <span class="badge bg-warning text-dark fw-bold">10</span>
+                <h6 class="text-warning fw-bold mb-0">Cash Box & Drawer Shifts</h6>
+              </div>
+              <p class="small text-white-50 mb-0">
+                Shift drawer management: morning opening float, authorized cash in / cash out recording, day-end balancing, over/short variance logging, and immutable cash transaction audit.
+              </p>
+            </div>
+          </div>
+
+          <!-- Module 11 -->
+          <div class="col-md-6 col-lg-4">
+            <div class="p-3 rounded bg-dark border border-secondary h-100">
+              <div class="d-flex align-items-center gap-2 mb-2">
+                <span class="badge bg-warning text-dark fw-bold">11</span>
+                <h6 class="text-warning fw-bold mb-0">Sales Incentives & Commissions</h6>
+              </div>
+              <p class="small text-white-50 mb-0">
+                Configurable incentive percentage matrix: automated commission calculations per sales staff, repair technician, and PC builder with claim submission, approvals, and payout records.
+              </p>
+            </div>
+          </div>
+
+          <!-- Module 12 -->
+          <div class="col-md-6 col-lg-4">
+            <div class="p-3 rounded bg-dark border border-secondary h-100">
+              <div class="d-flex align-items-center gap-2 mb-2">
+                <span class="badge bg-warning text-dark fw-bold">12</span>
+                <h6 class="text-warning fw-bold mb-0">Executive Analytics & Reports</h6>
+              </div>
+              <p class="small text-white-50 mb-0">
+                6-Layer Executive business intelligence: real-time Profit & Loss (P&L), gross margin calculations, AR aging analysis, product profitability matrix, and one-click Excel (.xlsx) export.
               </p>
             </div>
           </div>
         </div>
 
         <!-- Technical Challenges & Architecture -->
-        <h5 class="text-warning fw-bold mb-3">Engineering Highlights & Architectural Solutions</h5>
+        <h5 class="text-warning fw-bold mb-3">Enterprise Engineering Highlights & Data Integrity</h5>
         <div class="p-3 rounded bg-dark border border-secondary">
-          <ul class="small text-light-50 mb-0 ps-3">
+          <ul class="small text-white-50 mb-0 ps-3">
             <li class="mb-2">
-              <strong class="text-warning">Atomic Database Transactions:</strong> Leveraged Prisma interactive transactions (<code>prisma.$transaction</code>) to guarantee that inventory deductions, serial status transitions, payment ledgers, and technician incentives succeed or fail together atomically.
+              <strong class="text-warning">Atomic Database Transactions:</strong> Leveraged Prisma interactive transactions (<code>prisma.$transaction</code>) ensuring multi-step inventory deductions, serial status transitions, payment ledgers, and technician incentives succeed or fail together atomically.
             </li>
             <li class="mb-2">
-              <strong class="text-warning">Strict Multi-Branch Isolation & RBAC:</strong> Enforced backend authorization restricting branch-scoped personnel (Cashiers, Technicians, Admins) exclusively to their active branch, while allowing Super Owners enterprise-wide governance.
+              <strong class="text-warning">Strict Multi-Branch Isolation & RBAC:</strong> Enforced backend authorization restricting branch-scoped personnel (Cashiers, Technicians, Admins) strictly to their active branch, while allowing Super Owners enterprise-wide governance.
+            </li>
+            <li class="mb-2">
+              <strong class="text-warning">Concurrency Control & Race Condition Prevention:</strong> Implemented row-level locking (<code>SELECT ... FOR UPDATE</code>) on serialized items, transfer dispatches, and credit collections to prevent race conditions during high-volume cashier traffic.
             </li>
             <li class="mb-0">
-              <strong class="text-warning">Optimized High-Performance UI:</strong> Designed lightweight, debounced typeahead autocompletes with keyboard navigation (Arrow keys/Enter/Esc), replacing heavy native HTML selects to streamline checkout throughput for cashiers.
+              <strong class="text-warning">High-Throughput Keyboard-First UX:</strong> Engineered lightweight debounced typeahead autocompletes with arrow key/Enter navigation and Omnisearch (Ctrl+K), maximizing throughput for cashier and inventory encoders.
             </li>
           </ul>
         </div>
       </div>
-      <div class="modal-footer border-top border-secondary">
-        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+      <div class="modal-footer border-top border-secondary d-flex justify-content-between align-items-center">
+        <span class="text-secondary small">Arunafeltz Enterprise Cloud POS & ERP Platform</span>
+        <div class="d-flex gap-2">
+          <a href="https://arunafeltzcomputers.com" target="_blank" rel="noopener noreferrer" class="btn btn-warning fw-bold text-dark d-inline-flex align-items-center gap-1 shadow-sm">
+            <span>Launch Live System</span> ↗
+          </a>
+          <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+        </div>
       </div>
     </div>
   </div>
@@ -1025,6 +1404,208 @@
 
   <!-- Bootstrap JS Bundle -->
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+
+  <!-- Interactive Terminal Engine -->
+  <script>
+    document.addEventListener('DOMContentLoaded', function () {
+      const terminalInput = document.getElementById('terminalInput');
+      const terminalOutput = document.getElementById('terminalOutput');
+      const terminalBody = document.getElementById('terminalBody');
+      const terminalWindow = document.getElementById('terminalWindow');
+      const terminalButtons = document.querySelectorAll('.terminal-btn');
+
+      if (!terminalInput || !terminalOutput || !terminalBody) return;
+
+      // Focus input when clicking anywhere inside terminal body or window
+      terminalWindow.addEventListener('click', function (e) {
+        if (!e.target.closest('button') && !e.target.closest('a')) {
+          terminalInput.focus();
+        }
+      });
+
+      const initialTelemetry = `
+        <div class="mb-2">
+          <span class="text-warning fw-bold">parungao@system-core:~$</span> <span class="text-light">./system-profile --inspect --flagship</span>
+        </div>
+        <div class="text-white-50 mb-2">================ ENTERPRISE SYSTEM TELEMETRY ================</div>
+        <div><strong class="text-warning">[FLAGSHIP]</strong> Arunafeltz Multi-Branch Cloud POS & ERP (Active Production)</div>
+        <div><strong class="text-warning">[STACK]</strong> React 18 • Vite • Tailwind CSS • Node.js • Express REST APIs</div>
+        <div><strong class="text-warning">[DATABASE]</strong> PostgreSQL with Prisma ACID Interactive Transactions</div>
+        <div><strong class="text-warning">[MODULES]</strong> Strict Serialized PO Ingestion, POS Cashiering, Repair Job Orders</div>
+        <div><strong class="text-warning">[HARDWARE]</strong> Direct Thermal ESC/POS Receipt Printing & Serialized Barcodes</div>
+        <div><strong class="text-warning">[SECURITY]</strong> 5-Tier Role-Based Access Control (RBAC) & Audit Logging</div>
+        <div class="text-white-50 mt-2 mb-2">=============================================================</div>
+      `;
+
+      let commandHistory = [];
+      let historyIndex = -1;
+
+      const commands = {
+        help: function () {
+          return `
+<div class="text-warning fw-bold mb-1">Available System Commands:</div>
+<div class="ps-2">
+  <div><span class="text-warning fw-bold">projects</span>    - Inspect flagship Arunafeltz ERP & architecture</div>
+  <div><span class="text-warning fw-bold">stack</span>       - Full engineering breakdown: DB, Backend, Frontend</div>
+  <div><span class="text-warning fw-bold">about</span>       - IT background & core engineering philosophy</div>
+  <div><span class="text-warning fw-bold">experience</span>  - 5+ years graphic industry leadership & dev work</div>
+  <div><span class="text-warning fw-bold">education</span>   - BS in Information Technology (University of the Assumption)</div>
+  <div><span class="text-warning fw-bold">contact</span>     - Direct contact info & socials</div>
+  <div><span class="text-warning fw-bold">status</span>      - Re-run enterprise production telemetry</div>
+  <div><span class="text-warning fw-bold">whoami</span>      - Display current authenticated operator</div>
+  <div><span class="text-warning fw-bold">clear</span>       - Clear terminal buffer</div>
+</div>`;
+        },
+        projects: function () {
+          return `
+<div class="p-2 border border-warning rounded my-1 bg-black">
+  <div class="text-warning fw-bold">★ FLAGSHIP: Arunafeltz Enterprise Cloud POS & ERP</div>
+  <div class="text-white small mb-1">Production multi-branch system for computer hardware retailers & service hubs.</div>
+  <div class="text-white-50 small mb-2">• Serialized Barcodes • 5-Tier RBAC • Split Payments • Quotation Engine</div>
+  <div>
+    <button type="button" class="btn btn-sm btn-warning fw-bold py-0 px-2" data-bs-toggle="modal" data-bs-target="#arunafeltzModal">
+      Open Full Specs Modal ↗
+    </button>
+    <a href="https://arunafeltzcomputers.com" target="_blank" rel="noopener noreferrer" class="btn btn-sm btn-outline-warning py-0 px-2 ms-2">Live System ↗</a>
+    <a href="#projects" class="btn btn-sm btn-outline-secondary py-0 px-2 ms-2">Jump to Projects ↓</a>
+  </div>
+</div>`;
+        },
+        stack: function () {
+          return `
+<div class="text-warning fw-bold mb-1">Enterprise Tech Stack:</div>
+<div class="ps-2">
+  <div><strong class="text-light">Backend & API :</strong> Node.js, Express.js, RESTful Architecture</div>
+  <div><strong class="text-light">Database & ORM:</strong> PostgreSQL, Prisma ORM (ACID Interactive Transactions), MySQL</div>
+  <div><strong class="text-light">Frontend Core :</strong> React 18, Vite, Tailwind CSS, JavaScript (ES6+), Bootstrap 5</div>
+  <div><strong class="text-light">Hardware/Ops  :</strong> ESC/POS Thermal Printing, Barcode Scanners, Git, Postman, VS Code</div>
+  <div><strong class="text-light">Creative Suite:</strong> Photoshop, Illustrator, Premiere Pro, CorelDRAW, Figma</div>
+</div>`;
+        },
+        about: function () {
+          return `
+<div class="ps-2">
+  <div class="text-warning fw-bold">Joshua Parungao</div>
+  <div class="text-white-50">Full-Stack Software Developer & Enterprise Systems Architect.</div>
+  <div class="text-light small mt-1">Specialized in architecting high-performance cloud ERPs and robust transactional databases. Combining strong software engineering with 5+ years of creative leadership to deliver resilient enterprise solutions.</div>
+</div>`;
+        },
+        experience: function () {
+          return `
+<div class="ps-2">
+  <div class="text-warning fw-bold">Work Experience & Leadership:</div>
+  <div>• <strong>Lead Full-Stack Developer:</strong> Arunafeltz Cloud POS & ERP (Active Production System)</div>
+  <div>• <strong>Freelance Graphic Artist & Team Leader:</strong> 5 Years managing commercial design, branding & multimedia production.</div>
+</div>`;
+        },
+        education: function () {
+          return `
+<div class="ps-2">
+  <div class="text-warning fw-bold">University of the Assumption</div>
+  <div>Bachelor of Science in Information Technology (BSIT)</div>
+  <div class="text-white-50 small">Specialization in Software Development, Database Administration, and Network Systems.</div>
+</div>`;
+        },
+        contact: function () {
+          return `
+<div class="ps-2">
+  <div class="text-warning fw-bold">Communication Channels:</div>
+  <div>• Location: Pampanga, Philippines</div>
+  <div>• Facebook: <a href="https://facebook.com/joshua.parungao" target="_blank" class="text-warning text-decoration-underline">fb.com/joshua.parungao</a></div>
+  <div>• Instagram: <a href="https://instagram.com/joshuaparungao_" target="_blank" class="text-warning text-decoration-underline">@joshuaparungao_</a></div>
+  <div>• Jump to section: <a href="#contact" class="text-warning text-decoration-underline">#contact</a></div>
+</div>`;
+        },
+        status: function () {
+          return initialTelemetry;
+        },
+        whoami: function () {
+          return `<div class="text-warning">parungao (Joshua Parungao — Enterprise Systems Architect & Full-Stack Developer)</div>`;
+        },
+        date: function () {
+          return `<div>${new Date().toString()}</div>`;
+        },
+        sudo: function () {
+          return `<div class="text-danger">[SECURITY] User 'parungao' already possesses unrestricted schema & root execution privileges.</div>`;
+        },
+        clear: function () {
+          terminalOutput.innerHTML = '';
+          return null;
+        }
+      };
+
+      function executeCommand(rawCmd) {
+        const cmd = rawCmd.trim().toLowerCase();
+        if (!cmd) return;
+
+        commandHistory.push(rawCmd);
+        historyIndex = commandHistory.length;
+
+        // Append user prompt echo
+        const echoDiv = document.createElement('div');
+        echoDiv.className = 'mt-2 mb-1';
+        echoDiv.innerHTML = `<span class="text-warning fw-bold">parungao@system-core:~$</span> <span class="text-light">${escapeHtml(rawCmd)}</span>`;
+        terminalOutput.appendChild(echoDiv);
+
+        if (cmd === 'clear') {
+          commands.clear();
+        } else if (commands[cmd]) {
+          const res = commands[cmd]();
+          if (res) {
+            const outDiv = document.createElement('div');
+            outDiv.className = 'terminal-cmd-res text-light small mb-2';
+            outDiv.innerHTML = res;
+            terminalOutput.appendChild(outDiv);
+          }
+        } else {
+          const errDiv = document.createElement('div');
+          errDiv.className = 'text-danger small mb-2';
+          errDiv.innerHTML = `command not found: <span class="text-white">${escapeHtml(cmd)}</span>. Type <span class="text-warning fw-bold">help</span> to view available system commands.`;
+          terminalOutput.appendChild(errDiv);
+        }
+
+        terminalInput.value = '';
+        terminalBody.scrollTop = terminalBody.scrollHeight;
+      }
+
+      function escapeHtml(text) {
+        return text.replace(/&/g, '&amp;').replace(/</g, '&lt;').replace(/>/g, '&gt;');
+      }
+
+      // Input Enter event & History navigation
+      terminalInput.addEventListener('keydown', function (e) {
+        if (e.key === 'Enter') {
+          executeCommand(this.value);
+        } else if (e.key === 'ArrowUp') {
+          if (commandHistory.length > 0 && historyIndex > 0) {
+            historyIndex--;
+            this.value = commandHistory[historyIndex];
+          }
+          e.preventDefault();
+        } else if (e.key === 'ArrowDown') {
+          if (historyIndex < commandHistory.length - 1) {
+            historyIndex++;
+            this.value = commandHistory[historyIndex];
+          } else {
+            historyIndex = commandHistory.length;
+            this.value = '';
+          }
+          e.preventDefault();
+        }
+      });
+
+      // Quick Command Buttons
+      terminalButtons.forEach(btn => {
+        btn.addEventListener('click', function () {
+          const cmd = this.getAttribute('data-cmd');
+          if (cmd) {
+            terminalInput.value = cmd;
+            executeCommand(cmd);
+          }
+        });
+      });
+    });
+  </script>
 
 </body>
 
