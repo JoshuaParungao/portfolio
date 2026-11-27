@@ -12,6 +12,7 @@ export function ProjectCard({
   onActionClick,
   externalLink,
   externalLinkText,
+  secondaryActionBtnText,
   variant = 'warning'
 }) {
   const isCyan = variant === 'info';
@@ -74,6 +75,16 @@ export function ProjectCard({
                 >
                   {externalLinkText || 'View Live ↗'}
                 </a>
+              )}
+              {secondaryActionBtnText && (
+                <button
+                  type="button"
+                  className="btn btn-outline-secondary fw-bold"
+                  disabled
+                  style={{ cursor: 'not-allowed', opacity: 0.85 }}
+                >
+                  <i className="bi bi-hdd-network-fill me-1 text-info"></i>{secondaryActionBtnText}
+                </button>
               )}
             </div>
           </div>

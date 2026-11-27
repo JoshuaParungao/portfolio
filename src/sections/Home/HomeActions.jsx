@@ -98,8 +98,8 @@ export function HomeActions() {
       <div className="ps-2">
         <div className="text-warning fw-bold">Communication Channels:</div>
         <div>• Location: Pampanga, Philippines</div>
-        <div>• Facebook: <a href="https://facebook.com/joshua.parungao" target="_blank" rel="noreferrer" className="text-warning text-decoration-underline">fb.com/joshua.parungao</a></div>
-        <div>• Instagram: <a href="https://instagram.com/joshuaparungao_" target="_blank" rel="noreferrer" className="text-warning text-decoration-underline">@joshuaparungao_</a></div>
+        <div>• Facebook: <a href="https://www.facebook.com/parungao.joshua.ople" target="_blank" rel="noreferrer" className="text-warning text-decoration-underline">fb.com/parungao.joshua.ople</a></div>
+        <div>• Instagram: <a href="https://www.instagram.com/joshua.parungao/" target="_blank" rel="noreferrer" className="text-warning text-decoration-underline">@joshua.parungao</a></div>
         <div>• Jump to section: <a href="#contact" className="text-warning text-decoration-underline">#contact</a></div>
       </div>
     ),

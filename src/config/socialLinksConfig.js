@@ -1,15 +1,15 @@
 export const socialLinks = [
   {
     name: 'Facebook',
-    url: 'https://facebook.com/joshua.parungao',
+    url: 'https://www.facebook.com/parungao.joshua.ople',
     iconClass: 'bi bi-facebook',
-    label: 'fb.com/joshua.parungao'
+    label: 'fb.com/parungao.joshua.ople'
   },
   {
     name: 'Instagram',
-    url: 'https://instagram.com/joshuaparungao_',
+    url: 'https://www.instagram.com/joshua.parungao/',
     iconClass: 'bi bi-instagram',
-    label: '@joshuaparungao_'
+    label: '@joshua.parungao'
   },
   {
     name: 'Email',

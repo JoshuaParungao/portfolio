@@ -34,8 +34,10 @@ export function ProjectsSection() {
 
       {/* MedC Featured Card */}
       <ProjectCard
-        badge="● ON-PREMISE PRODUCTION"
+        badge="⭐ FEATURED CLIENT SYSTEM"
         secondaryBadges={[
+          { text: 'PROPRIETARY CLIENT SYSTEM', class: 'bg-danger text-white fw-bold' },
+          { text: '● ON-PREMISE PRODUCTION', class: 'bg-success text-white fw-bold' },
           { text: '3-App Desktop LAN Suite', class: 'bg-secondary' }
         ]}
         title={flagships.medc.title}
@@ -45,6 +47,7 @@ export function ProjectsSection() {
         tags={flagships.medc.stack}
         actionBtnText="Explore Full Specs & 3 LAN Apps"
         onActionClick={() => setActiveModal('medc')}
+        secondaryActionBtnText="Client On-Premise LAN Only"
         variant="info"
       />
 
