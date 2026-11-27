@@ -1,0 +1,31 @@
+.school-logos-container {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 1.5rem 0;
+  overflow-x: auto;
+}
+
+.school-logos {
+  display: flex;
+  gap: 2.5rem;
+  align-items: center;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.school-logos img {
+  height: 54px;
+  transition: transform 0.3s ease, filter 0.3s ease, opacity 0.3s ease;
+  filter: grayscale(100%);
+  opacity: 0.75;
+  cursor: pointer;
+  object-fit: contain;
+}
+
+.school-logos img:hover {
+  transform: scale(1.25);
+  filter: grayscale(0%);
+  opacity: 1;
+}

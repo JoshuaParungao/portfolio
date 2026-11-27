@@ -1,0 +1,63 @@
+.tools-section {
+  background: #f9f9f9;
+  padding: 2.5rem 0;
+  width: 100%;
+  max-width: 100%;
+  overflow: hidden;
+  box-sizing: border-box;
+}
+
+.tools-slider {
+  overflow: hidden;
+  position: relative;
+  width: 100%;
+}
+
+.tools-track {
+  display: flex;
+  gap: 2rem;
+  animation: scroll-tools 60s linear infinite;
+  width: max-content;
+  align-items: center;
+}
+
+.tool-card {
+  background: white;
+  padding: 1rem;
+  border-radius: 12px;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.08);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 120px;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.tool-card img {
+  height: 48px;
+  margin-bottom: 0.5rem;
+  object-fit: contain;
+  filter: grayscale(80%);
+  transition: filter 0.3s ease;
+}
+
+.tool-card span {
+  font-size: 0.85rem;
+  color: #333;
+  text-align: center;
+  font-family: var(--font-body);
+  font-weight: 600;
+}
+
+.tool-card:hover {
+  transform: scale(1.12);
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.15);
+}
+
+.tool-card:hover img {
+  filter: grayscale(0%);
+}
+
+.tools-slider:hover .tools-track {
+  animation-play-state: paused;
+}

@@ -1,0 +1,29 @@
+.contact-section {
+  background-color: #111111;
+  color: #ffffff;
+  padding: 4.5rem 1.5rem;
+  border-top: 1px solid #222222;
+  width: 100%;
+  max-width: 100% !important;
+  box-sizing: border-box;
+}
+
+.contact-section .container {
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+.social-link-item {
+  color: #f4c900;
+  font-size: 1.15rem;
+  margin: 0 1rem;
+  transition: all 0.25s ease;
+  display: inline-flex;
+  align-items: center;
+  gap: 0.4rem;
+}
+
+.social-link-item:hover {
+  color: #ffffff;
+  transform: translateY(-2px);
+}

@@ -1,0 +1,24 @@
+@media (max-width: 991px) {
+  #landing {
+    text-align: center;
+    padding: 3rem 1rem !important;
+  }
+  .hero-avatar {
+    width: 190px !important;
+    height: 190px !important;
+  }
+  .terminal-window {
+    margin-top: 1.5rem;
+  }
+}
+
+@media (max-width: 576px) {
+  .hero-avatar {
+    width: 170px !important;
+    height: 170px !important;
+  }
+  nav a {
+    margin: 0 0.5rem !important;
+    font-size: 0.95rem !important;
+  }
+}

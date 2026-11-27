@@ -1,0 +1,15 @@
+:root {
+  --primary-gold: #f4c900;
+  --primary-gold-hover: #b38f00;
+  --primary-gold-glow: rgba(244, 201, 0, 0.45);
+  --bg-dark-core: #0d0f12;
+  --bg-dark-card: #111111;
+  --bg-terminal: #090b10;
+  --border-dark: #222222;
+  --border-gold: rgba(244, 201, 0, 0.4);
+  --text-primary: #ffffff;
+  --text-secondary: #aaaaaa;
+  --font-heading: 'Orbitron', sans-serif;
+  --font-body: 'Rajdhani', sans-serif;
+  --font-mono: 'Consolas', 'Courier New', monospace;
+}

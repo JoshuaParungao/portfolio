@@ -1,0 +1,41 @@
+.projects-section {
+  padding: 3rem 1rem;
+}
+
+.project-featured-card {
+  box-shadow: 0 0 15px rgba(244, 201, 0, 0.35);
+  border: 1px solid var(--primary-gold);
+}
+
+.project-medc-card {
+  box-shadow: 0 0 15px rgba(13, 202, 240, 0.35);
+  border: 1px solid #0dcaf0;
+}
+
+.project-modal-dialog {
+  max-width: 1100px;
+}
+
+.project-carousel img {
+  height: 380px;
+  object-fit: contain;
+  background-color: #0b0b0b;
+  border-radius: 8px;
+  margin: auto;
+}
+
+.project-carousel .carousel-indicators [data-bs-target] {
+  background-color: var(--primary-gold);
+}
+
+.ascii-architecture {
+  line-height: 1.35;
+  overflow-x: auto;
+  text-align: left;
+  display: inline-block;
+  font-size: 0.82rem;
+  background: #000;
+  padding: 1rem;
+  border-radius: 6px;
+  border: 1px solid #333;
+}

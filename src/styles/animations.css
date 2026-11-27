@@ -1,0 +1,26 @@
+@keyframes scroll-tools {
+  0% {
+    transform: translateX(0%);
+  }
+  100% {
+    transform: translateX(-50%);
+  }
+}
+
+@keyframes terminalBlink {
+  0%, 100% {
+    opacity: 1;
+  }
+  50% {
+    opacity: 0;
+  }
+}
+
+.terminal-cursor {
+  display: inline-block;
+  width: 8px;
+  height: 14px;
+  background-color: var(--primary-gold);
+  vertical-align: middle;
+  animation: terminalBlink 1s step-end infinite;
+}
