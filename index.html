@@ -124,9 +124,17 @@
       display: inline-block;
     }
 
-    .dot-red { background: #ff5f56; }
-    .dot-yellow { background: #ffbd2e; }
-    .dot-green { background: #27c93f; }
+    .dot-red {
+      background: #ff5f56;
+    }
+
+    .dot-yellow {
+      background: #ffbd2e;
+    }
+
+    .dot-green {
+      background: #27c93f;
+    }
 
     .terminal-title {
       font-size: 0.8rem;
@@ -217,8 +225,15 @@
     }
 
     @keyframes blink {
-      0%, 100% { opacity: 1; }
-      50% { opacity: 0; }
+
+      0%,
+      100% {
+        opacity: 1;
+      }
+
+      50% {
+        opacity: 0;
+      }
     }
 
     /* Section */
@@ -303,17 +318,15 @@
         <!-- Profile Column -->
         <div class="col-lg-5 text-center text-lg-start">
           <div class="mb-3">
-            <img
-              src="./image/profile.jpg"
-              alt="Joshua Parungao Portrait"
-              class="hero-avatar" />
+            <img src="./image/profile.jpg" alt="Joshua Parungao Portrait" class="hero-avatar" />
           </div>
           <h1 class="mb-1" style="font-size: 2.3rem;">Joshua Parungao</h1>
           <div class="text-warning fw-bold mb-2" style="font-size: 1.15rem; letter-spacing: 0.5px;">
             Full-Stack Software Developer & Enterprise Systems Architect
           </div>
           <p class="text-white-50 small mb-3" style="line-height: 1.55;">
-            Specializing in mission-critical Cloud ERPs, multi-branch POS architecture, strict serialized inventory tracking, and relational database integrity.
+            Specializing in mission-critical Cloud ERPs, multi-branch POS architecture, strict serialized inventory
+            tracking, and relational database integrity.
           </p>
           <div class="d-flex flex-wrap gap-1 justify-content-center justify-content-lg-start">
             <span class="badge bg-black border border-warning text-warning">Enterprise ERP</span>
@@ -335,27 +348,36 @@
                 <span class="terminal-dot dot-green"></span>
               </div>
               <span class="terminal-title">parungao@system-core: ~ (bash)</span>
-              <span class="badge bg-success text-black small fw-bold" style="font-size: 0.68rem; letter-spacing: 0.5px;">SYSTEM ONLINE</span>
+              <span class="badge bg-success text-black small fw-bold"
+                style="font-size: 0.68rem; letter-spacing: 0.5px;">SYSTEM ONLINE</span>
             </div>
             <div class="terminal-body" id="terminalBody">
               <div id="terminalOutput">
                 <div class="mb-2">
-                  <span class="text-warning fw-bold">parungao@system-core:~$</span> <span class="text-light">./system-profile --inspect --flagship</span>
+                  <span class="text-warning fw-bold">parungao@system-core:~$</span> <span
+                    class="text-light">./system-profile --inspect --flagship</span>
                 </div>
                 <div class="text-white-50 mb-2">================ ENTERPRISE SYSTEM TELEMETRY ================</div>
-                <div><strong class="text-warning">[FLAGSHIP]</strong> Arunafeltz Multi-Branch Cloud POS & ERP (Active Production)</div>
-                <div><strong class="text-warning">[STACK]</strong> React 18 • Vite • Tailwind CSS • Node.js • Express REST APIs</div>
-                <div><strong class="text-warning">[DATABASE]</strong> PostgreSQL with Prisma ACID Interactive Transactions</div>
-                <div><strong class="text-warning">[MODULES]</strong> Strict Serialized PO Ingestion, POS Cashiering, Repair Job Orders</div>
-                <div><strong class="text-warning">[HARDWARE]</strong> Direct Thermal ESC/POS Receipt Printing & Serialized Barcodes</div>
-                <div><strong class="text-warning">[SECURITY]</strong> 5-Tier Role-Based Access Control (RBAC) & Audit Logging</div>
+                <div><strong class="text-warning">[FLAGSHIP]</strong> Arunafeltz Multi-Branch Cloud POS & ERP (Active
+                  Production)</div>
+                <div><strong class="text-warning">[STACK]</strong> React 18 • Vite • Tailwind CSS • Node.js • Express
+                  REST APIs</div>
+                <div><strong class="text-warning">[DATABASE]</strong> PostgreSQL with Prisma ACID Interactive
+                  Transactions</div>
+                <div><strong class="text-warning">[MODULES]</strong> Strict Serialized PO Ingestion, POS Cashiering,
+                  Repair Job Orders</div>
+                <div><strong class="text-warning">[HARDWARE]</strong> Direct Thermal ESC/POS Receipt Printing &
+                  Serialized Barcodes</div>
+                <div><strong class="text-warning">[SECURITY]</strong> 5-Tier Role-Based Access Control (RBAC) & Audit
+                  Logging</div>
                 <div class="text-white-50 mt-2 mb-2">=============================================================</div>
               </div>
 
               <!-- Interactive Prompt Row -->
               <div class="terminal-input-line">
                 <span class="text-warning fw-bold text-nowrap">parungao@system-core:~$</span>
-                <input type="text" id="terminalInput" class="terminal-input" autocomplete="off" spellcheck="false" placeholder="type 'help' or click commands below..." />
+                <input type="text" id="terminalInput" class="terminal-input" autocomplete="off" spellcheck="false"
+                  placeholder="type 'help' or click commands below..." />
               </div>
             </div>
 
@@ -366,11 +388,13 @@
                 <button type="button" class="btn btn-sm terminal-btn py-0 px-2" data-cmd="help">help</button>
                 <button type="button" class="btn btn-sm terminal-btn py-0 px-2" data-cmd="projects">projects</button>
                 <button type="button" class="btn btn-sm terminal-btn py-0 px-2" data-cmd="stack">stack</button>
-                <button type="button" class="btn btn-sm terminal-btn py-0 px-2" data-cmd="experience">experience</button>
+                <button type="button" class="btn btn-sm terminal-btn py-0 px-2"
+                  data-cmd="experience">experience</button>
                 <button type="button" class="btn btn-sm terminal-btn py-0 px-2" data-cmd="contact">contact</button>
                 <button type="button" class="btn btn-sm terminal-btn py-0 px-2" data-cmd="clear">clear</button>
               </div>
-              <span class="text-secondary small font-monospace d-none d-sm-inline" style="font-size: 0.72rem;">Press Enter ↵</span>
+              <span class="text-secondary small font-monospace d-none d-sm-inline" style="font-size: 0.72rem;">Press
+                Enter ↵</span>
             </div>
           </div>
         </div>
@@ -382,7 +406,10 @@
   <section id="about">
     <h2>About Me</h2>
     <p>
-      I am a hardworking and persistent Full-Stack Software Developer and IT student specializing in modern web development, database architecture, and enterprise cloud systems. With a strong foundation in both software engineering (React, Node.js, PostgreSQL, Prisma) and 5+ years of freelance creative leadership, I design and build robust, high-performance applications that solve complex real-world business challenges.
+      I am a hardworking and persistent Full-Stack Software Developer and IT student specializing in modern web
+      development, database architecture, and enterprise cloud systems. With a strong foundation in both software
+      engineering (React, Node.js, PostgreSQL, Prisma) and 5+ years of freelance creative leadership, I design and build
+      robust, high-performance applications that solve complex real-world business challenges.
     </p>
   </section>
 
@@ -409,7 +436,8 @@
           <span>Node.js</span>
         </div>
         <div class="tool-card">
-          <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/express/express-original.svg" alt="Express.js">
+          <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/express/express-original.svg"
+            alt="Express.js">
           <span>Express.js</span>
         </div>
         <div class="tool-card">
@@ -469,7 +497,8 @@
           <span>Photoshop</span>
         </div>
         <div class="tool-card">
-          <img src="https://upload.wikimedia.org/wikipedia/commons/f/fb/Adobe_Illustrator_CC_icon.svg" alt="Illustrator">
+          <img src="https://upload.wikimedia.org/wikipedia/commons/f/fb/Adobe_Illustrator_CC_icon.svg"
+            alt="Illustrator">
           <span>Illustrator</span>
         </div>
         <div class="tool-card">
@@ -477,7 +506,8 @@
           <span>Lightroom</span>
         </div>
         <div class="tool-card">
-          <img src="https://upload.wikimedia.org/wikipedia/commons/4/40/Adobe_Premiere_Pro_CC_icon.svg" alt="Premiere Pro">
+          <img src="https://upload.wikimedia.org/wikipedia/commons/4/40/Adobe_Premiere_Pro_CC_icon.svg"
+            alt="Premiere Pro">
           <span>Premiere Pro</span>
         </div>
         <div class="tool-card">
@@ -503,7 +533,8 @@
           <span>Node.js</span>
         </div>
         <div class="tool-card">
-          <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/express/express-original.svg" alt="Express.js">
+          <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/express/express-original.svg"
+            alt="Express.js">
           <span>Express.js</span>
         </div>
         <div class="tool-card">
@@ -563,7 +594,8 @@
           <span>Photoshop</span>
         </div>
         <div class="tool-card">
-          <img src="https://upload.wikimedia.org/wikipedia/commons/f/fb/Adobe_Illustrator_CC_icon.svg" alt="Illustrator">
+          <img src="https://upload.wikimedia.org/wikipedia/commons/f/fb/Adobe_Illustrator_CC_icon.svg"
+            alt="Illustrator">
           <span>Illustrator</span>
         </div>
         <div class="tool-card">
@@ -571,7 +603,8 @@
           <span>Lightroom</span>
         </div>
         <div class="tool-card">
-          <img src="https://upload.wikimedia.org/wikipedia/commons/4/40/Adobe_Premiere_Pro_CC_icon.svg" alt="Premiere Pro">
+          <img src="https://upload.wikimedia.org/wikipedia/commons/4/40/Adobe_Premiere_Pro_CC_icon.svg"
+            alt="Premiere Pro">
           <span>Premiere Pro</span>
         </div>
         <div class="tool-card">
@@ -735,17 +768,21 @@
     <div class="card mb-4 border border-warning" style="box-shadow: 0 0 15px rgba(244, 201, 0, 0.35);">
       <div class="row g-0 align-items-stretch">
         <div class="col-md-5 bg-black d-flex align-items-center justify-content-center">
-          <img src="./image/arunafeltz/banner.jpg" alt="Arunafeltz Cloud POS & ERP" class="img-fluid rounded-start w-100 h-100" style="object-fit: contain; background: #000; min-height: 240px;" />
+          <img src="./image/arunafeltz/banner.jpg" alt="Arunafeltz Cloud POS & ERP"
+            class="img-fluid rounded-start w-100 h-100"
+            style="object-fit: contain; background: #000; min-height: 240px;" />
         </div>
         <div class="col-md-7">
           <div class="card-body">
             <div class="d-flex align-items-center gap-2 mb-2 flex-wrap">
               <span class="badge bg-warning text-dark fw-bold">⭐ FEATURED SYSTEM</span>
-              <span class="badge bg-danger text-white fw-bold"><i class="bi bi-shield-lock me-1"></i>PROPRIETARY CLIENT SYSTEM</span>
+              <span class="badge bg-danger text-white fw-bold"><i class="bi bi-shield-lock me-1"></i>PROPRIETARY CLIENT
+                SYSTEM</span>
               <span class="badge bg-success text-white fw-bold">● ACTIVE PRODUCTION</span>
               <span class="badge bg-secondary">Multi-Branch Cloud POS</span>
             </div>
-            <h5 class="card-title text-warning fw-bold mb-2">Arunafeltz — Enterprise Multi-Branch Cloud POS, Inventory & Service ERP</h5>
+            <h5 class="card-title text-warning fw-bold mb-2">Arunafeltz — Enterprise Multi-Branch Cloud POS, Inventory &
+              Service ERP</h5>
             <p class="card-text text-light small mb-3">
               Full-scale, end-to-end production ERP & Cloud POS engineered for retail computer hardware stores and service hubs across physical branches. Features system-wide <strong>OmniSearch (Ctrl+K)</strong>, dynamic <strong>line-item Markup %</strong> and <strong>editable computation formulas</strong> for pricing and commissions, serialized barcode tracking, inter-branch logistics, PO receiving, custom PC building, repair job orders, AR installment financing, quotation conversions, shift cash drawer balancing, and 6-layer financial analytics. Operating under commercial turnover agreement with a secured, locked login portal.
             </p>
@@ -762,7 +799,8 @@
               <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#arunafeltzModal">
                 Explore Full Specs & Architecture
               </button>
-              <a href="https://arunafeltzcomputerpos.cloud/" target="_blank" rel="noopener noreferrer" class="btn btn-outline-warning fw-bold">
+              <a href="https://arunafeltzcomputerpos.cloud/" target="_blank" rel="noopener noreferrer"
+                class="btn btn-outline-warning fw-bold">
                 <i class="bi bi-lock-fill me-1"></i>Production Portal ↗
               </a>
             </div>
@@ -775,12 +813,15 @@
     <div class="card mb-4">
       <div class="row g-0 align-items-stretch">
         <div class="col-md-4">
-          <img src="https://images.unsplash.com/photo-1555066931-4365d14bab8c?auto=format&fit=crop&w=800&q=80" alt="Systems Project" class="img-fluid rounded-start w-100 h-100" style="object-fit: cover; min-height: 200px;" />
+          <img src="https://images.unsplash.com/photo-1555066931-4365d14bab8c?auto=format&fit=crop&w=800&q=80"
+            alt="Systems Project" class="img-fluid rounded-start w-100 h-100"
+            style="object-fit: cover; min-height: 200px;" />
         </div>
         <div class="col-md-8">
           <div class="card-body">
             <h5 class="card-title">Software & System Development (Capstone & Projects)</h5>
-            <p class="card-text"> Here's a summary of my software engineering systems, database projects, and Capstone project. </p>
+            <p class="card-text"> Here's a summary of my software engineering systems, database projects, and Capstone
+              project. </p>
             <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#systemsModal">
               View Project
             </button>
@@ -793,12 +834,14 @@
     <div class="card mb-4">
       <div class="row g-0 align-items-stretch">
         <div class="col-md-4">
-          <img src="./image/shot.jpg" alt="Design & Photography Portfolio" class="img-fluid rounded-start w-100 h-100" style="object-fit: cover; min-height: 200px;" />
+          <img src="./image/shot.jpg" alt="Design & Photography Portfolio" class="img-fluid rounded-start w-100 h-100"
+            style="object-fit: cover; min-height: 200px;" />
         </div>
         <div class="col-md-8">
           <div class="card-body">
             <h5 class="card-title">Comprehensive Profile in Editing, Design, and Photography</h5>
-            <p class="card-text"> Here's a professional summary you can use for your project skills in editing, advertising, design, and photography </p>
+            <p class="card-text"> Here's a professional summary you can use for your project skills in editing,
+              advertising, design, and photography </p>
             <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#projectModal">
               View Project
             </button>
@@ -819,7 +862,9 @@
         <div class="col-md-8">
           <div class="card-body">
             <h5 class="card-title">DATABASES, CCNA, ACADEMIC AWARDS & COE</h5>
-            <p class="card-text">Successfully completed a comprehensive training in backend technologies. These achievements are supported by academic awards, certifications in databases, and CCNA for networking fundamentals, as well as verified work experience demonstrated through a Certificate of Employment.</p>
+            <p class="card-text">Successfully completed a comprehensive training in backend technologies. These
+              achievements are supported by academic awards, certifications in databases, and CCNA for networking
+              fundamentals, as well as verified work experience demonstrated through a Certificate of Employment.</p>
             <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#certificateModal">
               View Certificate
             </button>
@@ -828,271 +873,318 @@
 
         <!-- Image on the Right -->
         <div class="col-md-4">
-          <img src="./image/award.jpg" alt="Certificates & Awards" class="img-fluid rounded-end w-100 h-100" style="object-fit: cover; min-height: 200px;" />
+          <img src="./image/award.jpg" alt="Certificates & Awards" class="img-fluid rounded-end w-100 h-100"
+            style="object-fit: cover; min-height: 200px;" />
         </div>
       </div>
     </div>
   </section>
 
 
- <!-- Contact Section -->
-<section class="py-5 bg-dark text-white" id="contact">
-  <div class="container text-center">
-    <h2 class="text-warning fw-bold display-5 animate__animated animate__fadeInDown">Contact</h2>
-    <p class="mb-4 animate__animated animate__fadeIn animate__delay-1s">Let’s connect on social media or view my professional documents below.</p>
+  <!-- Contact Section -->
+  <section class="py-5 bg-dark text-white" id="contact">
+    <div class="container text-center">
+      <h2 class="text-warning fw-bold display-5 animate__animated animate__fadeInDown">Contact</h2>
+      <p class="mb-4 animate__animated animate__fadeIn animate__delay-1s">Let’s connect on social media or view my
+        professional documents below.</p>
 
-    <!-- Social Links -->
-    <div class="mb-4">
-      <a href="https://www.facebook.com/joshua.parungao.930542" class="text-warning fs-5 me-4 animate__animated animate__fadeInLeft" target="_blank" rel="noopener noreferrer">
-        <i class="bi bi-facebook me-1"></i>Facebook
-      </a>
-      <a href="https://www.instagram.com/joshua.parungao/" class="text-warning fs-5 animate__animated animate__fadeInRight" target="_blank" rel="noopener noreferrer">
-        <i class="bi bi-instagram me-1"></i>Instagram
-      </a>
-    </div>
-
-    <!-- Resume & CV Buttons -->
-    <div class="row justify-content-center g-4 mt-4">
-      <div class="col-md-5 animate__animated animate__fadeInLeft animate__delay-1s">
-        <a href="https://docs.google.com/document/d/e/2PACX-1vT0CVm0BnUEz4D95pB2y8HAEVLxfit8E2Jvgz0JVG8l38Oih6chE2NfXXWWal2AhBPPO9PHPXY7hgvS/pub"
-           target="_blank"
-           class="btn btn-outline-warning btn-lg w-100 shadow rounded-pill">
-          📄 View My Resume
+      <!-- Social Links -->
+      <div class="mb-4">
+        <a href="https://www.facebook.com/joshua.parungao.930542"
+          class="text-warning fs-5 me-4 animate__animated animate__fadeInLeft" target="_blank"
+          rel="noopener noreferrer">
+          <i class="bi bi-facebook me-1"></i>Facebook
+        </a>
+        <a href="https://www.instagram.com/joshua.parungao/"
+          class="text-warning fs-5 animate__animated animate__fadeInRight" target="_blank" rel="noopener noreferrer">
+          <i class="bi bi-instagram me-1"></i>Instagram
         </a>
       </div>
-      <div class="col-md-5 animate__animated animate__fadeInRight animate__delay-1s">
-        <a href="https://docs.google.com/document/d/e/2PACX-1vSg11jlvRJMj0LNO4gz43SJrGPqZ-v_K6jY3W-KPIOnceJAhNG_-PnVi-y8paJtxBvA5wZHNMmKEwZw/pub"
-           target="_blank"
-           class="btn btn-outline-warning btn-lg w-100 shadow rounded-pill">
-          📁 View My CV
-        </a>
-      </div>
-    </div>
-  </div>
-</section>
 
-<!-- Arunafeltz System Modal -->
-<div class="modal fade" id="arunafeltzModal" tabindex="-1" aria-labelledby="arunafeltzModalLabel" aria-hidden="true">
-  <div class="modal-dialog modal-xl modal-dialog-centered modal-dialog-scrollable">
-    <div class="modal-content bg-black text-light border border-warning shadow-lg">
-      <div class="modal-header border-bottom border-secondary d-flex justify-content-between align-items-center">
-        <div>
-          <div class="d-flex align-items-center gap-2 mb-1 flex-wrap">
-            <span class="badge bg-warning text-dark fw-bold">ENTERPRISE CLOUD SYSTEM</span>
-            <span class="badge bg-danger text-white fw-bold"><i class="bi bi-shield-lock me-1"></i>PROPRIETARY CLIENT ERP</span>
-            <span class="badge bg-success text-white fw-bold">● ACTIVE IN PRODUCTION</span>
-            <span class="badge bg-dark border border-secondary text-secondary">Multi-Branch Architecture</span>
-          </div>
-          <h4 class="modal-title text-warning fw-bold mb-0" id="arunafeltzModalLabel">Arunafeltz — Enterprise Multi-Branch Cloud POS, Inventory & Service ERP</h4>
-        </div>
-        <div class="d-flex align-items-center gap-2">
-          <a href="https://arunafeltzcomputerpos.cloud/" target="_blank" rel="noopener noreferrer" class="btn btn-outline-warning btn-sm fw-bold d-none d-sm-inline-flex align-items-center gap-1 shadow-sm">
-            <i class="bi bi-lock-fill me-1"></i><span>Production Portal</span> ↗
+      <!-- Resume & CV Buttons -->
+      <div class="row justify-content-center g-4 mt-4">
+        <div class="col-md-5 animate__animated animate__fadeInLeft animate__delay-1s">
+          <a href="https://docs.google.com/document/d/e/2PACX-1vT0CVm0BnUEz4D95pB2y8HAEVLxfit8E2Jvgz0JVG8l38Oih6chE2NfXXWWal2AhBPPO9PHPXY7hgvS/pub"
+            target="_blank" class="btn btn-outline-warning btn-lg w-100 shadow rounded-pill">
+            📄 View My Resume
           </a>
-          <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <div class="col-md-5 animate__animated animate__fadeInRight animate__delay-1s">
+          <a href="https://docs.google.com/document/d/e/2PACX-1vSg11jlvRJMj0LNO4gz43SJrGPqZ-v_K6jY3W-KPIOnceJAhNG_-PnVi-y8paJtxBvA5wZHNMmKEwZw/pub"
+            target="_blank" class="btn btn-outline-warning btn-lg w-100 shadow rounded-pill">
+            📁 View My CV
+          </a>
         </div>
       </div>
-      <div class="modal-body p-4">
-        <!-- Physical Production Storefront Banner -->
-        <div class="mb-4 text-center">
-          <div class="position-relative overflow-hidden rounded-3 border border-warning shadow" style="max-height: 380px; background-color: #000;">
-            <img src="./image/arunafeltz/banner.jpg" class="img-fluid w-100" style="object-fit: contain; max-height: 380px; background-color: #000;" alt="Arunafeltz Computer Parts & Accessories — San Fernando & Dau Branches" />
-          </div>
-          <div class="p-2 text-center bg-dark border-start border-end border-bottom border-secondary rounded-bottom">
-            <span class="text-warning small fw-bold">Commercial Production Deployment: San Fernando & Dau (Mabalacat), Pampanga Branches</span>
-          </div>
-        </div>
+    </div>
+  </section>
 
-        <!-- Commercial Client Turnover & Data Privacy Notice -->
-        <div class="p-3 mb-4 rounded bg-dark border border-warning shadow-sm">
-          <div class="d-flex flex-column flex-md-row align-items-md-center justify-content-between gap-3">
-            <div>
-              <div class="d-flex align-items-center gap-2 mb-1 flex-wrap">
-                <span class="badge bg-danger text-white fw-bold"><i class="bi bi-file-earmark-lock-fill me-1"></i>COMMERCIAL TURNOVER & NDA</span>
-                <span class="badge bg-dark border border-secondary text-secondary">Physical Stores: San Fernando & Dau, Pampanga</span>
-                <span class="badge bg-warning text-dark fw-bold"><i class="bi bi-shield-lock-fill me-1"></i>LOCKED LOGIN PORTAL</span>
-              </div>
-              <h6 class="text-warning fw-bold mb-1">Active Client Production System & Security-Locked Login Portal</h6>
-              <p class="small text-white-50 mb-0">
-                This enterprise ERP platform is in active commercial operation across physical retail computer branches under a formal client turnover and confidentiality agreement. The live system entrance is <strong>strictly locked and secured</strong> with multi-branch authentication to protect store financials, real-time inventory assets, and customer privacy. Visitors may access the live portal gateway to verify active production deployment, while complete functional walkthroughs, database schemas, and administrative capabilities are demonstrated during technical interviews.
-              </p>
-            </div>
-            <div class="d-flex flex-column gap-1 flex-shrink-0 align-items-md-end">
-              <a href="https://arunafeltzcomputerpos.cloud/" target="_blank" rel="noopener noreferrer" class="btn btn-outline-warning fw-bold text-nowrap d-inline-flex align-items-center gap-1 shadow-sm px-3 py-2">
-                <i class="bi bi-box-arrow-up-right"></i><span>Production Portal</span>
-              </a>
-              <span class="text-secondary" style="font-size: 0.72rem;"><i class="bi bi-shield-lock me-1"></i>Secured Login Gateway</span>
-            </div>
-          </div>
-        </div>
-
-        <!-- Project Summary & Full Technical Specifications -->
-        <div class="row g-3 mb-4">
-          <div class="col-lg-6">
-            <div class="p-3 rounded bg-dark border border-secondary h-100">
-              <h5 class="text-warning fw-bold mb-2">Overall System Architecture & Scope</h5>
-              <p class="text-white-50 small mb-2">
-                <strong>Arunafeltz</strong> is a custom, commercial-grade cloud Enterprise Resource Planning (ERP) and Point of Sale (POS) system unifying all retail, service, and supply chain operations for computer hardware enterprises across physical branches (San Fernando & Dau, Pampanga).
-              </p>
-              <p class="text-white-50 small mb-2">
-                The platform integrates 12 mission-critical operational domains into one cohesive system: fast POS counter cashiering, unit-level serialized barcode tracking, inter-branch logistics, supplier POs & receiving, custom PC building, technical repair job orders, AR credit/installment financing, warranty claims, shift cash box auditing, sales commissions, and executive P&L intelligence.
-              </p>
-              <p class="text-white-50 small mb-0">
-                <strong>Privacy & Access Security:</strong> Features a secured, locked login gateway enforcing 5-tier Role-Based Access Control (RBAC) and database-level branch isolation to guarantee 100% data security, commercial privacy, and operational integrity.
-              </p>
-            </div>
-          </div>
-          <div class="col-lg-6">
-            <div class="p-3 rounded bg-dark border border-secondary h-100">
-              <h6 class="text-warning fw-bold mb-2">Full Technical Specifications</h6>
-              <div class="row g-2 small">
-                <div class="col-sm-6">
-                  <div class="text-secondary"><strong class="text-light">Frontend:</strong> React 18 SPA, Vite, Tailwind CSS v4, Lucide Icons</div>
-                </div>
-                <div class="col-sm-6">
-                  <div class="text-secondary"><strong class="text-light">Backend:</strong> Node.js, Express.js (Modular Service Layer), REST API</div>
-                </div>
-                <div class="col-sm-6">
-                  <div class="text-secondary"><strong class="text-light">Database:</strong> PostgreSQL, Prisma ORM, Interactive Transactions</div>
-                </div>
-                <div class="col-sm-6">
-                  <div class="text-secondary"><strong class="text-light">Security:</strong> 5-Tier RBAC, Multi-Branch Isolation, JWT & Bcrypt</div>
-                </div>
-                <div class="col-sm-6">
-                  <div class="text-secondary"><strong class="text-light">OmniSearch:</strong> Command Palette (Ctrl+K) with system-wide fuzzy search</div>
-                </div>
-                <div class="col-sm-6">
-                  <div class="text-secondary"><strong class="text-light">Formulas:</strong> Settings-Driven Dynamic Markup % & Price Calculations</div>
-                </div>
-                <div class="col-sm-6">
-                  <div class="text-secondary"><strong class="text-light">Printing:</strong> Direct ESC/POS Thermal 80mm/58mm, Barcode Scanner</div>
-                </div>
-                <div class="col-sm-6">
-                  <div class="text-secondary"><strong class="text-light">Exports:</strong> Client-side Excel (.xlsx via ExcelJS), Vector PDF</div>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-
-        <!-- Comprehensive Financial, Cash & Transactional Ledgers -->
-        <div class="d-flex align-items-center justify-content-between mb-3 flex-wrap gap-2">
+  <!-- Arunafeltz System Modal -->
+  <div class="modal fade" id="arunafeltzModal" tabindex="-1" aria-labelledby="arunafeltzModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-xl modal-dialog-centered modal-dialog-scrollable">
+      <div class="modal-content bg-black text-light border border-warning shadow-lg">
+        <div class="modal-header border-bottom border-secondary d-flex justify-content-between align-items-center">
           <div>
-            <h5 class="text-warning fw-bold mb-0">Financial, Cash & Transactional Ledgers</h5>
-            <span class="text-white-50 small">Automated Double-Entry Principles, Drawer Balancing & Real-Time Accounting</span>
-          </div>
-          <span class="badge bg-danger text-white fw-bold"><i class="bi bi-journal-check me-1"></i>ACID-COMPLIANT LEDGERS</span>
-        </div>
-
-        <div class="row g-3 mb-4">
-          <!-- Ledger 1 -->
-          <div class="col-md-6 col-lg-4">
-            <div class="p-3 rounded bg-dark border border-warning h-100">
-              <div class="d-flex align-items-center justify-content-between mb-2">
-                <h6 class="text-warning fw-bold mb-0">1. Split-Payment Sales Ledger</h6>
-                <span class="badge bg-black border border-secondary text-secondary small">POS & Sales</span>
-              </div>
-              <p class="small text-white-50 mb-2">
-                Tracks multi-tender payments per receipt (Cash, GCash, Bank Transfer, PDC/Cheque, AR Credit). Records exact transaction timestamps, assigned cashier, sales agent attribution, and discount structures.
-              </p>
-              <ul class="list-unstyled small text-secondary mb-0">
-                <li>• <strong class="text-light">Audited Voids:</strong> Non-destructive cancellations with reverse stock & cash journaling</li>
-                <li>• <strong class="text-light">Multi-Tier Pricing:</strong> Automated tier selection (Tier 1 Cash Discount to Tier 5 Wholesale)</li>
-              </ul>
+            <div class="d-flex align-items-center gap-2 mb-1 flex-wrap">
+              <span class="badge bg-warning text-dark fw-bold">ENTERPRISE CLOUD SYSTEM</span>
+              <span class="badge bg-danger text-white fw-bold"><i class="bi bi-shield-lock me-1"></i>PROPRIETARY CLIENT
+                ERP</span>
+              <span class="badge bg-success text-white fw-bold">● ACTIVE IN PRODUCTION</span>
+              <span class="badge bg-dark border border-secondary text-secondary">Multi-Branch Architecture</span>
             </div>
+            <h4 class="modal-title text-warning fw-bold mb-0" id="arunafeltzModalLabel">Arunafeltz — Enterprise
+              Multi-Branch Cloud POS, Inventory & Service ERP</h4>
           </div>
-
-          <!-- Ledger 2 -->
-          <div class="col-md-6 col-lg-4">
-            <div class="p-3 rounded bg-dark border border-warning h-100">
-              <div class="d-flex align-items-center justify-content-between mb-2">
-                <h6 class="text-warning fw-bold mb-0">2. Accounts Receivable (AR) & Credit Ledger</h6>
-                <span class="badge bg-black border border-secondary text-secondary small">Financing & Credit</span>
-              </div>
-              <p class="small text-white-50 mb-2">
-                Customer-level credit lines, installment schedules (Month 3 to 12), and historical amortization ledgers for in-house credit and 3rd-party financing (Home Credit, Credit Card).
-              </p>
-              <ul class="list-unstyled small text-secondary mb-0">
-                <li>• <strong class="text-light">Remittance & Float:</strong> Shop Net, CC/Tax Float, and settled float reconciliation</li>
-                <li>• <strong class="text-light">SOA Engine:</strong> Live Statement of Account generation & Bad Debt declaration</li>
-              </ul>
-            </div>
-          </div>
-
-          <!-- Ledger 3 -->
-          <div class="col-md-6 col-lg-4">
-            <div class="p-3 rounded bg-dark border border-warning h-100">
-              <div class="d-flex align-items-center justify-content-between mb-2">
-                <h6 class="text-warning fw-bold mb-0">3. Cash Box & Drawer Shift Ledger</h6>
-                <span class="badge bg-black border border-secondary text-secondary small">Cash Balancing</span>
-              </div>
-              <p class="small text-white-50 mb-2">
-                Live cash drawer monitoring from morning opening float to day-end cash reconciliation. Direct cash linkage logs all cash-in (sales, collections) and cash-out (expenses, petty cash).
-              </p>
-              <ul class="list-unstyled small text-secondary mb-0">
-                <li>• <strong class="text-light">Variance Ledger:</strong> Over/Short discrepancy logging with reason and supervisor sign-off</li>
-                <li>• <strong class="text-light">Shift Handovers:</strong> Drawer snapshots and auditable mid-day cash adjustments</li>
-              </ul>
-            </div>
-          </div>
-
-          <!-- Ledger 4 -->
-          <div class="col-md-6 col-lg-4">
-            <div class="p-3 rounded bg-dark border border-warning h-100">
-              <div class="d-flex align-items-center justify-content-between mb-2">
-                <h6 class="text-warning fw-bold mb-0">4. Serialized Stock Movement Ledger</h6>
-                <span class="badge bg-black border border-secondary text-secondary small">WMS Inventory</span>
-              </div>
-              <p class="small text-white-50 mb-2">
-                Every unit-level serial number is tracked chronologically from PO receiving, transfer dispatch, sales deduction, repair pull-out, to customer warranty replacement.
-              </p>
-              <ul class="list-unstyled small text-secondary mb-0">
-                <li>• <strong class="text-light">Zero Leakage:</strong> Prevents duplicate serial ingestion and phantom inventory</li>
-                <li>• <strong class="text-light">Stock Adjustments:</strong> Physical count reconciliation with audited write-offs</li>
-              </ul>
-            </div>
-          </div>
-
-          <!-- Ledger 5 -->
-          <div class="col-md-6 col-lg-4">
-            <div class="p-3 rounded bg-dark border border-warning h-100">
-              <div class="d-flex align-items-center justify-content-between mb-2">
-                <h6 class="text-warning fw-bold mb-0">5. Employee Commissions & Incentive Ledger</h6>
-                <span class="badge bg-black border border-secondary text-secondary small">Staff Payroll / Cuts</span>
-              </div>
-              <p class="small text-white-50 mb-2">
-                Dynamic automated commission engine calculating cuts per sales agent, repair technician labor fee, and custom PC builder assembly fee based on branch settings.
-              </p>
-              <ul class="list-unstyled small text-secondary mb-0">
-                <li>• <strong class="text-light">Claim Approvals:</strong> Strict claim submission, admin review, and payout disbursement</li>
-                <li>• <strong class="text-light">Auto-Reversals:</strong> Automatic commission clawbacks when sales are voided</li>
-              </ul>
-            </div>
-          </div>
-
-          <!-- Ledger 6 -->
-          <div class="col-md-6 col-lg-4">
-            <div class="p-3 rounded bg-dark border border-warning h-100">
-              <div class="d-flex align-items-center justify-content-between mb-2">
-                <h6 class="text-warning fw-bold mb-0">6. Immutable System Audit Ledger</h6>
-                <span class="badge bg-black border border-secondary text-secondary small">Enterprise Governance</span>
-              </div>
-              <p class="small text-white-50 mb-2">
-                Complete, tamper-evident audit trail logging every write mutation: user ID, role, branch, IP address, timestamp, table, and full JSON before/after state snapshots.
-              </p>
-              <ul class="list-unstyled small text-secondary mb-0">
-                <li>• <strong class="text-light">Security Compliance:</strong> Tracks price changes, stock overrides, voids, and logins</li>
-                <li>• <strong class="text-light">Forensic Accountability:</strong> Transparent trace for multi-branch store operations</li>
-              </ul>
-            </div>
+          <div class="d-flex align-items-center gap-2">
+            <a href="https://arunafeltzcomputerpos.cloud/" target="_blank" rel="noopener noreferrer"
+              class="btn btn-outline-warning btn-sm fw-bold d-none d-sm-inline-flex align-items-center gap-1 shadow-sm">
+              <i class="bi bi-lock-fill me-1"></i><span>Production Portal</span> ↗
+            </a>
+            <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal" aria-label="Close"></button>
           </div>
         </div>
+        <div class="modal-body p-4">
+          <!-- Physical Production Storefront Banner -->
+          <div class="mb-4 text-center">
+            <div class="position-relative overflow-hidden rounded-3 border border-warning shadow d-inline-block w-100"
+              style="max-width: 720px; background-color: #000;">
+              <img src="./image/arunafeltz/banner.jpg" class="img-fluid w-100"
+                style="object-fit: contain; max-height: 360px;"
+                alt="Arunafeltz Computer Parts & Accessories — San Fernando & Dau Branches" />
+              <div class="p-2 text-center bg-dark border-top border-secondary">
+                <span class="text-warning small fw-bold">Commercial Production Deployment: San Fernando & Dau (Mabalacat), Pampanga Branches</span>
+              </div>
+            </div>
+          </div>
 
-        <!-- Full Core Engineering Modules -->
-        <div class="d-flex align-items-center justify-content-between mb-3 flex-wrap gap-2">
-          <h5 class="text-warning fw-bold mb-0">Full System Modules & Operational Capabilities</h5>
-          <span class="badge bg-dark border border-warning text-warning small">12 Integrated Business Domains</span>
-        </div>
+          <!-- Commercial Client Turnover & Data Privacy Notice -->
+          <div class="p-3 mb-4 rounded bg-dark border border-warning shadow-sm">
+            <div class="d-flex flex-column flex-md-row align-items-md-center justify-content-between gap-3">
+              <div>
+                <div class="d-flex align-items-center gap-2 mb-1 flex-wrap">
+                  <span class="badge bg-danger text-white fw-bold"><i
+                      class="bi bi-file-earmark-lock-fill me-1"></i>COMMERCIAL TURNOVER & NDA</span>
+                  <span class="badge bg-dark border border-secondary text-secondary">Physical Stores: San Fernando &
+                    Dau, Pampanga</span>
+                  <span class="badge bg-warning text-dark fw-bold"><i class="bi bi-shield-lock-fill me-1"></i>LOCKED
+                    LOGIN PORTAL</span>
+                </div>
+                <h6 class="text-warning fw-bold mb-1">Active Client Production System & Security-Locked Login Portal
+                </h6>
+                <p class="small text-white-50 mb-0">
+                  This enterprise ERP platform is in active commercial operation across physical retail computer
+                  branches under a formal client turnover and confidentiality agreement. The live system entrance is
+                  <strong>strictly locked and secured</strong> with multi-branch authentication to protect store
+                  financials, real-time inventory assets, and customer privacy. Visitors may access the live portal
+                  gateway to verify active production deployment, while complete functional walkthroughs, database
+                  schemas, and administrative capabilities are demonstrated during technical interviews.
+                </p>
+              </div>
+              <div class="d-flex flex-column gap-1 flex-shrink-0 align-items-md-end">
+                <a href="https://arunafeltzcomputerpos.cloud/" target="_blank" rel="noopener noreferrer"
+                  class="btn btn-outline-warning fw-bold text-nowrap d-inline-flex align-items-center gap-1 shadow-sm px-3 py-2">
+                  <i class="bi bi-box-arrow-up-right"></i><span>Production Portal</span>
+                </a>
+                <span class="text-secondary" style="font-size: 0.72rem;"><i class="bi bi-shield-lock me-1"></i>Secured
+                  Login Gateway</span>
+              </div>
+            </div>
+          </div>
+
+          <!-- Project Summary & Full Technical Specifications -->
+          <div class="row g-3 mb-4">
+            <div class="col-lg-6">
+              <div class="p-3 rounded bg-dark border border-secondary h-100">
+                <h5 class="text-warning fw-bold mb-2">Overall System Architecture & Scope</h5>
+                <p class="text-white-50 small mb-2">
+                  <strong>Arunafeltz</strong> is a custom, commercial-grade cloud Enterprise Resource Planning (ERP) and
+                  Point of Sale (POS) system unifying all retail, service, and supply chain operations for computer
+                  hardware enterprises across physical branches (San Fernando & Dau, Pampanga).
+                </p>
+                <p class="text-white-50 small mb-2">
+                  The platform integrates 12 mission-critical operational domains into one cohesive system: fast POS
+                  counter cashiering, unit-level serialized barcode tracking, inter-branch logistics, supplier POs &
+                  receiving, custom PC building, technical repair job orders, AR credit/installment financing, warranty
+                  claims, shift cash box auditing, sales commissions, and executive P&L intelligence.
+                </p>
+                <p class="text-white-50 small mb-0">
+                  <strong>Privacy & Access Security:</strong> Features a secured, locked login gateway enforcing 5-tier
+                  Role-Based Access Control (RBAC) and database-level branch isolation to guarantee 100% data security,
+                  commercial privacy, and operational integrity.
+                </p>
+              </div>
+            </div>
+            <div class="col-lg-6">
+              <div class="p-3 rounded bg-dark border border-secondary h-100">
+                <h6 class="text-warning fw-bold mb-2">Full Technical Specifications</h6>
+                <div class="row g-2 small">
+                  <div class="col-sm-6">
+                    <div class="text-secondary"><strong class="text-light">Frontend:</strong> React 18 SPA, Vite, Tailwind CSS v4, Lucide Icons</div>
+                  </div>
+                  <div class="col-sm-6">
+                    <div class="text-secondary"><strong class="text-light">Backend:</strong> Node.js, Express.js (Modular Services), REST API</div>
+                  </div>
+                  <div class="col-sm-6">
+                    <div class="text-secondary"><strong class="text-light">Database:</strong> PostgreSQL, Prisma ORM, Interactive Transactions</div>
+                  </div>
+                  <div class="col-sm-6">
+                    <div class="text-secondary"><strong class="text-light">Security:</strong> 5-Tier RBAC, Multi-Branch Isolation, JWT & Bcrypt</div>
+                  </div>
+                  <div class="col-sm-6">
+                    <div class="text-secondary"><strong class="text-light">OmniSearch:</strong> Command Palette (Ctrl+K) System-Wide Fuzzy Search</div>
+                  </div>
+                  <div class="col-sm-6">
+                    <div class="text-secondary"><strong class="text-light">Formulas:</strong> Settings-Driven Dynamic Markup % & Price Calculations</div>
+                  </div>
+                  <div class="col-sm-6">
+                    <div class="text-secondary"><strong class="text-light">Printing:</strong> Direct ESC/POS Thermal 80mm/58mm, Barcode Scanner</div>
+                  </div>
+                  <div class="col-sm-6">
+                    <div class="text-secondary"><strong class="text-light">Exports:</strong> Client-side Excel (.xlsx via ExcelJS), Vector PDF</div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Comprehensive Financial, Cash & Transactional Ledgers -->
+          <div class="d-flex align-items-center justify-content-between mb-3 flex-wrap gap-2">
+            <div>
+              <h5 class="text-warning fw-bold mb-0">Financial, Cash & Transactional Ledgers</h5>
+              <span class="text-white-50 small">Automated Double-Entry Principles, Drawer Balancing & Real-Time
+                Accounting</span>
+            </div>
+            <span class="badge bg-danger text-white fw-bold"><i class="bi bi-journal-check me-1"></i>ACID-COMPLIANT
+              LEDGERS</span>
+          </div>
+
+          <div class="row g-3 mb-4">
+            <!-- Ledger 1 -->
+            <div class="col-md-6 col-lg-4">
+              <div class="p-3 rounded bg-dark border border-warning h-100">
+                <div class="d-flex align-items-center justify-content-between mb-2">
+                  <h6 class="text-warning fw-bold mb-0">1. Split-Payment Sales Ledger</h6>
+                  <span class="badge bg-black border border-secondary text-secondary small">POS & Sales</span>
+                </div>
+                <p class="small text-white-50 mb-2">
+                  Tracks multi-tender payments per receipt (Cash, GCash, Bank Transfer, PDC/Cheque, AR Credit). Records
+                  exact transaction timestamps, assigned cashier, sales agent attribution, and discount structures.
+                </p>
+                <ul class="list-unstyled small text-secondary mb-0">
+                  <li>• <strong class="text-light">Audited Voids:</strong> Non-destructive cancellations with reverse
+                    stock & cash journaling</li>
+                  <li>• <strong class="text-light">Multi-Tier Pricing:</strong> Automated tier selection (Tier 1 Cash
+                    Discount to Tier 5 Wholesale)</li>
+                </ul>
+              </div>
+            </div>
+
+            <!-- Ledger 2 -->
+            <div class="col-md-6 col-lg-4">
+              <div class="p-3 rounded bg-dark border border-warning h-100">
+                <div class="d-flex align-items-center justify-content-between mb-2">
+                  <h6 class="text-warning fw-bold mb-0">2. Accounts Receivable (AR) & Credit Ledger</h6>
+                  <span class="badge bg-black border border-secondary text-secondary small">Financing & Credit</span>
+                </div>
+                <p class="small text-white-50 mb-2">
+                  Customer-level credit lines, installment schedules (Month 3 to 12), and historical amortization
+                  ledgers for in-house credit and 3rd-party financing (Home Credit, Credit Card).
+                </p>
+                <ul class="list-unstyled small text-secondary mb-0">
+                  <li>• <strong class="text-light">Remittance & Float:</strong> Shop Net, CC/Tax Float, and settled
+                    float reconciliation</li>
+                  <li>• <strong class="text-light">SOA Engine:</strong> Live Statement of Account generation & Bad Debt
+                    declaration</li>
+                </ul>
+              </div>
+            </div>
+
+            <!-- Ledger 3 -->
+            <div class="col-md-6 col-lg-4">
+              <div class="p-3 rounded bg-dark border border-warning h-100">
+                <div class="d-flex align-items-center justify-content-between mb-2">
+                  <h6 class="text-warning fw-bold mb-0">3. Cash Box & Drawer Shift Ledger</h6>
+                  <span class="badge bg-black border border-secondary text-secondary small">Cash Balancing</span>
+                </div>
+                <p class="small text-white-50 mb-2">
+                  Live cash drawer monitoring from morning opening float to day-end cash reconciliation. Direct cash
+                  linkage logs all cash-in (sales, collections) and cash-out (expenses, petty cash).
+                </p>
+                <ul class="list-unstyled small text-secondary mb-0">
+                  <li>• <strong class="text-light">Variance Ledger:</strong> Over/Short discrepancy logging with reason
+                    and supervisor sign-off</li>
+                  <li>• <strong class="text-light">Shift Handovers:</strong> Drawer snapshots and auditable mid-day cash
+                    adjustments</li>
+                </ul>
+              </div>
+            </div>
+
+            <!-- Ledger 4 -->
+            <div class="col-md-6 col-lg-4">
+              <div class="p-3 rounded bg-dark border border-warning h-100">
+                <div class="d-flex align-items-center justify-content-between mb-2">
+                  <h6 class="text-warning fw-bold mb-0">4. Serialized Stock Movement Ledger</h6>
+                  <span class="badge bg-black border border-secondary text-secondary small">WMS Inventory</span>
+                </div>
+                <p class="small text-white-50 mb-2">
+                  Every unit-level serial number is tracked chronologically from PO receiving, transfer dispatch, sales
+                  deduction, repair pull-out, to customer warranty replacement.
+                </p>
+                <ul class="list-unstyled small text-secondary mb-0">
+                  <li>• <strong class="text-light">Zero Leakage:</strong> Prevents duplicate serial ingestion and
+                    phantom inventory</li>
+                  <li>• <strong class="text-light">Stock Adjustments:</strong> Physical count reconciliation with
+                    audited write-offs</li>
+                </ul>
+              </div>
+            </div>
+
+            <!-- Ledger 5 -->
+            <div class="col-md-6 col-lg-4">
+              <div class="p-3 rounded bg-dark border border-warning h-100">
+                <div class="d-flex align-items-center justify-content-between mb-2">
+                  <h6 class="text-warning fw-bold mb-0">5. Employee Commissions & Incentive Ledger</h6>
+                  <span class="badge bg-black border border-secondary text-secondary small">Staff Payroll / Cuts</span>
+                </div>
+                <p class="small text-white-50 mb-2">
+                  Dynamic automated commission engine calculating cuts per sales agent, repair technician labor fee, and
+                  custom PC builder assembly fee based on branch settings.
+                </p>
+                <ul class="list-unstyled small text-secondary mb-0">
+                  <li>• <strong class="text-light">Claim Approvals:</strong> Strict claim submission, admin review, and
+                    payout disbursement</li>
+                  <li>• <strong class="text-light">Auto-Reversals:</strong> Automatic commission clawbacks when sales
+                    are voided</li>
+                </ul>
+              </div>
+            </div>
+
+            <!-- Ledger 6 -->
+            <div class="col-md-6 col-lg-4">
+              <div class="p-3 rounded bg-dark border border-warning h-100">
+                <div class="d-flex align-items-center justify-content-between mb-2">
+                  <h6 class="text-warning fw-bold mb-0">6. Immutable System Audit Ledger</h6>
+                  <span class="badge bg-black border border-secondary text-secondary small">Enterprise Governance</span>
+                </div>
+                <p class="small text-white-50 mb-2">
+                  Complete, tamper-evident audit trail logging every write mutation: user ID, role, branch, IP address,
+                  timestamp, table, and full JSON before/after state snapshots.
+                </p>
+                <ul class="list-unstyled small text-secondary mb-0">
+                  <li>• <strong class="text-light">Security Compliance:</strong> Tracks price changes, stock overrides,
+                    voids, and logins</li>
+                  <li>• <strong class="text-light">Forensic Accountability:</strong> Transparent trace for multi-branch
+                    store operations</li>
+                </ul>
+              </div>
+            </div>
+          </div>
+
+          <!-- Full Core Engineering Modules -->
+          <div class="d-flex align-items-center justify-content-between mb-3 flex-wrap gap-2">
+            <h5 class="text-warning fw-bold mb-0">Full System Modules & Operational Capabilities</h5>
+            <span class="badge bg-dark border border-warning text-warning small">12 Integrated Business Domains</span>
+          </div>
 
         <div class="row g-3 mb-4">
           <!-- Module 1 -->
@@ -1113,57 +1205,61 @@
             </div>
           </div>
 
-          <!-- Module 2 -->
-          <div class="col-md-6 col-lg-4">
-            <div class="p-3 rounded bg-dark border border-secondary h-100">
-              <div class="d-flex align-items-center gap-2 mb-2">
-                <span class="badge bg-warning text-dark fw-bold">02</span>
-                <h6 class="text-warning fw-bold mb-0">Serialized Inventory & WMS</h6>
+            <!-- Module 2 -->
+            <div class="col-md-6 col-lg-4">
+              <div class="p-3 rounded bg-dark border border-secondary h-100">
+                <div class="d-flex align-items-center gap-2 mb-2">
+                  <span class="badge bg-warning text-dark fw-bold">02</span>
+                  <h6 class="text-warning fw-bold mb-0">Serialized Inventory & WMS</h6>
+                </div>
+                <p class="small text-white-50 mb-0">
+                  100% auditable unit-level serial number lifecycle (Available, Sold, Transferred, Defective, Replaced)
+                  preventing inventory leakage, serial collisions, and phantom stock across all branches.
+                </p>
               </div>
-              <p class="small text-white-50 mb-0">
-                100% auditable unit-level serial number lifecycle (Available, Sold, Transferred, Defective, Replaced) preventing inventory leakage, serial collisions, and phantom stock across all branches.
-              </p>
             </div>
-          </div>
 
-          <!-- Module 3 -->
-          <div class="col-md-6 col-lg-4">
-            <div class="p-3 rounded bg-dark border border-secondary h-100">
-              <div class="d-flex align-items-center gap-2 mb-2">
-                <span class="badge bg-warning text-dark fw-bold">03</span>
-                <h6 class="text-warning fw-bold mb-0">Inter-Branch Stock Transfers</h6>
+            <!-- Module 3 -->
+            <div class="col-md-6 col-lg-4">
+              <div class="p-3 rounded bg-dark border border-secondary h-100">
+                <div class="d-flex align-items-center gap-2 mb-2">
+                  <span class="badge bg-warning text-dark fw-bold">03</span>
+                  <h6 class="text-warning fw-bold mb-0">Inter-Branch Stock Transfers</h6>
+                </div>
+                <p class="small text-white-50 mb-0">
+                  Traceable multi-step logistics state machine: Transfer Request &rarr; Approval &rarr;
+                  Dispatch/In-Transit &rarr; Receive with physical serial verification, eliminating cross-branch loss.
+                </p>
               </div>
-              <p class="small text-white-50 mb-0">
-                Traceable multi-step logistics state machine: Transfer Request &rarr; Approval &rarr; Dispatch/In-Transit &rarr; Receive with physical serial verification, eliminating cross-branch loss.
-              </p>
             </div>
-          </div>
 
-          <!-- Module 4 -->
-          <div class="col-md-6 col-lg-4">
-            <div class="p-3 rounded bg-dark border border-secondary h-100">
-              <div class="d-flex align-items-center gap-2 mb-2">
-                <span class="badge bg-warning text-dark fw-bold">04</span>
-                <h6 class="text-warning fw-bold mb-0">Procurement & Receivings (SCM)</h6>
+            <!-- Module 4 -->
+            <div class="col-md-6 col-lg-4">
+              <div class="p-3 rounded bg-dark border border-secondary h-100">
+                <div class="d-flex align-items-center gap-2 mb-2">
+                  <span class="badge bg-warning text-dark fw-bold">04</span>
+                  <h6 class="text-warning fw-bold mb-0">Procurement & Receivings (SCM)</h6>
+                </div>
+                <p class="small text-white-50 mb-0">
+                  Supplier catalog management, Purchase Orders (PO lifecycle), batch receivings with instant barcode
+                  serial allocation, cost basis tracking, and Supplier Returns (RTV) with credit memos.
+                </p>
               </div>
-              <p class="small text-white-50 mb-0">
-                Supplier catalog management, Purchase Orders (PO lifecycle), batch receivings with instant barcode serial allocation, cost basis tracking, and Supplier Returns (RTV) with credit memos.
-              </p>
             </div>
-          </div>
 
-          <!-- Module 5 -->
-          <div class="col-md-6 col-lg-4">
-            <div class="p-3 rounded bg-dark border border-secondary h-100">
-              <div class="d-flex align-items-center gap-2 mb-2">
-                <span class="badge bg-warning text-dark fw-bold">05</span>
-                <h6 class="text-warning fw-bold mb-0">Service & Repair Job Orders</h6>
+            <!-- Module 5 -->
+            <div class="col-md-6 col-lg-4">
+              <div class="p-3 rounded bg-dark border border-secondary h-100">
+                <div class="d-flex align-items-center gap-2 mb-2">
+                  <span class="badge bg-warning text-dark fw-bold">05</span>
+                  <h6 class="text-warning fw-bold mb-0">Service & Repair Job Orders</h6>
+                </div>
+                <p class="small text-white-50 mb-0">
+                  Full technical repair ticketing: device intake, diagnostics, technician assignment, replacement parts
+                  deduction with markup, repair notes, customer claiming, and backjob tracking.
+                </p>
               </div>
-              <p class="small text-white-50 mb-0">
-                Full technical repair ticketing: device intake, diagnostics, technician assignment, replacement parts deduction with markup, repair notes, customer claiming, and backjob tracking.
-              </p>
             </div>
-          </div>
 
           <!-- Module 6 -->
           <div class="col-md-6 col-lg-4">
@@ -1183,356 +1279,390 @@
             </div>
           </div>
 
-          <!-- Module 7 -->
-          <div class="col-md-6 col-lg-4">
-            <div class="p-3 rounded bg-dark border border-secondary h-100">
-              <div class="d-flex align-items-center gap-2 mb-2">
-                <span class="badge bg-warning text-dark fw-bold">07</span>
-                <h6 class="text-warning fw-bold mb-0">Custom PC Builder Matrix</h6>
+            <!-- Module 7 -->
+            <div class="col-md-6 col-lg-4">
+              <div class="p-3 rounded bg-dark border border-secondary h-100">
+                <div class="d-flex align-items-center gap-2 mb-2">
+                  <span class="badge bg-warning text-dark fw-bold">07</span>
+                  <h6 class="text-warning fw-bold mb-0">Custom PC Builder Matrix</h6>
+                </div>
+                <p class="small text-white-50 mb-0">
+                  Interactive rig configurator validating component availability (CPU, Motherboard, GPU, RAM, Storage,
+                  PSU, Chassis), single-transaction stock deduction, and builder commission attribution.
+                </p>
               </div>
-              <p class="small text-white-50 mb-0">
-                Interactive rig configurator validating component availability (CPU, Motherboard, GPU, RAM, Storage, PSU, Chassis), single-transaction stock deduction, and builder commission attribution.
-              </p>
+            </div>
+
+            <!-- Module 8 -->
+            <div class="col-md-6 col-lg-4">
+              <div class="p-3 rounded bg-dark border border-secondary h-100">
+                <div class="d-flex align-items-center gap-2 mb-2">
+                  <span class="badge bg-warning text-dark fw-bold">08</span>
+                  <h6 class="text-warning fw-bold mb-0">Accounts Receivable (AR) & Credit</h6>
+                </div>
+                <p class="small text-white-50 mb-0">
+                  Handles in-house customer credit and 3rd-party installment financing (Home Credit, Credit Card), term
+                  schedules, Statement of Account (SOA) printing, collection posting, and float absorption.
+                </p>
+              </div>
+            </div>
+
+            <!-- Module 9 -->
+            <div class="col-md-6 col-lg-4">
+              <div class="p-3 rounded bg-dark border border-secondary h-100">
+                <div class="d-flex align-items-center gap-2 mb-2">
+                  <span class="badge bg-warning text-dark fw-bold">09</span>
+                  <h6 class="text-warning fw-bold mb-0">Warranty & RMA Management</h6>
+                </div>
+                <p class="small text-white-50 mb-0">
+                  Serial-linked warranty validation, supplier RMA dispatch tracking, customer replacement unit issuance,
+                  and warranty service history linked to original sales receipts.
+                </p>
+              </div>
+            </div>
+
+            <!-- Module 10 -->
+            <div class="col-md-6 col-lg-4">
+              <div class="p-3 rounded bg-dark border border-secondary h-100">
+                <div class="d-flex align-items-center gap-2 mb-2">
+                  <span class="badge bg-warning text-dark fw-bold">10</span>
+                  <h6 class="text-warning fw-bold mb-0">Cash Box & Drawer Shifts</h6>
+                </div>
+                <p class="small text-white-50 mb-0">
+                  Shift drawer management: morning opening float, authorized cash in / cash out recording, day-end
+                  balancing, over/short variance logging, and immutable cash transaction audit.
+                </p>
+              </div>
+            </div>
+
+            <!-- Module 11 -->
+            <div class="col-md-6 col-lg-4">
+              <div class="p-3 rounded bg-dark border border-secondary h-100">
+                <div class="d-flex align-items-center gap-2 mb-2">
+                  <span class="badge bg-warning text-dark fw-bold">11</span>
+                  <h6 class="text-warning fw-bold mb-0">Sales Incentives & Commissions</h6>
+                </div>
+                <p class="small text-white-50 mb-0">
+                  Configurable incentive percentage matrix: automated commission calculations per sales staff, repair
+                  technician, and PC builder with claim submission, approvals, and payout records.
+                </p>
+              </div>
+            </div>
+
+            <!-- Module 12 -->
+            <div class="col-md-6 col-lg-4">
+              <div class="p-3 rounded bg-dark border border-secondary h-100">
+                <div class="d-flex align-items-center gap-2 mb-2">
+                  <span class="badge bg-warning text-dark fw-bold">12</span>
+                  <h6 class="text-warning fw-bold mb-0">Executive Analytics & Reports</h6>
+                </div>
+                <p class="small text-white-50 mb-0">
+                  6-Layer Executive business intelligence: real-time Profit & Loss (P&L), gross margin calculations, AR
+                  aging analysis, product profitability matrix, and one-click Excel (.xlsx) export.
+                </p>
+              </div>
             </div>
           </div>
 
-          <!-- Module 8 -->
-          <div class="col-md-6 col-lg-4">
-            <div class="p-3 rounded bg-dark border border-secondary h-100">
-              <div class="d-flex align-items-center gap-2 mb-2">
-                <span class="badge bg-warning text-dark fw-bold">08</span>
-                <h6 class="text-warning fw-bold mb-0">Accounts Receivable (AR) & Credit</h6>
-              </div>
-              <p class="small text-white-50 mb-0">
-                Handles in-house customer credit and 3rd-party installment financing (Home Credit, Credit Card), term schedules, Statement of Account (SOA) printing, collection posting, and float absorption.
-              </p>
-            </div>
-          </div>
-
-          <!-- Module 9 -->
-          <div class="col-md-6 col-lg-4">
-            <div class="p-3 rounded bg-dark border border-secondary h-100">
-              <div class="d-flex align-items-center gap-2 mb-2">
-                <span class="badge bg-warning text-dark fw-bold">09</span>
-                <h6 class="text-warning fw-bold mb-0">Warranty & RMA Management</h6>
-              </div>
-              <p class="small text-white-50 mb-0">
-                Serial-linked warranty validation, supplier RMA dispatch tracking, customer replacement unit issuance, and warranty service history linked to original sales receipts.
-              </p>
-            </div>
-          </div>
-
-          <!-- Module 10 -->
-          <div class="col-md-6 col-lg-4">
-            <div class="p-3 rounded bg-dark border border-secondary h-100">
-              <div class="d-flex align-items-center gap-2 mb-2">
-                <span class="badge bg-warning text-dark fw-bold">10</span>
-                <h6 class="text-warning fw-bold mb-0">Cash Box & Drawer Shifts</h6>
-              </div>
-              <p class="small text-white-50 mb-0">
-                Shift drawer management: morning opening float, authorized cash in / cash out recording, day-end balancing, over/short variance logging, and immutable cash transaction audit.
-              </p>
-            </div>
-          </div>
-
-          <!-- Module 11 -->
-          <div class="col-md-6 col-lg-4">
-            <div class="p-3 rounded bg-dark border border-secondary h-100">
-              <div class="d-flex align-items-center gap-2 mb-2">
-                <span class="badge bg-warning text-dark fw-bold">11</span>
-                <h6 class="text-warning fw-bold mb-0">Sales Incentives & Commissions</h6>
-              </div>
-              <p class="small text-white-50 mb-0">
-                Configurable incentive percentage matrix: automated commission calculations per sales staff, repair technician, and PC builder with claim submission, approvals, and payout records.
-              </p>
-            </div>
-          </div>
-
-          <!-- Module 12 -->
-          <div class="col-md-6 col-lg-4">
-            <div class="p-3 rounded bg-dark border border-secondary h-100">
-              <div class="d-flex align-items-center gap-2 mb-2">
-                <span class="badge bg-warning text-dark fw-bold">12</span>
-                <h6 class="text-warning fw-bold mb-0">Executive Analytics & Reports</h6>
-              </div>
-              <p class="small text-white-50 mb-0">
-                6-Layer Executive business intelligence: real-time Profit & Loss (P&L), gross margin calculations, AR aging analysis, product profitability matrix, and one-click Excel (.xlsx) export.
-              </p>
-            </div>
+          <!-- Technical Challenges & Architecture -->
+          <h5 class="text-warning fw-bold mb-3">Enterprise Engineering Highlights & Data Integrity</h5>
+          <div class="p-3 rounded bg-dark border border-secondary">
+            <ul class="small text-white-50 mb-0 ps-3">
+              <li class="mb-2">
+                <strong class="text-warning">Atomic Database Transactions:</strong> Leveraged Prisma interactive
+                transactions (<code>prisma.$transaction</code>) ensuring multi-step inventory deductions, serial status
+                transitions, payment ledgers, and technician incentives succeed or fail together atomically.
+              </li>
+              <li class="mb-2">
+                <strong class="text-warning">Strict Multi-Branch Isolation & RBAC:</strong> Enforced backend
+                authorization restricting branch-scoped personnel (Cashiers, Technicians, Admins) strictly to their
+                active branch, while allowing Super Owners enterprise-wide governance.
+              </li>
+              <li class="mb-2">
+                <strong class="text-warning">Concurrency Control & Race Condition Prevention:</strong> Implemented
+                row-level locking (<code>SELECT ... FOR UPDATE</code>) on serialized items, transfer dispatches, and
+                credit collections to prevent race conditions during high-volume cashier traffic.
+              </li>
+              <li class="mb-0">
+                <strong class="text-warning">High-Throughput Keyboard-First UX:</strong> Engineered lightweight
+                debounced typeahead autocompletes with arrow key/Enter navigation and Omnisearch (Ctrl+K), maximizing
+                throughput for cashier and inventory encoders.
+              </li>
+            </ul>
           </div>
         </div>
-
-        <!-- Technical Challenges & Architecture -->
-        <h5 class="text-warning fw-bold mb-3">Enterprise Engineering Highlights & Data Integrity</h5>
-        <div class="p-3 rounded bg-dark border border-secondary">
-          <ul class="small text-white-50 mb-0 ps-3">
-            <li class="mb-2">
-              <strong class="text-warning">Atomic Database Transactions:</strong> Leveraged Prisma interactive transactions (<code>prisma.$transaction</code>) ensuring multi-step inventory deductions, serial status transitions, payment ledgers, and technician incentives succeed or fail together atomically.
-            </li>
-            <li class="mb-2">
-              <strong class="text-warning">Strict Multi-Branch Isolation & RBAC:</strong> Enforced backend authorization restricting branch-scoped personnel (Cashiers, Technicians, Admins) strictly to their active branch, while allowing Super Owners enterprise-wide governance.
-            </li>
-            <li class="mb-2">
-              <strong class="text-warning">Concurrency Control & Race Condition Prevention:</strong> Implemented row-level locking (<code>SELECT ... FOR UPDATE</code>) on serialized items, transfer dispatches, and credit collections to prevent race conditions during high-volume cashier traffic.
-            </li>
-            <li class="mb-0">
-              <strong class="text-warning">High-Throughput Keyboard-First UX:</strong> Engineered lightweight debounced typeahead autocompletes with arrow key/Enter navigation and Omnisearch (Ctrl+K), maximizing throughput for cashier and inventory encoders.
-            </li>
-          </ul>
-        </div>
-      </div>
-      <div class="modal-footer border-top border-secondary d-flex justify-content-between align-items-center">
-        <span class="text-secondary small"><i class="bi bi-shield-lock me-1"></i>Arunafeltz Proprietary Enterprise ERP — Commercial Turnover Agreement</span>
-        <div class="d-flex gap-2">
-          <a href="https://arunafeltzcomputerpos.cloud/" target="_blank" rel="noopener noreferrer" class="btn btn-outline-warning fw-bold d-inline-flex align-items-center gap-1 shadow-sm">
-            <i class="bi bi-box-arrow-up-right me-1"></i><span>Production Portal</span>
-          </a>
-          <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
-        </div>
-      </div>
-    </div>
-  </div>
-</div>
-
-<!-- Systems Modal with Carousel -->
-<div class="modal fade" id="systemsModal" tabindex="-1" aria-labelledby="systemsModalLabel" aria-hidden="true">
-  <div class="modal-dialog modal-lg modal-dialog-centered">
-    <div class="modal-content bg-black text-light">
-      <div class="modal-header border-0">
-        <h5 class="modal-title" id="systemsModalLabel">Systems & Software Gallery</h5>
-        <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal" aria-label="Close"></button>
-      </div>
-      <div class="modal-body p-0">
-        <style>
-          /* Carousel images styling for systems */
-          #systemsCarousel .carousel-item img {
-            height: 400px;
-            object-fit: contain;
-            border: 3px solid #FFD700;
-            border-radius: 8px;
-            background-color: #111;
-            margin: auto;
-          }
-        </style>
-        <div id="systemsCarousel" class="carousel slide" data-bs-ride="carousel">
-          <div class="carousel-inner">
-            <div class="carousel-item active">
-              <img src="https://images.unsplash.com/photo-1555066931-4365d14bab8c?auto=format&fit=crop&w=1000&q=80" class="d-block w-100" alt="Capstone Project" />
-              <div class="p-3 text-center">
-                <h5>Capstone Project</h5>
-                <p class="text-secondary mb-0">Capstone system details and features</p>
-              </div>
-            </div>
-            <div class="carousel-item">
-              <img src="https://images.unsplash.com/photo-1460925895917-afdab827c52f?auto=format&fit=crop&w=1000&q=80" class="d-block w-100" alt="System Project 1" />
-              <div class="p-3 text-center">
-                <h5>System Project 1</h5>
-                <p class="text-secondary mb-0">System project 1 details and features</p>
-              </div>
-            </div>
-            <div class="carousel-item">
-              <img src="https://images.unsplash.com/photo-1551288049-bebda4e38f71?auto=format&fit=crop&w=1000&q=80" class="d-block w-100" alt="System Project 2" />
-              <div class="p-3 text-center">
-                <h5>System Project 2</h5>
-                <p class="text-secondary mb-0">System project 2 details and features</p>
-              </div>
-            </div>
+        <div class="modal-footer border-top border-secondary d-flex justify-content-between align-items-center">
+          <span class="text-secondary small"><i class="bi bi-shield-lock me-1"></i>Arunafeltz Proprietary Enterprise ERP
+            — Commercial Turnover Agreement</span>
+          <div class="d-flex gap-2">
+            <a href="https://arunafeltzcomputerpos.cloud/" target="_blank" rel="noopener noreferrer"
+              class="btn btn-outline-warning fw-bold d-inline-flex align-items-center gap-1 shadow-sm">
+              <i class="bi bi-box-arrow-up-right me-1"></i><span>Production Portal</span>
+            </a>
+            <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
           </div>
-          <button class="carousel-control-prev" type="button" data-bs-target="#systemsCarousel" data-bs-slide="prev">
-            <span class="carousel-control-prev-icon"></span>
-            <span class="visually-hidden">Previous</span>
-          </button>
-          <button class="carousel-control-next" type="button" data-bs-target="#systemsCarousel" data-bs-slide="next">
-            <span class="carousel-control-next-icon"></span>
-            <span class="visually-hidden">Next</span>
-          </button>
         </div>
       </div>
     </div>
   </div>
-</div>
 
-<!-- Project Modal with Carousel -->
-<div class="modal fade" id="projectModal" tabindex="-1" aria-labelledby="projectModalLabel" aria-hidden="true">
-  <div class="modal-dialog modal-lg modal-dialog-centered">
-    <div class="modal-content bg-black text-light">
-      <div class="modal-header border-0">
-        <h5 class="modal-title" id="projectModalLabel">Project 1 Gallery</h5>
-        <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal" aria-label="Close"></button>
-      </div>
-      <div class="modal-body p-0">
-        <style>
-          /* Carousel images styling */
-          #projectCarousel .carousel-item img {
-            height: 400px; /* fixed height */
-            object-fit: contain; /* maintain aspect ratio */
-            border: 3px solid #FFD700; /* golden border */
-            border-radius: 8px; /* rounded corners */
-            background-color: #f7f7f7; /* dark bg behind image */
-            margin: auto; /* center image */
-          }
-        </style>
-        <div id="projectCarousel" class="carousel slide" data-bs-ride="carousel">
-          <div class="carousel-inner">
-            <div class="carousel-item active">
-              <img src="./image/LOGO/jm.png" class="d-block w-100" alt="Project Image 1" />
+  <!-- Systems Modal with Carousel -->
+  <div class="modal fade" id="systemsModal" tabindex="-1" aria-labelledby="systemsModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-lg modal-dialog-centered">
+      <div class="modal-content bg-black text-light">
+        <div class="modal-header border-0">
+          <h5 class="modal-title" id="systemsModalLabel">Systems & Software Gallery</h5>
+          <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <div class="modal-body p-0">
+          <style>
+            /* Carousel images styling for systems */
+            #systemsCarousel .carousel-item img {
+              height: 400px;
+              object-fit: contain;
+              border: 3px solid #FFD700;
+              border-radius: 8px;
+              background-color: #111;
+              margin: auto;
+            }
+          </style>
+          <div id="systemsCarousel" class="carousel slide" data-bs-ride="carousel">
+            <div class="carousel-inner">
+              <div class="carousel-item active">
+                <img src="https://images.unsplash.com/photo-1555066931-4365d14bab8c?auto=format&fit=crop&w=1000&q=80"
+                  class="d-block w-100" alt="Capstone Project" />
+                <div class="p-3 text-center">
+                  <h5>Capstone Project</h5>
+                  <p class="text-secondary mb-0">Capstone system details and features</p>
+                </div>
+              </div>
+              <div class="carousel-item">
+                <img src="https://images.unsplash.com/photo-1460925895917-afdab827c52f?auto=format&fit=crop&w=1000&q=80"
+                  class="d-block w-100" alt="System Project 1" />
+                <div class="p-3 text-center">
+                  <h5>System Project 1</h5>
+                  <p class="text-secondary mb-0">System project 1 details and features</p>
+                </div>
+              </div>
+              <div class="carousel-item">
+                <img src="https://images.unsplash.com/photo-1551288049-bebda4e38f71?auto=format&fit=crop&w=1000&q=80"
+                  class="d-block w-100" alt="System Project 2" />
+                <div class="p-3 text-center">
+                  <h5>System Project 2</h5>
+                  <p class="text-secondary mb-0">System project 2 details and features</p>
+                </div>
+              </div>
             </div>
-            <div class="carousel-item">
-              <img src="./image/LOGO/solar crest logo.png" class="d-block w-100" alt="Project Image 2" />
-            </div>
-            <div class="carousel-item">
-              <img src="./image/LOGO/jm perfume logo.jpg" class="d-block w-100" alt="Project Image 3" />
-            </div>
-            <div class="carousel-item">
-              <img src="./image/LOGO/RB8.png" class="d-block w-100" alt="Project Image 4" />
-            </div>
-            <div class="carousel-item">
-              <img src="./image/basketball/prenup.jpg" class="d-block w-100" alt="Project Image 5" />
-            </div>
-            <div class="carousel-item">
-              <img src="./image/basketball/prenup2.jpg" class="d-block w-100" alt="Project Image 6" />
-            </div>
-            <div class="carousel-item">
-              <img src="./image/shot.jpg" class="d-block w-100" alt="Project Image 7" />
-            </div>
-            <div class="carousel-item">
-              <img src="./image/basketball/bossj.jpg" class="d-block w-100" alt="Project Image 8" />
-            </div>
-            <div class="carousel-item">
-              <img src="./image/basketball/aldana.jpg" class="d-block w-100" alt="Project Image 9" />
-            </div>
-            <div class="carousel-item">
-              <img src="./image/PRESENTATION BC.jpg" class="d-block w-100" alt="Project Image 10" />
-            </div>
-            <div class="carousel-item">
-              <img src="./image/PRESENTATION SOLAR CREST BC.jpg" class="d-block w-100" alt="Project Image 11" />
-            </div>
-            <div class="carousel-item">
-              <img src="./image/PRESENTATION copy.jpg" class="d-block w-100" alt="Project Image 12" />
-            </div>
-            <div class="carousel-item">
-              <img src="./image/SABON/SABON SIGNAGE.jpg" class="d-block w-100" alt="Project Image 13" />
-            </div>
-            <div class="carousel-item">
-              <img src="./image/SABON/SABON JR.jpg" class="d-block w-100" alt="Project Image 14" />
-            </div>
-            <div class="carousel-item">
-              <img src="./image/SABON/REFILL REVOLUTION.jpg" class="d-block w-100" alt="Project Image 15" />
-            </div>
-            <div class="carousel-item">
-              <img src="./image/SABON/PRICELIST.jpg" class="d-block w-100" alt="Project Image 16" />
-            </div>
-            <div class="carousel-item">
-              <img src="./image/SABON/PARTNER.jpg" class="d-block w-100" alt="Project Image 17" />
-            </div>
-            <div class="carousel-item">
-              <img src="./image/SABON/OPENING.jpg" class="d-block w-100" alt="Project Image 18" />
-            </div>
-            <div class="carousel-item">
-              <img src="./image/SABON/DIY KIT POSTER copy.jpg" class="d-block w-100" alt="Project Image 19" />
-            </div>
-            <div class="carousel-item">
-              <img src="./image/poster son et sa.jpg" class="d-block w-100" alt="Project Image 20" />
-            </div>
-            <div class="carousel-item">
-              <img src="./image/SABON/DW.jpg" class="d-block w-100" alt="Project Image 21" />
-            </div>
-            <div class="carousel-item">
-              <img src="./image/SABON/LB.jpg" class="d-block w-100" alt="Project Image 22" />
-            </div>
-            <div class="carousel-item">
-              <img src="./image/SABON/HANDSOAP.jpg" class="d-block w-100" alt="Project Image 23" />
-            </div>
-            <div class="carousel-item">
-              <img src="./image/SABON/LD copy.jpg" class="d-block w-100" alt="Project Image 24" />
-            </div>
-            <div class="carousel-item">
-              <img src="./image/SABON/FABCON BLACK copy.jpg" class="d-block w-100" alt="Project Image 25" />
-            </div>
-            <div class="carousel-item">
-              <img src="./image/SABON/FABCON.jpg" class="d-block w-100" alt="Project Image 26" />
-            </div>
-            <div class="carousel-item">
-              <img src="./image/SABON/BARETA.jpg" class="d-block w-100" alt="Project Image 27" />
-            </div>
-            <div class="carousel-item">
-              <img src="./image/BAR.jpg" class="d-block w-100" alt="Project Image 28" />
-            </div>
-            <div class="carousel-item">
-              <img src="./image/'91.png" class="d-block w-100" alt="Project Image 29" />
-            </div>
-            <div class="carousel-item">
-              <img src="./image/cover copy.jpg" class="d-block w-100" alt="Project Image 30" />
-            </div>
+            <button class="carousel-control-prev" type="button" data-bs-target="#systemsCarousel" data-bs-slide="prev">
+              <span class="carousel-control-prev-icon"></span>
+              <span class="visually-hidden">Previous</span>
+            </button>
+            <button class="carousel-control-next" type="button" data-bs-target="#systemsCarousel" data-bs-slide="next">
+              <span class="carousel-control-next-icon"></span>
+              <span class="visually-hidden">Next</span>
+            </button>
           </div>
-          <button class="carousel-control-prev" type="button" data-bs-target="#projectCarousel" data-bs-slide="prev">
-            <span class="carousel-control-prev-icon"></span>
-            <span class="visually-hidden">Previous</span>
-          </button>
-          <button class="carousel-control-next" type="button" data-bs-target="#projectCarousel" data-bs-slide="next">
-            <span class="carousel-control-next-icon"></span>
-            <span class="visually-hidden">Next</span>
-          </button>
         </div>
       </div>
     </div>
   </div>
-</div>
+
+  <!-- Project Modal with Carousel -->
+  <div class="modal fade" id="projectModal" tabindex="-1" aria-labelledby="projectModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-lg modal-dialog-centered">
+      <div class="modal-content bg-black text-light">
+        <div class="modal-header border-0">
+          <h5 class="modal-title" id="projectModalLabel">Project 1 Gallery</h5>
+          <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <div class="modal-body p-0">
+          <style>
+            /* Carousel images styling */
+            #projectCarousel .carousel-item img {
+              height: 400px;
+              /* fixed height */
+              object-fit: contain;
+              /* maintain aspect ratio */
+              border: 3px solid #FFD700;
+              /* golden border */
+              border-radius: 8px;
+              /* rounded corners */
+              background-color: #f7f7f7;
+              /* dark bg behind image */
+              margin: auto;
+              /* center image */
+            }
+          </style>
+          <div id="projectCarousel" class="carousel slide" data-bs-ride="carousel">
+            <div class="carousel-inner">
+              <div class="carousel-item active">
+                <img src="./image/LOGO/jm.png" class="d-block w-100" alt="Project Image 1" />
+              </div>
+              <div class="carousel-item">
+                <img src="./image/LOGO/solar crest logo.png" class="d-block w-100" alt="Project Image 2" />
+              </div>
+              <div class="carousel-item">
+                <img src="./image/LOGO/jm perfume logo.jpg" class="d-block w-100" alt="Project Image 3" />
+              </div>
+              <div class="carousel-item">
+                <img src="./image/LOGO/RB8.png" class="d-block w-100" alt="Project Image 4" />
+              </div>
+              <div class="carousel-item">
+                <img src="./image/basketball/prenup.jpg" class="d-block w-100" alt="Project Image 5" />
+              </div>
+              <div class="carousel-item">
+                <img src="./image/basketball/prenup2.jpg" class="d-block w-100" alt="Project Image 6" />
+              </div>
+              <div class="carousel-item">
+                <img src="./image/shot.jpg" class="d-block w-100" alt="Project Image 7" />
+              </div>
+              <div class="carousel-item">
+                <img src="./image/basketball/bossj.jpg" class="d-block w-100" alt="Project Image 8" />
+              </div>
+              <div class="carousel-item">
+                <img src="./image/basketball/aldana.jpg" class="d-block w-100" alt="Project Image 9" />
+              </div>
+              <div class="carousel-item">
+                <img src="./image/PRESENTATION BC.jpg" class="d-block w-100" alt="Project Image 10" />
+              </div>
+              <div class="carousel-item">
+                <img src="./image/PRESENTATION SOLAR CREST BC.jpg" class="d-block w-100" alt="Project Image 11" />
+              </div>
+              <div class="carousel-item">
+                <img src="./image/PRESENTATION copy.jpg" class="d-block w-100" alt="Project Image 12" />
+              </div>
+              <div class="carousel-item">
+                <img src="./image/SABON/SABON SIGNAGE.jpg" class="d-block w-100" alt="Project Image 13" />
+              </div>
+              <div class="carousel-item">
+                <img src="./image/SABON/SABON JR.jpg" class="d-block w-100" alt="Project Image 14" />
+              </div>
+              <div class="carousel-item">
+                <img src="./image/SABON/REFILL REVOLUTION.jpg" class="d-block w-100" alt="Project Image 15" />
+              </div>
+              <div class="carousel-item">
+                <img src="./image/SABON/PRICELIST.jpg" class="d-block w-100" alt="Project Image 16" />
+              </div>
+              <div class="carousel-item">
+                <img src="./image/SABON/PARTNER.jpg" class="d-block w-100" alt="Project Image 17" />
+              </div>
+              <div class="carousel-item">
+                <img src="./image/SABON/OPENING.jpg" class="d-block w-100" alt="Project Image 18" />
+              </div>
+              <div class="carousel-item">
+                <img src="./image/SABON/DIY KIT POSTER copy.jpg" class="d-block w-100" alt="Project Image 19" />
+              </div>
+              <div class="carousel-item">
+                <img src="./image/poster son et sa.jpg" class="d-block w-100" alt="Project Image 20" />
+              </div>
+              <div class="carousel-item">
+                <img src="./image/SABON/DW.jpg" class="d-block w-100" alt="Project Image 21" />
+              </div>
+              <div class="carousel-item">
+                <img src="./image/SABON/LB.jpg" class="d-block w-100" alt="Project Image 22" />
+              </div>
+              <div class="carousel-item">
+                <img src="./image/SABON/HANDSOAP.jpg" class="d-block w-100" alt="Project Image 23" />
+              </div>
+              <div class="carousel-item">
+                <img src="./image/SABON/LD copy.jpg" class="d-block w-100" alt="Project Image 24" />
+              </div>
+              <div class="carousel-item">
+                <img src="./image/SABON/FABCON BLACK copy.jpg" class="d-block w-100" alt="Project Image 25" />
+              </div>
+              <div class="carousel-item">
+                <img src="./image/SABON/FABCON.jpg" class="d-block w-100" alt="Project Image 26" />
+              </div>
+              <div class="carousel-item">
+                <img src="./image/SABON/BARETA.jpg" class="d-block w-100" alt="Project Image 27" />
+              </div>
+              <div class="carousel-item">
+                <img src="./image/BAR.jpg" class="d-block w-100" alt="Project Image 28" />
+              </div>
+              <div class="carousel-item">
+                <img src="./image/'91.png" class="d-block w-100" alt="Project Image 29" />
+              </div>
+              <div class="carousel-item">
+                <img src="./image/cover copy.jpg" class="d-block w-100" alt="Project Image 30" />
+              </div>
+            </div>
+            <button class="carousel-control-prev" type="button" data-bs-target="#projectCarousel" data-bs-slide="prev">
+              <span class="carousel-control-prev-icon"></span>
+              <span class="visually-hidden">Previous</span>
+            </button>
+            <button class="carousel-control-next" type="button" data-bs-target="#projectCarousel" data-bs-slide="next">
+              <span class="carousel-control-next-icon"></span>
+              <span class="visually-hidden">Next</span>
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
 
 
   <!-- Certificate Modal with Carousel -->
-<div class="modal fade" id="certificateModal" tabindex="-1" aria-labelledby="certificateModalLabel" aria-hidden="true">
-  <div class="modal-dialog modal-lg modal-dialog-centered">
-    <div class="modal-content bg-black text-light">
-      <div class="modal-header border-0">
-        <h5 class="modal-title" id="certificateModalLabel">Certificate Gallery</h5>
-        <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal" aria-label="Close"></button>
-      </div>
-      <div class="modal-body p-0">
-        <style>
-          /* Uniform image style for certificate carousel */
-          #certificateCarousel .carousel-item img {
-            height: 400px;           /* fixed height */
-            object-fit: contain;     /* keep aspect ratio */
-            border: 3px solid #FFD700; /* golden border */
-            border-radius: 8px;      /* rounded corners */
-            background-color: #c2c2c2;  /* dark background */
-            margin: auto;            /* center horizontally */
-            display: block;
-            max-width: 100%;
-          }
-        </style>
-        <div id="certificateCarousel" class="carousel slide" data-bs-ride="carousel">
-          <div class="carousel-inner">
-            <div class="carousel-item active">
-              <img src="./image/DATABASES-CERTIFICATE_page-0001.jpg" class="d-block mx-auto" alt="Certificate 1" />
+  <div class="modal fade" id="certificateModal" tabindex="-1" aria-labelledby="certificateModalLabel"
+    aria-hidden="true">
+    <div class="modal-dialog modal-lg modal-dialog-centered">
+      <div class="modal-content bg-black text-light">
+        <div class="modal-header border-0">
+          <h5 class="modal-title" id="certificateModalLabel">Certificate Gallery</h5>
+          <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <div class="modal-body p-0">
+          <style>
+            /* Uniform image style for certificate carousel */
+            #certificateCarousel .carousel-item img {
+              height: 400px;
+              /* fixed height */
+              object-fit: contain;
+              /* keep aspect ratio */
+              border: 3px solid #FFD700;
+              /* golden border */
+              border-radius: 8px;
+              /* rounded corners */
+              background-color: #c2c2c2;
+              /* dark background */
+              margin: auto;
+              /* center horizontally */
+              display: block;
+              max-width: 100%;
+            }
+          </style>
+          <div id="certificateCarousel" class="carousel slide" data-bs-ride="carousel">
+            <div class="carousel-inner">
+              <div class="carousel-item active">
+                <img src="./image/DATABASES-CERTIFICATE_page-0001.jpg" class="d-block mx-auto" alt="Certificate 1" />
+              </div>
+              <div class="carousel-item">
+                <img src="./image/Presidential Lister.jpg" class="d-block mx-auto" alt="Certificate 2" />
+              </div>
+              <div class="carousel-item">
+                <img src="./image/quiz bee.jpg" class="d-block mx-auto" alt="Certificate 3" />
+              </div>
+              <div class="carousel-item">
+                <img src="./image/sabon.jpg" class="d-block mx-auto" alt="Certificate 4" />
+              </div>
+              <div class="carousel-item">
+                <img src="./image/cba.jpg" class="d-block mx-auto" alt="Certificate 5" />
+              </div>
             </div>
-            <div class="carousel-item">
-              <img src="./image/Presidential Lister.jpg" class="d-block mx-auto" alt="Certificate 2" />
-            </div>
-            <div class="carousel-item">
-              <img src="./image/quiz bee.jpg" class="d-block mx-auto" alt="Certificate 3" />
-            </div>
-            <div class="carousel-item">
-              <img src="./image/sabon.jpg" class="d-block mx-auto" alt="Certificate 4" />
-            </div>
-            <div class="carousel-item">
-              <img src="./image/cba.jpg" class="d-block mx-auto" alt="Certificate 5" />
-            </div>
+            <button class="carousel-control-prev" type="button" data-bs-target="#certificateCarousel"
+              data-bs-slide="prev">
+              <span class="carousel-control-prev-icon"></span>
+              <span class="visually-hidden">Previous</span>
+            </button>
+            <button class="carousel-control-next" type="button" data-bs-target="#certificateCarousel"
+              data-bs-slide="next">
+              <span class="carousel-control-next-icon"></span>
+              <span class="visually-hidden">Next</span>
+            </button>
           </div>
-          <button class="carousel-control-prev" type="button" data-bs-target="#certificateCarousel" data-bs-slide="prev">
-            <span class="carousel-control-prev-icon"></span>
-            <span class="visually-hidden">Previous</span>
-          </button>
-          <button class="carousel-control-next" type="button" data-bs-target="#certificateCarousel" data-bs-slide="next">
-            <span class="carousel-control-next-icon"></span>
-            <span class="visually-hidden">Next</span>
-          </button>
         </div>
       </div>
     </div>
   </div>
-</div>
 
 
 
