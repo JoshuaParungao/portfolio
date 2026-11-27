@@ -13,8 +13,8 @@ export const socialLinks = [
   },
   {
     name: 'Email',
-    url: 'mailto:jmphotography1830@gmail.com',
+    url: 'mailto:davensitsolutions@gmail.com',
     iconClass: 'bi bi-envelope-fill',
-    label: 'jmphotography1830@gmail.com'
+    label: 'davensitsolutions@gmail.com'
   }
 ];
