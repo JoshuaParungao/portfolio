@@ -747,7 +747,7 @@
             </div>
             <h5 class="card-title text-warning fw-bold mb-2">Arunafeltz — Enterprise Multi-Branch Cloud POS, Inventory & Service ERP</h5>
             <p class="card-text text-light small mb-3">
-              Full-scale, end-to-end production ERP & Cloud POS engineered for retail computer hardware stores and service hubs across physical branches. Covers complete business operations: serialized barcode inventory tracking, inter-branch stock logistics, PO receiving, custom PC building, technical repair job orders, AR installment financing, quotation conversions, shift cash drawer balancing, and 6-layer financial analytics. Operating under commercial turnover agreement with a secured, locked login portal for enterprise privacy and data integrity.
+              Full-scale, end-to-end production ERP & Cloud POS engineered for retail computer hardware stores and service hubs across physical branches. Features system-wide <strong>OmniSearch (Ctrl+K)</strong>, dynamic <strong>line-item Markup %</strong> and <strong>editable computation formulas</strong> for pricing and commissions, serialized barcode tracking, inter-branch logistics, PO receiving, custom PC building, repair job orders, AR installment financing, quotation conversions, shift cash drawer balancing, and 6-layer financial analytics. Operating under commercial turnover agreement with a secured, locked login portal.
             </p>
             <div class="d-flex flex-wrap gap-1 mb-3">
               <span class="badge bg-black border border-secondary text-secondary">React 18</span>
@@ -959,6 +959,12 @@
                   <div class="text-secondary"><strong class="text-light">Security:</strong> 5-Tier RBAC, Multi-Branch Isolation, JWT & Bcrypt</div>
                 </div>
                 <div class="col-sm-6">
+                  <div class="text-secondary"><strong class="text-light">OmniSearch:</strong> Command Palette (Ctrl+K) with system-wide fuzzy search</div>
+                </div>
+                <div class="col-sm-6">
+                  <div class="text-secondary"><strong class="text-light">Formulas:</strong> Settings-Driven Dynamic Markup % & Price Calculations</div>
+                </div>
+                <div class="col-sm-6">
                   <div class="text-secondary"><strong class="text-light">Printing:</strong> Direct ESC/POS Thermal 80mm/58mm, Barcode Scanner</div>
                 </div>
                 <div class="col-sm-6">
@@ -1094,11 +1100,16 @@
             <div class="p-3 rounded bg-dark border border-secondary h-100">
               <div class="d-flex align-items-center gap-2 mb-2">
                 <span class="badge bg-warning text-dark fw-bold">01</span>
-                <h6 class="text-warning fw-bold mb-0">Point of Sale (POS) Cashiering</h6>
+                <h6 class="text-warning fw-bold mb-0">POS Cashiering & OmniSearch (Ctrl+K)</h6>
               </div>
-              <p class="small text-white-50 mb-0">
-                Fast counter checkout supporting split payments (Cash, GCash, Bank Transfer, Cheque, AR Credit), 5-tier pricing (Cash Discount to Wholesale), customer lookup, thermal receipts, and Omnisearch (Ctrl+K).
+              <p class="small text-white-50 mb-2">
+                High-speed cashier terminal featuring the system-wide <strong>OmniSearch Command Palette (Ctrl+K)</strong> for instant fuzzy lookup across products, barcodes, serial numbers, and customers.
               </p>
+              <ul class="list-unstyled small text-secondary mb-0">
+                <li>• <strong class="text-light">Dynamic Markup %:</strong> Per-item custom markup percentage input with live margin recalculation</li>
+                <li>• <strong class="text-light">Editable Formulas:</strong> Settings-driven dynamic computation formulas for pricing, tier discounts, and fee structures</li>
+                <li>• <strong class="text-light">Split Payments:</strong> Cash, GCash, bank transfer, cheque, and AR credit in a single transaction</li>
+              </ul>
             </div>
           </div>
 
@@ -1159,11 +1170,16 @@
             <div class="p-3 rounded bg-dark border border-secondary h-100">
               <div class="d-flex align-items-center gap-2 mb-2">
                 <span class="badge bg-warning text-dark fw-bold">06</span>
-                <h6 class="text-warning fw-bold mb-0">Quotation Engine & Conversion</h6>
+                <h6 class="text-warning fw-bold mb-0">Quotation Engine & Formula Pricing</h6>
               </div>
-              <p class="small text-white-50 mb-0">
-                Formal customer quotation builder with client-facing PDF generation (masks internal wholesale tiers), and one-click seamless conversion directly into POS cart with auto-cancellation sync.
+              <p class="small text-white-50 mb-2">
+                Formal commercial quotation builder with <strong>per-item editable Markup %</strong> and configurable formula calculations. Masks internal tier labels on official customer-facing PDFs.
               </p>
+              <ul class="list-unstyled small text-secondary mb-0">
+                <li>• <strong class="text-light">1-Click POS Conversion:</strong> Idempotent transfer into active POS cart with stock validation</li>
+                <li>• <strong class="text-light">Formula Engine:</strong> Dynamically calculates gross margins, markup cuts, and taxes</li>
+                <li>• <strong class="text-light">Full Sync:</strong> Automated status tracking and void synchronization across transactions</li>
+              </ul>
             </div>
           </div>
 
