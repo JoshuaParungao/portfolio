@@ -784,7 +784,7 @@
             <h5 class="card-title text-warning fw-bold mb-2">Arunafeltz — Enterprise Multi-Branch Cloud POS, Inventory &
               Service ERP</h5>
             <p class="card-text text-light small mb-3">
-              Full-scale, end-to-end production ERP & Cloud POS engineered for retail computer hardware stores and service hubs across physical branches. Features system-wide <strong>OmniSearch (Ctrl+K)</strong>, dynamic <strong>line-item Markup %</strong> and <strong>editable computation formulas</strong> for pricing and commissions, serialized barcode tracking, inter-branch logistics, PO receiving, custom PC building, repair job orders, AR installment financing, quotation conversions, shift cash drawer balancing, and 6-layer financial analytics. Operating under commercial turnover agreement with a secured, locked login portal.
+              Full-scale, end-to-end production ERP & Cloud POS engineered for retail computer hardware stores and service hubs across physical branches. Features system-wide <strong>OmniSearch (Ctrl+K)</strong>, dynamic <strong>line-item Markup %</strong>, <strong>editable computation formulas</strong> (pricing, commissions & AR installments), comprehensive <strong>File Maintenance</strong> master data, automated <strong>Database Backups</strong>, serialized barcode tracking, inter-branch logistics, PO receiving, custom PC building, repair job orders, quotation conversions, shift cash drawer balancing, and 6-layer financial analytics. Operating under commercial turnover agreement with a secured, locked login portal.
             </p>
             <div class="d-flex flex-wrap gap-1 mb-3">
               <span class="badge bg-black border border-secondary text-secondary">React 18</span>
@@ -1034,7 +1034,13 @@
                     <div class="text-secondary"><strong class="text-light">OmniSearch:</strong> Command Palette (Ctrl+K) System-Wide Fuzzy Search</div>
                   </div>
                   <div class="col-sm-6">
-                    <div class="text-secondary"><strong class="text-light">Formulas:</strong> Settings-Driven Dynamic Markup % & Price Calculations</div>
+                    <div class="text-secondary"><strong class="text-light">Formulas:</strong> Settings-Driven AR Installment, Markup % & Commissions</div>
+                  </div>
+                  <div class="col-sm-6">
+                    <div class="text-secondary"><strong class="text-light">Master Data:</strong> Full File Maintenance (Items, Brands, Suppliers, Customers)</div>
+                  </div>
+                  <div class="col-sm-6">
+                    <div class="text-secondary"><strong class="text-light">Backups:</strong> Automated & On-Demand Database Backups & Snapshots</div>
                   </div>
                   <div class="col-sm-6">
                     <div class="text-secondary"><strong class="text-light">Printing:</strong> Direct ESC/POS Thermal 80mm/58mm, Barcode Scanner</div>
@@ -1084,17 +1090,14 @@
               <div class="p-3 rounded bg-dark border border-warning h-100">
                 <div class="d-flex align-items-center justify-content-between mb-2">
                   <h6 class="text-warning fw-bold mb-0">2. Accounts Receivable (AR) & Credit Ledger</h6>
-                  <span class="badge bg-black border border-secondary text-secondary small">Financing & Credit</span>
+                  <span class="badge bg-black border border-secondary text-secondary small">Installment Formulas</span>
                 </div>
                 <p class="small text-white-50 mb-2">
-                  Customer-level credit lines, installment schedules (Month 3 to 12), and historical amortization
-                  ledgers for in-house credit and 3rd-party financing (Home Credit, Credit Card).
+                  Customer-level credit lines and installment schedules (Month 3 to 12) powered by <strong>settings-driven computation formulas</strong> for interest rates, financing fees, and amortization.
                 </p>
                 <ul class="list-unstyled small text-secondary mb-0">
-                  <li>• <strong class="text-light">Remittance & Float:</strong> Shop Net, CC/Tax Float, and settled
-                    float reconciliation</li>
-                  <li>• <strong class="text-light">SOA Engine:</strong> Live Statement of Account generation & Bad Debt
-                    declaration</li>
+                  <li>• <strong class="text-light">Formula Calculations:</strong> Automated monthly amortization schedules, downpayments, and float absorption fees</li>
+                  <li>• <strong class="text-light">SOA Engine:</strong> Live Statement of Account (SOA) generation, collection posting, and float reconciliation</li>
                 </ul>
               </div>
             </div>
@@ -1183,7 +1186,7 @@
           <!-- Full Core Engineering Modules -->
           <div class="d-flex align-items-center justify-content-between mb-3 flex-wrap gap-2">
             <h5 class="text-warning fw-bold mb-0">Full System Modules & Operational Capabilities</h5>
-            <span class="badge bg-dark border border-warning text-warning small">12 Integrated Business Domains</span>
+            <span class="badge bg-dark border border-warning text-warning small">15 Integrated Business & Infrastructure Domains</span>
           </div>
 
         <div class="row g-3 mb-4">
@@ -1298,12 +1301,15 @@
               <div class="p-3 rounded bg-dark border border-secondary h-100">
                 <div class="d-flex align-items-center gap-2 mb-2">
                   <span class="badge bg-warning text-dark fw-bold">08</span>
-                  <h6 class="text-warning fw-bold mb-0">Accounts Receivable (AR) & Credit</h6>
+                  <h6 class="text-warning fw-bold mb-0">AR Financing & Installment Formulas</h6>
                 </div>
-                <p class="small text-white-50 mb-0">
-                  Handles in-house customer credit and 3rd-party installment financing (Home Credit, Credit Card), term
-                  schedules, Statement of Account (SOA) printing, collection posting, and float absorption.
+                <p class="small text-white-50 mb-2">
+                  In-house customer credit and 3rd-party installment financing (Home Credit, Credit Card) powered by <strong>settings-driven computation formulas</strong> for interest rates, term schedules, downpayments, and monthly amortization.
                 </p>
+                <ul class="list-unstyled small text-secondary mb-0">
+                  <li>• <strong class="text-light">Amortization Formulas:</strong> Configurable monthly terms, financing fees, and float absorption calculations</li>
+                  <li>• <strong class="text-light">Collections & SOA:</strong> Statement of Account (SOA) printing, collection posting, and bad debt declaration</li>
+                </ul>
               </div>
             </div>
 
@@ -1360,6 +1366,57 @@
                   6-Layer Executive business intelligence: real-time Profit & Loss (P&L), gross margin calculations, AR
                   aging analysis, product profitability matrix, and one-click Excel (.xlsx) export.
                 </p>
+              </div>
+            </div>
+
+            <!-- Module 13 -->
+            <div class="col-md-6 col-lg-4">
+              <div class="p-3 rounded bg-dark border border-secondary h-100">
+                <div class="d-flex align-items-center gap-2 mb-2">
+                  <span class="badge bg-warning text-dark fw-bold">13</span>
+                  <h6 class="text-warning fw-bold mb-0">Master Data & File Maintenance</h6>
+                </div>
+                <p class="small text-white-50 mb-2">
+                  Centralized masterfile maintenance for complete enterprise catalog control: categories, brands, product models, serialized SKUs, and units of measure.
+                </p>
+                <ul class="list-unstyled small text-secondary mb-0">
+                  <li>• <strong class="text-light">Entity Profiles:</strong> Suppliers & payment terms, customer credit limits, and branch locations</li>
+                  <li>• <strong class="text-light">RBAC Roles:</strong> Granular staff permissions, encoder audit tags, and branch assignments</li>
+                </ul>
+              </div>
+            </div>
+
+            <!-- Module 14 -->
+            <div class="col-md-6 col-lg-4">
+              <div class="p-3 rounded bg-dark border border-secondary h-100">
+                <div class="d-flex align-items-center gap-2 mb-2">
+                  <span class="badge bg-warning text-dark fw-bold">14</span>
+                  <h6 class="text-warning fw-bold mb-0">Automated Database Backups & Recovery</h6>
+                </div>
+                <p class="small text-white-50 mb-2">
+                  Mission-critical disaster recovery infrastructure safeguarding financial, inventory, and transaction records against data loss or server outages.
+                </p>
+                <ul class="list-unstyled small text-secondary mb-0">
+                  <li>• <strong class="text-light">Automated Routines:</strong> Scheduled periodic PostgreSQL database dumps (<code>pg_dump</code>) & state snapshots</li>
+                  <li>• <strong class="text-light">Point-in-Time Recovery:</strong> One-click manual backup download and auditable rollback capability</li>
+                </ul>
+              </div>
+            </div>
+
+            <!-- Module 15 -->
+            <div class="col-md-6 col-lg-4">
+              <div class="p-3 rounded bg-dark border border-secondary h-100">
+                <div class="d-flex align-items-center gap-2 mb-2">
+                  <span class="badge bg-warning text-dark fw-bold">15</span>
+                  <h6 class="text-warning fw-bold mb-0">Settings & Formula Configuration Engine</h6>
+                </div>
+                <p class="small text-white-50 mb-2">
+                  Enterprise control panel eliminating hardcoded logic: owners dynamically customize formulas for markups, tiered prices, installment rates, and staff commissions.
+                </p>
+                <ul class="list-unstyled small text-secondary mb-0">
+                  <li>• <strong class="text-light">Dynamic Rates:</strong> Configurable percentage matrices for sales staff, repair technicians & PC builders</li>
+                  <li>• <strong class="text-light">Branch Settings:</strong> Receipt headers, VAT/tax parameters, and cash drawer variance thresholds</li>
+                </ul>
               </div>
             </div>
           </div>
