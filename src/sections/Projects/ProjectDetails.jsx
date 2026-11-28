@@ -1,12 +1,14 @@
 import React from 'react';
 import { ProjectGallery } from './ProjectGallery';
+import posynctifyLogo from '../../assets/images/projects/posynctify/posynctify-logo.jpg';
+import posynctifyIcon from '../../assets/images/projects/posynctify/posynctify-icon.jpg';
 
 export function ProjectDetails({ activeModal, onClose }) {
   if (!activeModal) return null;
 
   const posynctifyImages = [
-    { src: '/src/assets/images/projects/posynctify/posynctify-logo.jpg', alt: 'POSynctify Platform Logo', caption: 'POSynctify Universal Cloud Point of Sale & Management Platform' },
-    { src: '/src/assets/images/projects/posynctify/posynctify-icon.jpg', alt: 'POSynctify Sync Engine & Alerts', caption: 'Offline-First Synchronized Architecture & Real-Time Business Telemetry' },
+    { src: posynctifyLogo, alt: 'POSynctify Platform Logo', caption: 'POSynctify Universal Cloud Point of Sale & Management Platform' },
+    { src: posynctifyIcon, alt: 'POSynctify Sync Engine & Alerts', caption: 'Offline-First Synchronized Architecture & Real-Time Business Telemetry' },
     { src: '/src/assets/images/projects/arunafeltz/receipt.png', alt: 'Automated Warranty Slip & e-Receipt', caption: 'Automated SMTP Warranty Slips, QR Ph Receipts & Customer Statements' }
   ];
 
@@ -107,7 +109,7 @@ export function ProjectDetails({ activeModal, onClose }) {
                   >
                     <div className="p-4 d-flex flex-column flex-sm-row align-items-center justify-content-center gap-4">
                       <img
-                        src="/src/assets/images/projects/posynctify/posynctify-logo.jpg"
+                        src={posynctifyLogo}
                         className="img-fluid rounded"
                         style={{ maxHeight: '180px', objectFit: 'contain', filter: 'drop-shadow(0 0 20px rgba(244, 201, 0, 0.35))' }}
                         alt="POSynctify Universal Cloud POS & Business Management Platform"

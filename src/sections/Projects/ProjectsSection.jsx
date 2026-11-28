@@ -2,6 +2,7 @@ import React, { useState } from 'react';
 import { ProjectCard } from './ProjectCard';
 import { ProjectDetails } from './ProjectDetails';
 import { portfolioConfig } from '../../config/portfolioConfig';
+import posynctifyLogo from '../../assets/images/projects/posynctify/posynctify-logo.jpg';
 import './projects.css';
 
 export function ProjectsSection() {
@@ -22,7 +23,7 @@ export function ProjectsSection() {
         ]}
         title={flagships.posynctify.title}
         description={flagships.posynctify.description}
-        imageSrc="/src/assets/images/projects/posynctify/posynctify-logo.jpg"
+        imageSrc={posynctifyLogo}
         imageAlt="POSynctify Cloud POS & Universal Business Management Platform"
         tags={flagships.posynctify.stack}
         actionBtnText="Explore Full Specs & Architecture"
