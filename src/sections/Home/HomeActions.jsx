@@ -48,7 +48,15 @@ export function HomeActions() {
           <div className="text-warning fw-bold">★ FLAGSHIP 1: Arunafeltz Enterprise Cloud POS &amp; ERP</div>
           <div className="text-white small mb-1">Production multi-branch system for computer hardware retailers &amp; service hubs.</div>
           <div className="text-white-50 small mb-2">• Serialized Barcodes • 5-Tier RBAC • Split Payments • Quotation Engine</div>
-          <div>
+          <div className="d-flex gap-2 flex-wrap">
+            <a
+              href="http://i41hiagpd95rj79rh3habdao.187.77.131.56.sslip.io/?fbclid=IwY2xjawVz4clleHRuA2FlbQIxMABwZG9mBWJyaWQRMU1maDVQeGhWUHM0THUxRVpzcnRjBmFwcF9pZBAyMjIwMzkxNzg4MjAwODkyAAEfGVMCciOB3Rv_8_DvLZvzVHWoOlqPAR48qTPXHbv9HH-jdL0cE06pzmwydiU_aem_XfZ-dxvXPPA5GOyx2bE6rA#flexibility"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="btn btn-sm btn-primary py-0 px-2 fw-bold text-white"
+            >
+              Live Demo ↗
+            </a>
             <a href="#projects" className="btn btn-sm btn-outline-warning py-0 px-2">Jump to Projects Section ↓</a>
           </div>
         </div>

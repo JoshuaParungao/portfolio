@@ -12,7 +12,7 @@ export function ProjectsSection() {
     <section id="projects" className="projects-section">
       <h2 className="mb-4">Projects</h2>
 
-      {/* Arunafeltz Featured Card */}
+      {/* Arunafeltz / POSynctify Featured Card */}
       <ProjectCard
         badge="⭐ FEATURED SYSTEM"
         secondaryBadges={[
@@ -23,10 +23,12 @@ export function ProjectsSection() {
         title={flagships.arunafeltz.title}
         description={flagships.arunafeltz.description}
         imageSrc="/src/assets/images/projects/arunafeltz/banner.jpg"
-        imageAlt="Arunafeltz Cloud POS & ERP"
+        imageAlt="POSynctify Cloud POS & Business Management System"
         tags={flagships.arunafeltz.stack}
         actionBtnText="Explore Full Specs & Architecture"
         onActionClick={() => setActiveModal('arunafeltz')}
+        liveDemoLink="http://i41hiagpd95rj79rh3habdao.187.77.131.56.sslip.io/?fbclid=IwY2xjawVz4clleHRuA2FlbQIxMABwZG9mBWJyaWQRMU1maDVQeGhWUHM0THUxRVpzcnRjBmFwcF9pZBAyMjIwMzkxNzg4MjAwODkyAAEfGVMCciOB3Rv_8_DvLZvzVHWoOlqPAR48qTPXHbv9HH-jdL0cE06pzmwydiU_aem_XfZ-dxvXPPA5GOyx2bE6rA#flexibility"
+        liveDemoText="Live Demo ↗"
         externalLink="https://arunafeltzcomputerpos.cloud/"
         externalLinkText="Production Portal ↗"
         variant="warning"

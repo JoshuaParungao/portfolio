@@ -19,10 +19,10 @@ export const portfolioConfig = {
   },
   flagships: {
     arunafeltz: {
-      title: 'Arunafeltz — Enterprise Multi-Branch Cloud POS, Inventory & Service ERP',
-      subtitle: 'Production Client ERP • Multi-Branch Cloud POS',
-      stack: ['React 18', 'Vite', 'Tailwind CSS', 'Node.js', 'Express', 'Prisma ORM', 'PostgreSQL'],
-      description: 'Full-stack production ERP engineered for retail computer hardware stores and service centers. Features strict serialized inventory tracking from PO receiving to POS sale, 5-tier role-based access control, real-time cashiering, technician job order management, automated commission calculators, and quotation conversions.'
+      title: 'POSynctify (Arunafeltz) — Multi-Branch Cloud POS, Serial Lifecycle & Business Management System',
+      subtitle: 'Production Client System • Multi-Branch Cloud POS',
+      stack: ['React 19', 'Vite', 'Tailwind CSS', 'Node.js', 'Express', 'Prisma ORM', 'PostgreSQL', 'IndexedDB', 'PayMongo QR Ph', 'Docker'],
+      description: 'Full-stack production Point of Sale and Business Management System engineered for computer hardware retailers, wholesalers, and diagnostic service centers. Features an offline-first IndexedDB engine with automatic PostgreSQL background synchronization, PayMongo QR Ph integration, automated warranty e-receipt dispatch, double-entry customer AR ledger with configurable financing interest, and granular Six-Layer financial reports.'
     },
     medc: {
       title: 'MedC — Enterprise LAN-Based Drugstore POS, Expiry Tracking & Inventory ERP',

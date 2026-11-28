@@ -12,6 +12,8 @@ export function ProjectCard({
   onActionClick,
   externalLink,
   externalLinkText,
+  liveDemoLink,
+  liveDemoText,
   secondaryActionBtnText,
   variant = 'warning'
 }) {
@@ -65,6 +67,17 @@ export function ProjectCard({
                 <button type="button" className={btnClass} onClick={onActionClick}>
                   {actionBtnText}
                 </button>
+              )}
+              {liveDemoLink && (
+                <a
+                  href={liveDemoLink}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="btn btn-primary fw-bold text-white shadow-sm d-inline-flex align-items-center gap-1"
+                >
+                  <i className="bi bi-play-circle-fill"></i>
+                  <span>{liveDemoText || 'Live Demo ↗'}</span>
+                </a>
               )}
               {externalLink && (
                 <a

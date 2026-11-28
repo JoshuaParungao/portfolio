@@ -23,7 +23,7 @@ export function ProjectDetails({ activeModal, onClose }) {
             <div>
               <span className="badge bg-warning text-dark fw-bold mb-1">ENTERPRISE SYSTEM ARCHITECTURE</span>
               <h4 className="modal-title text-warning fw-bold mb-0">
-                {activeModal === 'arunafeltz' && 'Arunafeltz — Enterprise Multi-Branch Cloud POS, Inventory & Service ERP'}
+                {activeModal === 'arunafeltz' && 'POSynctify (Arunafeltz) — Multi-Branch Cloud POS, Serial Lifecycle & Business Management'}
                 {activeModal === 'medc' && 'MedC — Enterprise LAN-Based Drugstore POS, Expiry Tracking & Inventory ERP'}
                 {activeModal === 'systems' && 'Software & System Development (Capstone & Projects)'}
                 {activeModal === 'design' && 'Comprehensive Profile in Editing, Design, and Photography'}
@@ -35,25 +35,56 @@ export function ProjectDetails({ activeModal, onClose }) {
           <div className="modal-body p-4">
             {activeModal === 'arunafeltz' && (
               <div>
+                {/* Live Interactive Production Demo Banner */}
+                <div className="p-3 mb-4 rounded bg-dark border border-warning shadow-sm">
+                  <div className="d-flex flex-column flex-md-row align-items-md-center justify-content-between gap-3">
+                    <div>
+                      <div className="d-flex align-items-center gap-2 mb-1 flex-wrap">
+                        <span className="badge bg-warning text-dark fw-bold">
+                          <i className="bi bi-broadcast me-1"></i>LIVE INTERACTIVE PRODUCTION DEMO
+                        </span>
+                        <span className="badge bg-success text-white fw-bold">● ONLINE / READY</span>
+                        <span className="badge bg-dark border border-secondary text-secondary">Evaluator Preset Accounts Available</span>
+                      </div>
+                      <h5 className="text-warning fw-bold mb-1">POSynctify Live Cloud POS Demo</h5>
+                      <p className="small text-white-50 mb-0">
+                        Experience the live system showcase featuring offline-first IndexedDB resilience, PayMongo QR Ph payment checkout, customer AR credit ledger, customizable financing interest rates, and granular six-layer executive financial analytics.
+                      </p>
+                    </div>
+                    <div className="flex-shrink-0">
+                      <a
+                        href="http://i41hiagpd95rj79rh3habdao.187.77.131.56.sslip.io/?fbclid=IwY2xjawVz4clleHRuA2FlbQIxMABwZG9mBWJyaWQRMU1maDVQeGhWUHM0THUxRVpzcnRjBmFwcF9pZBAyMjIwMzkxNzg4MjAwODkyAAEfGVMCciOB3Rv_8_DvLZvzVHWoOlqPAR48qTPXHbv9HH-jdL0cE06pzmwydiU_aem_XfZ-dxvXPPA5GOyx2bE6rA#flexibility"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className="btn btn-warning fw-bold text-dark d-inline-flex align-items-center gap-2 px-3 py-2 text-nowrap shadow"
+                      >
+                        <i className="bi bi-play-circle-fill"></i>
+                        <span>Launch Live Demo ↗</span>
+                      </a>
+                    </div>
+                  </div>
+                </div>
+
                 <ProjectGallery id="arunafeltzCarousel" images={arunafeltzImages} />
                 <div className="row g-3 mb-4">
                   <div className="col-md-8">
                     <h5 className="text-warning fw-bold">Project Summary</h5>
                     <p className="text-white-50 small mb-2">
-                      <strong>Arunafeltz</strong> is a custom, production-grade cloud Enterprise Resource Planning (ERP) and multi-branch Point of Sale (POS) system engineered for computer hardware retailers, custom PC builders, and tech service repair shops.
+                      <strong>POSynctify (formerly Arunafeltz)</strong> is a production-grade Cloud Point of Sale (POS) and Business Management System engineered for computer hardware retailers, custom PC builders, and tech service repair shops.
                     </p>
                     <p className="text-white-50 small mb-0">
-                      The platform manages the complete retail lifecycle: supplier purchase receiving, serialized barcode allocations, real-time counter sales, multi-tier pricing formulas, repair job orders, and shift auditing.
+                      The platform manages the complete retail and service lifecycle: supplier purchase receiving, serialized barcode allocations, offline-first IndexedDB counter sales, dynamic wholesale markups, customer AR ledger financing with customizable interest %, technician job orders, and shift auditing.
                     </p>
                   </div>
                   <div className="col-md-4">
                     <div className="p-3 rounded bg-dark border border-secondary">
                       <h6 className="text-warning fw-bold mb-2">Tech Stack</h6>
                       <ul className="list-unstyled small mb-0 text-secondary">
-                        <li><strong className="text-light">Frontend:</strong> React 18, Vite, Tailwind CSS</li>
+                        <li><strong className="text-light">Frontend:</strong> React 19, Vite, Tailwind CSS</li>
                         <li><strong className="text-light">Backend:</strong> Node.js, Express.js, REST API</li>
                         <li><strong className="text-light">Database:</strong> PostgreSQL, Prisma ORM</li>
-                        <li><strong className="text-light">Security:</strong> 5-Tier RBAC, Atomic Transactions</li>
+                        <li><strong className="text-light">Integrations:</strong> IndexedDB, PayMongo, Gmail SMTP</li>
+                        <li><strong className="text-light">DevOps:</strong> Docker, Coolify Linux VPS</li>
                       </ul>
                     </div>
                   </div>
@@ -513,7 +544,18 @@ export function ProjectDetails({ activeModal, onClose }) {
             )}
           </div>
 
-          <div className="modal-footer border-top border-secondary">
+          <div className="modal-footer border-top border-secondary d-flex justify-content-between align-items-center">
+            {activeModal === 'arunafeltz' ? (
+              <a
+                href="http://i41hiagpd95rj79rh3habdao.187.77.131.56.sslip.io/?fbclid=IwY2xjawVz4clleHRuA2FlbQIxMABwZG9mBWJyaWQRMU1maDVQeGhWUHM0THUxRVpzcnRjBmFwcF9pZBAyMjIwMzkxNzg4MjAwODkyAAEfGVMCciOB3Rv_8_DvLZvzVHWoOlqPAR48qTPXHbv9HH-jdL0cE06pzmwydiU_aem_XfZ-dxvXPPA5GOyx2bE6rA#flexibility"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="btn btn-warning fw-bold text-dark d-inline-flex align-items-center gap-1.5"
+              >
+                <i className="bi bi-play-circle-fill"></i>
+                <span>Launch Live Demo ↗</span>
+              </a>
+            ) : <div />}
             <button type="button" className="btn btn-secondary" onClick={onClose}>
               Close
             </button>
