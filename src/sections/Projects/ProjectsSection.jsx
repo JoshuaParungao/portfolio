@@ -12,9 +12,29 @@ export function ProjectsSection() {
     <section id="projects" className="projects-section">
       <h2 className="mb-4">Projects</h2>
 
-      {/* Arunafeltz / POSynctify Featured Card */}
+      {/* Flagship 1: POSynctify Universal Cloud POS & Business Management Platform */}
       <ProjectCard
-        badge="⭐ FEATURED SYSTEM"
+        badge="⭐ FEATURED CAPSTONE SYSTEM"
+        secondaryBadges={[
+          { text: 'ACADEMIC CAPSTONE & PRODUCTION', class: 'bg-primary text-white fw-bold' },
+          { text: '● LIVE CLOUD DEMO', class: 'bg-success text-white fw-bold' },
+          { text: 'Cloud & Offline-First POS', class: 'bg-secondary' }
+        ]}
+        title={flagships.posynctify.title}
+        description={flagships.posynctify.description}
+        imageSrc="/src/assets/images/projects/posynctify/posynctify-logo.jpg"
+        imageAlt="POSynctify Cloud POS & Universal Business Management Platform"
+        tags={flagships.posynctify.stack}
+        actionBtnText="Explore Full Specs & Architecture"
+        onActionClick={() => setActiveModal('posynctify')}
+        liveDemoLink="http://i41hiagpd95rj79rh3habdao.187.77.131.56.sslip.io/?fbclid=IwY2xjawVz4clleHRuA2FlbQIxMABwZG9mBWJyaWQRMU1maDVQeGhWUHM0THUxRVpzcnRjBmFwcF9pZBAyMjIwMzkxNzg4MjAwODkyAAEfGVMCciOB3Rv_8_DvLZvzVHWoOlqPAR48qTPXHbv9HH-jdL0cE06pzmwydiU_aem_XfZ-dxvXPPA5GOyx2bE6rA#flexibility"
+        liveDemoText="Live Demo ↗"
+        variant="warning"
+      />
+
+      {/* Flagship 2: Arunafeltz Multi-Branch Client System */}
+      <ProjectCard
+        badge="⭐ FEATURED CLIENT SYSTEM"
         secondaryBadges={[
           { text: 'PROPRIETARY CLIENT SYSTEM', class: 'bg-danger text-white fw-bold' },
           { text: '● ACTIVE PRODUCTION', class: 'bg-success text-white fw-bold' },
@@ -23,12 +43,10 @@ export function ProjectsSection() {
         title={flagships.arunafeltz.title}
         description={flagships.arunafeltz.description}
         imageSrc="/src/assets/images/projects/arunafeltz/banner.jpg"
-        imageAlt="POSynctify Cloud POS & Business Management System"
+        imageAlt="Arunafeltz Cloud POS & ERP"
         tags={flagships.arunafeltz.stack}
         actionBtnText="Explore Full Specs & Architecture"
         onActionClick={() => setActiveModal('arunafeltz')}
-        liveDemoLink="http://i41hiagpd95rj79rh3habdao.187.77.131.56.sslip.io/?fbclid=IwY2xjawVz4clleHRuA2FlbQIxMABwZG9mBWJyaWQRMU1maDVQeGhWUHM0THUxRVpzcnRjBmFwcF9pZBAyMjIwMzkxNzg4MjAwODkyAAEfGVMCciOB3Rv_8_DvLZvzVHWoOlqPAR48qTPXHbv9HH-jdL0cE06pzmwydiU_aem_XfZ-dxvXPPA5GOyx2bE6rA#flexibility"
-        liveDemoText="Live Demo ↗"
         externalLink="https://arunafeltzcomputerpos.cloud/"
         externalLinkText="Production Portal ↗"
         variant="warning"

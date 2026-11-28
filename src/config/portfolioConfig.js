@@ -18,11 +18,17 @@ export const portfolioConfig = {
     }
   },
   flagships: {
+    posynctify: {
+      title: 'POSynctify — Cloud Point of Sale & Universal Business Management Platform',
+      subtitle: 'Universal Business Architecture • Cloud & Offline-First POS',
+      stack: ['React 19', 'Vite', 'Tailwind CSS', 'Node.js', 'Express', 'Prisma ORM', 'PostgreSQL', 'IndexedDB', 'PayMongo QR Ph', 'Docker', 'Coolify'],
+      description: 'Next-generation Point of Sale and Business Management System engineered for modern retail, wholesale, and technical service repair enterprises. Features an offline-first IndexedDB auto-sync engine, PayMongo national QR Ph digital payments, automated warranty e-receipt dispatch via SMTP, double-entry customer AR ledger with configurable financing interest rates (3–24 mos), granular Six-Layer financial profitability reports, and strict employee role governance.'
+    },
     arunafeltz: {
-      title: 'POSynctify (Arunafeltz) — Multi-Branch Cloud POS, Serial Lifecycle & Business Management System',
+      title: 'Arunafeltz — Enterprise Multi-Branch Cloud POS, Inventory & Service ERP',
       subtitle: 'Production Client System • Multi-Branch Cloud POS',
-      stack: ['React 19', 'Vite', 'Tailwind CSS', 'Node.js', 'Express', 'Prisma ORM', 'PostgreSQL', 'IndexedDB', 'PayMongo QR Ph', 'Docker'],
-      description: 'Full-stack production Point of Sale and Business Management System engineered for computer hardware retailers, wholesalers, and diagnostic service centers. Features an offline-first IndexedDB engine with automatic PostgreSQL background synchronization, PayMongo QR Ph integration, automated warranty e-receipt dispatch, double-entry customer AR ledger with configurable financing interest, and granular Six-Layer financial reports.'
+      stack: ['React 18', 'Vite', 'Tailwind CSS', 'Node.js', 'Express', 'Prisma ORM', 'PostgreSQL'],
+      description: 'Full-stack production ERP engineered for Arunafeltz Computer Parts & Accessories across San Fernando and Mabalacat branches. Features strict serialized inventory tracking from PO receiving to POS sale, 5-tier role-based access control, real-time cashiering, technician job order management, automated commission calculators, and quotation conversions.'
     },
     medc: {
       title: 'MedC — Enterprise LAN-Based Drugstore POS, Expiry Tracking & Inventory ERP',

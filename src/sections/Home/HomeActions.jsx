@@ -45,9 +45,9 @@ export function HomeActions() {
     projects: () => (
       <div className="my-1">
         <div className="p-2 border border-warning rounded my-1 bg-black">
-          <div className="text-warning fw-bold">★ FLAGSHIP 1: Arunafeltz Enterprise Cloud POS &amp; ERP</div>
-          <div className="text-white small mb-1">Production multi-branch system for computer hardware retailers &amp; service hubs.</div>
-          <div className="text-white-50 small mb-2">• Serialized Barcodes • 5-Tier RBAC • Split Payments • Quotation Engine</div>
+          <div className="text-warning fw-bold">★ FLAGSHIP 1: POSynctify Universal Cloud POS &amp; Business Management</div>
+          <div className="text-white small mb-1">Universal Business Architecture for retail, wholesale &amp; technical diagnostic services.</div>
+          <div className="text-white-50 small mb-2">• Offline-First IndexedDB • PayMongo QR Ph • Customer AR Ledger • 6-Layer Profit Matrix</div>
           <div className="d-flex gap-2 flex-wrap">
             <a
               href="http://i41hiagpd95rj79rh3habdao.187.77.131.56.sslip.io/?fbclid=IwY2xjawVz4clleHRuA2FlbQIxMABwZG9mBWJyaWQRMU1maDVQeGhWUHM0THUxRVpzcnRjBmFwcF9pZBAyMjIwMzkxNzg4MjAwODkyAAEfGVMCciOB3Rv_8_DvLZvzVHWoOlqPAR48qTPXHbv9HH-jdL0cE06pzmwydiU_aem_XfZ-dxvXPPA5GOyx2bE6rA#flexibility"
@@ -60,8 +60,24 @@ export function HomeActions() {
             <a href="#projects" className="btn btn-sm btn-outline-warning py-0 px-2">Jump to Projects Section ↓</a>
           </div>
         </div>
+        <div className="p-2 border border-warning rounded my-1 bg-black">
+          <div className="text-warning fw-bold">★ FLAGSHIP 2: Arunafeltz Enterprise Multi-Branch Cloud POS &amp; ERP</div>
+          <div className="text-white small mb-1">Production multi-branch system for computer hardware retailers &amp; service hubs (CSFP &amp; Mabalacat).</div>
+          <div className="text-white-50 small mb-2">• Serialized Barcodes • 5-Tier RBAC • Split Payments • Quotation Engine</div>
+          <div className="d-flex gap-2 flex-wrap">
+            <a
+              href="https://arunafeltzcomputerpos.cloud/"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="btn btn-sm btn-outline-warning py-0 px-2"
+            >
+              Production Portal ↗
+            </a>
+            <a href="#projects" className="btn btn-sm btn-outline-warning py-0 px-2">Jump to Projects Section ↓</a>
+          </div>
+        </div>
         <div className="p-2 border border-info rounded my-1 bg-black">
-          <div className="text-info fw-bold">★ FLAGSHIP 2: MedC Enterprise 3-App LAN Drugstore POS &amp; ERP</div>
+          <div className="text-info fw-bold">★ FLAGSHIP 3: MedC Enterprise 3-App LAN Drugstore POS &amp; ERP</div>
           <div className="text-white small mb-1">Mission-critical 3-app desktop LAN suite (Server, Cashier POS, Store Admin) in Dolores, CSFP.</div>
           <div className="text-white-50 small mb-2">• PCS/BOX Conversion • Batch FIFO Expiry • 1-Char OmniSearch • SQLite WAL</div>
           <div>

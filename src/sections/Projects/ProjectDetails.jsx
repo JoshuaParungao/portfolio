@@ -4,6 +4,12 @@ import { ProjectGallery } from './ProjectGallery';
 export function ProjectDetails({ activeModal, onClose }) {
   if (!activeModal) return null;
 
+  const posynctifyImages = [
+    { src: '/src/assets/images/projects/posynctify/posynctify-logo.jpg', alt: 'POSynctify Platform Logo', caption: 'POSynctify Universal Cloud Point of Sale & Management Platform' },
+    { src: '/src/assets/images/projects/posynctify/posynctify-icon.jpg', alt: 'POSynctify Sync Engine & Alerts', caption: 'Offline-First Synchronized Architecture & Real-Time Business Telemetry' },
+    { src: '/src/assets/images/projects/arunafeltz/receipt.png', alt: 'Automated Warranty Slip & e-Receipt', caption: 'Automated SMTP Warranty Slips, QR Ph Receipts & Customer Statements' }
+  ];
+
   const arunafeltzImages = [
     { src: '/src/assets/images/projects/arunafeltz/banner.jpg', alt: 'Arunafeltz Banner', caption: 'Cloud POS Cashiering & Store Operations Dashboard' },
     { src: '/src/assets/images/projects/arunafeltz/logo.png', alt: 'Arunafeltz Logo', caption: 'Arunafeltz Cloud Computer POS & Business Monitoring ERP' },
@@ -23,7 +29,8 @@ export function ProjectDetails({ activeModal, onClose }) {
             <div>
               <span className="badge bg-warning text-dark fw-bold mb-1">ENTERPRISE SYSTEM ARCHITECTURE</span>
               <h4 className="modal-title text-warning fw-bold mb-0">
-                {activeModal === 'arunafeltz' && 'POSynctify (Arunafeltz) — Multi-Branch Cloud POS, Serial Lifecycle & Business Management'}
+                {activeModal === 'posynctify' && 'POSynctify — Cloud Point of Sale & Universal Business Management Platform'}
+                {activeModal === 'arunafeltz' && 'Arunafeltz — Enterprise Multi-Branch Cloud POS, Serial Lifecycle & Computer Store ERP'}
                 {activeModal === 'medc' && 'MedC — Enterprise LAN-Based Drugstore POS, Expiry Tracking & Inventory ERP'}
                 {activeModal === 'systems' && 'Software & System Development (Capstone & Projects)'}
                 {activeModal === 'design' && 'Comprehensive Profile in Editing, Design, and Photography'}
@@ -33,7 +40,8 @@ export function ProjectDetails({ activeModal, onClose }) {
           </div>
 
           <div className="modal-body p-4">
-            {activeModal === 'arunafeltz' && (
+            {/* POSYNCTIFY FULL ARCHITECTURAL SPECIFICATION */}
+            {activeModal === 'posynctify' && (
               <div>
                 {/* Live Interactive Production Demo Banner */}
                 <div className="p-3 mb-4 rounded bg-dark border border-warning shadow-sm">
@@ -46,7 +54,7 @@ export function ProjectDetails({ activeModal, onClose }) {
                         <span className="badge bg-success text-white fw-bold">● ONLINE / READY</span>
                         <span className="badge bg-dark border border-secondary text-secondary">Evaluator Preset Accounts Available</span>
                       </div>
-                      <h5 className="text-warning fw-bold mb-1">POSynctify Live Cloud POS Demo</h5>
+                      <h5 className="text-warning fw-bold mb-1">POSynctify Live Cloud Showcase</h5>
                       <p className="small text-white-50 mb-0">
                         Experience the live system showcase featuring offline-first IndexedDB resilience, PayMongo QR Ph payment checkout, customer AR credit ledger, customizable financing interest rates, and granular six-layer executive financial analytics.
                       </p>
@@ -63,28 +71,281 @@ export function ProjectDetails({ activeModal, onClose }) {
                       </a>
                     </div>
                   </div>
+
+                  {/* Evaluator Preset Accounts Callout */}
+                  <div className="mt-3 p-2.5 rounded bg-black border border-secondary small">
+                    <div className="d-flex align-items-center gap-2 mb-1 text-warning fw-bold">
+                      <i className="bi bi-key-fill"></i>
+                      <span>Preset Evaluator Demonstration Credentials (Ready for Instant Login):</span>
+                    </div>
+                    <div className="row g-2 text-white-50 font-monospace" style={{ fontSize: '0.82rem' }}>
+                      <div className="col-md-6">
+                        <div className="p-2 rounded bg-dark border border-secondary">
+                          <span className="badge bg-primary text-white me-2">ROLE: OWNER / SUPER ADMIN</span>
+                          <div><strong>Username:</strong> <span className="text-warning">joshua.parungao</span></div>
+                          <div><strong>Password:</strong> <span className="text-warning">password123</span></div>
+                        </div>
+                      </div>
+                      <div className="col-md-6">
+                        <div className="p-2 rounded bg-dark border border-secondary">
+                          <span className="badge bg-secondary text-white me-2">ROLE: MANAGER / CASHIER</span>
+                          <div><strong>Username:</strong> <span className="text-warning">kyle.musngi</span></div>
+                          <div><strong>Password:</strong> <span className="text-warning">password123</span></div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
                 </div>
 
+                <ProjectGallery id="posynctifyCarousel" images={posynctifyImages} />
+
+                {/* Identity & Universal Architecture Banner */}
+                <div className="mb-4 text-center">
+                  <div
+                    className="position-relative overflow-hidden rounded-3 border border-warning shadow d-inline-block w-100"
+                    style={{ maxWidth: '820px', backgroundColor: '#050b14' }}
+                  >
+                    <div className="p-4 d-flex flex-column flex-sm-row align-items-center justify-content-center gap-4">
+                      <img
+                        src="/src/assets/images/projects/posynctify/posynctify-logo.jpg"
+                        className="img-fluid rounded"
+                        style={{ maxHeight: '180px', objectFit: 'contain', filter: 'drop-shadow(0 0 20px rgba(244, 201, 0, 0.35))' }}
+                        alt="POSynctify Universal Cloud POS & Business Management Platform"
+                      />
+                      <div className="text-start">
+                        <span className="badge bg-warning text-dark fw-bold mb-2">UNIVERSAL BUSINESS ARCHITECTURE</span>
+                        <h4 className="text-white fw-bold mb-1">POSynctify Platform</h4>
+                        <div className="text-warning small fw-bold mb-2">
+                          <i className="bi bi-globe me-1"></i>Next-Gen Cloud POS &amp; Business Management System
+                        </div>
+                        <p className="text-white-50 small mb-0">
+                          Engineered with dual operational modalities: pure merchandise retail and wholesale distribution (Without Services) alongside complex diagnostic service repairs and technician job orders (With Services).
+                        </p>
+                      </div>
+                    </div>
+                    <div className="p-2 text-center bg-dark border-top border-secondary">
+                      <span className="text-warning small fw-bold">
+                        <i className="bi bi-check-circle-fill me-1"></i>Cloud Resilience: Offline-First IndexedDB Engine • PayMongo QR Ph • PostgreSQL Relational Hub
+                      </span>
+                    </div>
+                  </div>
+                </div>
+
+                {/* Architectural Rationale & Why Offline-First Resiliency */}
+                <div className="row g-3 mb-4">
+                  <div className="col-lg-6">
+                    <div className="p-3 rounded bg-dark border border-secondary h-100">
+                      <h5 className="text-warning fw-bold mb-2">
+                        <i className="bi bi-cpu-fill me-2"></i>Engineering Rationale: Why Offline-First Resiliency?
+                      </h5>
+                      <p className="text-white-50 small mb-2">
+                        Retail checkout lines cannot tolerate latency or internet disconnects. Standard cloud-dependent POS systems freeze the moment an ISP experiences packet loss, causing checkout bottlenecks and loss of sales.
+                      </p>
+                      <p className="text-white-50 small mb-2">
+                        <strong>The Architectural Solution:</strong> POSynctify implements an <em>offline-first IndexedDB transactional engine</em> paired with Dexie.js. Sales transactions, product lookups, and cart manipulations occur locally in the client browser with sub-millisecond response times.
+                      </p>
+                      <div className="p-2 rounded bg-black border border-secondary small">
+                        <div className="text-warning fw-bold mb-1"><i className="bi bi-check2-circle me-1"></i>Key Architectural Advantages:</div>
+                        <div className="text-white-50">• <strong>Microsecond Checkout Response:</strong> Local reads and writes eliminate cloud network round-trip ping.</div>
+                        <div className="text-white-50">• <strong>Background Delta Synchronization:</strong> Transactions automatically queue in IndexedDB and reconcile with PostgreSQL upon reconnect.</div>
+                        <div className="text-white-50">• <strong>Total Fault Tolerance:</strong> Business operations continue uninterrupted during internet outages or cloud maintenance.</div>
+                      </div>
+                    </div>
+                  </div>
+                  <div className="col-lg-6">
+                    <div className="p-3 rounded bg-dark border border-secondary h-100">
+                      <h6 className="text-warning fw-bold mb-2">
+                        <i className="bi bi-gear-wide-connected me-2"></i>Full Technical Specifications
+                      </h6>
+                      <div className="row g-2 small">
+                        <div className="col-sm-6">
+                          <div className="text-secondary"><strong className="text-light">Frontend Core:</strong> React 19 SPA, Vite, Tailwind CSS, Lucide Icons</div>
+                        </div>
+                        <div className="col-sm-6">
+                          <div className="text-secondary"><strong className="text-light">Backend API:</strong> Node.js, Express.js REST Core, JWT Bearer Auth</div>
+                        </div>
+                        <div className="col-sm-6">
+                          <div className="text-secondary"><strong className="text-light">Database &amp; ORM:</strong> PostgreSQL 16, Prisma ORM (ACID Guarantees)</div>
+                        </div>
+                        <div className="col-sm-6">
+                          <div className="text-secondary"><strong className="text-light">Client Cache:</strong> IndexedDB (Dexie engine) with background sync</div>
+                        </div>
+                        <div className="col-sm-6">
+                          <div className="text-secondary"><strong className="text-light">Digital Payments:</strong> PayMongo QR Ph (BSP National Standard QR)</div>
+                        </div>
+                        <div className="col-sm-6">
+                          <div className="text-secondary"><strong className="text-light">Notifications:</strong> Gmail SMTP TLS for Warranty e-Receipts</div>
+                        </div>
+                        <div className="col-sm-6">
+                          <div className="text-secondary"><strong className="text-light">Cloud Orchestration:</strong> Docker, Coolify Linux VPS Hosting</div>
+                        </div>
+                        <div className="col-sm-6">
+                          <div className="text-secondary"><strong className="text-light">Printing &amp; Peripherals:</strong> ESC/POS Thermal Printing, USB Scanners</div>
+                        </div>
+                      </div>
+                      <div className="mt-3 p-2 rounded bg-black border border-warning small">
+                        <span className="text-warning fw-bold">Live VPS Infrastructure:</span> Fully deployed via containerized Docker services managed by Coolify on a dedicated high-performance Linux VPS.
+                      </div>
+                    </div>
+                  </div>
+                </div>
+
+                {/* 5 CORE BUSINESS LOGIC ENGINES */}
+                <div className="mb-4">
+                  <h5 className="text-warning fw-bold mb-3">
+                    <i className="bi bi-diagram-3-fill me-2"></i>5 Core Business Logic Engines &amp; Mission-Critical Data Pipelines
+                  </h5>
+                  <div className="row g-3">
+                    {/* Engine 1 */}
+                    <div className="col-md-6">
+                      <div className="p-3 rounded bg-dark border border-secondary h-100">
+                        <h6 className="text-warning fw-bold mb-2">
+                          <i className="bi bi-shuffle me-2"></i>1. Universal Dual-Mode Business Architecture
+                        </h6>
+                        <p className="text-white-50 small mb-2">
+                          Engineered to support any commercial enterprise through toggleable operational paradigms:
+                        </p>
+                        <div className="text-light small ps-2">
+                          <div>• <strong>Without Services (Pure Retail &amp; Wholesale):</strong> Optimized for high-throughput scanning, barcode lookups, inventory reorder alerts, and customer volume tier pricing. Ideal for computer stores, hardware supplies, and retail marts.</div>
+                          <div className="mt-1">• <strong>With Services (Repair &amp; Diagnostics):</strong> Integrates job ticketing, technician labor tracking, intake condition checklists, warranty verification, and repair parts deduction. Ideal for device repair shops, auto diagnostic hubs, and electronics service centers.</div>
+                        </div>
+                      </div>
+                    </div>
+
+                    {/* Engine 2 */}
+                    <div className="col-md-6">
+                      <div className="p-3 rounded bg-dark border border-secondary h-100">
+                        <h6 className="text-warning fw-bold mb-2">
+                          <i className="bi bi-calculator me-2"></i>2. Double-Entry Customer Ledger &amp; Dynamic Markups
+                        </h6>
+                        <p className="text-white-50 small mb-2">
+                          Maintains bulletproof financial accuracy and pricing agility across all catalog items:
+                        </p>
+                        <div className="text-light small ps-2">
+                          <div>• <strong>Dynamic Cost Markups:</strong> Automated base SRP computation based on customizable markup formulas: <code>Cost + Markup % = Base Selling Price</code>.</div>
+                          <div className="mt-1">• <strong>Double-Entry Ledger Integrity:</strong> Every customer transaction, down payment, installment credit, and adjustment is recorded with balanced debit and credit entries.</div>
+                          <div className="mt-1">• <strong>Customer Statement Exports:</strong> 1-click generation of customer account statements showing total debits, payments, and real-time outstanding balances.</div>
+                        </div>
+                      </div>
+                    </div>
+
+                    {/* Engine 3 */}
+                    <div className="col-md-6">
+                      <div className="p-3 rounded bg-dark border border-secondary h-100">
+                        <h6 className="text-warning fw-bold mb-2">
+                          <i className="bi bi-calendar3 me-2"></i>3. Accounts Receivable (AR) &amp; Configurable Financing Interest
+                        </h6>
+                        <p className="text-white-50 small mb-2">
+                          Flexible financing calculation engine for installment sales and customer credit plans:
+                        </p>
+                        <div className="text-light small ps-2">
+                          <div>• <strong>Configurable Interest Rates:</strong> Store administrators can configure dynamic monthly interest rates (e.g., 2.5%, 3%, 5%) tailored to 3, 6, 12, or 24-month term structures.</div>
+                          <div className="mt-1">• <strong>Automated Amortization Schedules:</strong> Automatically splits total principal and financing charges into monthly payment schedules with due dates.</div>
+                          <div className="mt-1">• <strong>Late Penalty Recalculation:</strong> Grace period management and automated compounding penalties for overdue installment cycles.</div>
+                        </div>
+                      </div>
+                    </div>
+
+                    {/* Engine 4 */}
+                    <div className="col-md-6">
+                      <div className="p-3 rounded bg-dark border border-secondary h-100">
+                        <h6 className="text-warning fw-bold mb-2">
+                          <i className="bi bi-graph-up-arrow me-2"></i>4. Six-Layer Executive Profitability Matrix &amp; AR Aging
+                        </h6>
+                        <p className="text-white-50 small mb-2">
+                          Deep financial visibility providing executives with granular operational insights:
+                        </p>
+                        <div className="text-light small ps-2">
+                          <div>• <strong>Six-Layer Profitability Decomposition:</strong> Real-time tracking of Gross Sales, Supplier Cost of Goods Sold (COGS), Operating Expenses, Net Cash Flow, Financing Interest Earnings, and Realized Net Profit.</div>
+                          <div className="mt-1">• <strong>AR Aging Risk Buckets:</strong> Automated segmentation of receivables across <code>Current</code>, <code>1–30 Days</code>, <code>31–60 Days</code>, <code>61–90 Days</code>, <code>91–120 Days</code>, and <code>120+ Days Overdue</code>.</div>
+                          <div className="mt-1">• <strong>Disposal &amp; Shrinkage Tracking:</strong> Audited logs for damaged stock write-offs and store warranty claims.</div>
+                        </div>
+                      </div>
+                    </div>
+
+                    {/* Engine 5 */}
+                    <div className="col-12">
+                      <div className="p-3 rounded bg-dark border border-secondary">
+                        <h6 className="text-warning fw-bold mb-2">
+                          <i className="bi bi-shield-lock me-2"></i>5. Employee Role Governance, Cashier Overrides &amp; Technician Commission Tracking
+                        </h6>
+                        <p className="text-white-50 small mb-2">
+                          Comprehensive workforce management enforcing strict operational boundaries and motivational commissions:
+                        </p>
+                        <div className="row g-2 text-light small ps-2">
+                          <div className="col-md-4">
+                            <strong>• 5-Tier Role-Based Security:</strong> Distinct permission sets for Super Admin, Business Owner, Store Manager, Cashier, and Technician.
+                          </div>
+                          <div className="col-md-4">
+                            <strong>• Supervisor Cashier Overrides:</strong> Privileged supervisor authorization codes required for cart line-item price adjustments, cart voids, and discount waivers.
+                          </div>
+                          <div className="col-md-4">
+                            <strong>• Technician Commission Engine:</strong> Automated commission schedules tied to service job completions, calculating gross payouts directly into payroll summaries.
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+
+                {/* CLOUD & SYNC TOPOLOGY DIAGRAM */}
+                <div className="p-3 mb-4 rounded bg-dark border border-warning">
+                  <h6 className="text-warning fw-bold mb-2"><i className="bi bi-cloud-check-fill me-2"></i>Cloud &amp; Offline Sync Topology</h6>
+                  <div className="p-3 rounded bg-black border border-secondary text-center">
+                    <pre className="text-warning small mb-0 font-monospace" style={{ lineHeight: 1.4, overflowX: 'auto', textAlign: 'left', display: 'inline-block' }}>
+{`+---------------------------------------------------------------------------------------------------+
+|                        POSYNCTIFY DISTRIBUTED HYBRID CLOUD & OFFLINE TOPOLOGY                     |
++---------------------------------------------------------------------------------------------------+
+                                                   |
+                         +-------------------------+-------------------------+
+                         |                                                   |
+                         v                                                   v
+  +---------------------------------------------+     +---------------------------------------------+
+  |        CLIENT TERMINAL (ONLINE / OFFLINE)   |     |             PAYMENT & SMTP GATEWAYS         |
+  |  App:  React 19 SPA (Vite + Tailwind CSS)   |     |  Gateway: PayMongo National QR Ph API       |
+  |  Sync: Dexie.js Engine + IndexedDB Storage  |     |  Email:   Gmail SMTP TLS Gateway            |
+  |  IO:   ESC/POS Thermal & Barcode Scanners   |     |  Output:  Instant Dynamic QR & e-Receipts    |
+  |  Feat: Zero-Lag Offline Cashier Operations  |     +---------------------------------------------+
+  +---------------------------------------------+                            ^
+                         |                                                   |
+                         | HTTPS REST / Bearer JWT Delta Sync                |
+                         v                                                   |
+  +--------------------------------------------------------------------------+--+
+  |              PRODUCTION CLOUD BACKEND (DOCKER / COOLIFY VPS HOSTING)        |
+  |  Server: Node.js Express REST Core (Port 5000 / SSL Proxy)                  |
+  |  ORM:    Prisma ORM with Strict ACID Transaction Isolation                  |
+  |  DB:     PostgreSQL 16 Relational Cluster (Products, Ledgers, AR, Orders)   |
+  |  Worker: Automated Shift Reconciliations, AR Aging & Daily Summary Audits   |
+  +-----------------------------------------------------------------------------+`}
+                    </pre>
+                  </div>
+                </div>
+              </div>
+            )}
+
+            {/* ARUNAFELTZ CLIENT SPECIFICATION */}
+            {activeModal === 'arunafeltz' && (
+              <div>
                 <ProjectGallery id="arunafeltzCarousel" images={arunafeltzImages} />
                 <div className="row g-3 mb-4">
                   <div className="col-md-8">
                     <h5 className="text-warning fw-bold">Project Summary</h5>
                     <p className="text-white-50 small mb-2">
-                      <strong>POSynctify (formerly Arunafeltz)</strong> is a production-grade Cloud Point of Sale (POS) and Business Management System engineered for computer hardware retailers, custom PC builders, and tech service repair shops.
+                      <strong>Arunafeltz Computer Parts &amp; Accessories</strong> is an active, multi-branch commercial enterprise operating retail stores and repair centers across the City of San Fernando and Mabalacat City, Pampanga.
                     </p>
                     <p className="text-white-50 small mb-0">
-                      The platform manages the complete retail and service lifecycle: supplier purchase receiving, serialized barcode allocations, offline-first IndexedDB counter sales, dynamic wholesale markups, customer AR ledger financing with customizable interest %, technician job orders, and shift auditing.
+                      The custom ERP manages the entire hardware computer lifecycle: serialized barcode tracking from purchase order ingestion down to counter sale, automated warranty slip dispatch, technician diagnostic repair orders, and multi-branch inventory transfers.
                     </p>
                   </div>
                   <div className="col-md-4">
                     <div className="p-3 rounded bg-dark border border-secondary">
                       <h6 className="text-warning fw-bold mb-2">Tech Stack</h6>
                       <ul className="list-unstyled small mb-0 text-secondary">
-                        <li><strong className="text-light">Frontend:</strong> React 19, Vite, Tailwind CSS</li>
+                        <li><strong className="text-light">Frontend:</strong> React 18, Vite, Tailwind CSS</li>
                         <li><strong className="text-light">Backend:</strong> Node.js, Express.js, REST API</li>
                         <li><strong className="text-light">Database:</strong> PostgreSQL, Prisma ORM</li>
-                        <li><strong className="text-light">Integrations:</strong> IndexedDB, PayMongo, Gmail SMTP</li>
-                        <li><strong className="text-light">DevOps:</strong> Docker, Coolify Linux VPS</li>
+                        <li><strong className="text-light">Integrations:</strong> Serial Barcode Tracking, ESC/POS</li>
+                        <li><strong className="text-light">Production:</strong> arunafeltzcomputerpos.cloud</li>
                       </ul>
                     </div>
                   </div>
@@ -545,7 +806,7 @@ export function ProjectDetails({ activeModal, onClose }) {
           </div>
 
           <div className="modal-footer border-top border-secondary d-flex justify-content-between align-items-center">
-            {activeModal === 'arunafeltz' ? (
+            {activeModal === 'posynctify' ? (
               <a
                 href="http://i41hiagpd95rj79rh3habdao.187.77.131.56.sslip.io/?fbclid=IwY2xjawVz4clleHRuA2FlbQIxMABwZG9mBWJyaWQRMU1maDVQeGhWUHM0THUxRVpzcnRjBmFwcF9pZBAyMjIwMzkxNzg4MjAwODkyAAEfGVMCciOB3Rv_8_DvLZvzVHWoOlqPAR48qTPXHbv9HH-jdL0cE06pzmwydiU_aem_XfZ-dxvXPPA5GOyx2bE6rA#flexibility"
                 target="_blank"
@@ -554,6 +815,16 @@ export function ProjectDetails({ activeModal, onClose }) {
               >
                 <i className="bi bi-play-circle-fill"></i>
                 <span>Launch Live Demo ↗</span>
+              </a>
+            ) : activeModal === 'arunafeltz' ? (
+              <a
+                href="https://arunafeltzcomputerpos.cloud/"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="btn btn-warning fw-bold text-dark d-inline-flex align-items-center gap-1.5"
+              >
+                <i className="bi bi-box-arrow-up-right"></i>
+                <span>Visit Production Portal ↗</span>
               </a>
             ) : <div />}
             <button type="button" className="btn btn-secondary" onClick={onClose}>
