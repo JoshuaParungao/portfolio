@@ -8,8 +8,7 @@ export function ProjectDetails({ activeModal, onClose }) {
 
   const posynctifyImages = [
     { src: posynctifyLogo, alt: 'POSynctify Platform Logo', caption: 'POSynctify Universal Cloud Point of Sale & Management Platform' },
-    { src: posynctifyIcon, alt: 'POSynctify Sync Engine & Alerts', caption: 'Offline-First Synchronized Architecture & Real-Time Business Telemetry' },
-    { src: '/src/assets/images/projects/arunafeltz/receipt.png', alt: 'Automated Warranty Slip & e-Receipt', caption: 'Automated SMTP Warranty Slips, QR Ph Receipts & Customer Statements' }
+    { src: posynctifyIcon, alt: 'POSynctify Sync Engine & Alerts', caption: 'Offline-First Synchronized Architecture & Real-Time Business Telemetry' }
   ];
 
   const arunafeltzImages = [
