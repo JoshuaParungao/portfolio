@@ -62,7 +62,7 @@ export function ProjectCard({
               ))}
             </div>
 
-            <div className="d-flex gap-2 flex-wrap">
+            <div className="d-flex gap-2 flex-wrap align-items-center">
               {actionBtnText && (
                 <button type="button" className={btnClass} onClick={onActionClick}>
                   {actionBtnText}
@@ -73,7 +73,12 @@ export function ProjectCard({
                   href={liveDemoLink}
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="btn btn-primary fw-bold text-white shadow-sm d-inline-flex align-items-center gap-1"
+                  className="btn fw-bold text-white shadow d-inline-flex align-items-center gap-1.5"
+                  style={{
+                    backgroundColor: '#1e60ff',
+                    borderColor: '#1e60ff',
+                    boxShadow: '0 0 15px rgba(30, 96, 255, 0.5)',
+                  }}
                 >
                   <i className="bi bi-play-circle-fill"></i>
                   <span>{liveDemoText || 'Live Demo ↗'}</span>

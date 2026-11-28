@@ -63,6 +63,8 @@ export function ProjectsSection() {
         tags={['Full-Stack', 'Systems Engineering', 'Database Design']}
         actionBtnText="View Project"
         onActionClick={() => setActiveModal('systems')}
+        liveDemoLink="http://i41hiagpd95rj79rh3habdao.187.77.131.56.sslip.io/?fbclid=IwY2xjawVz4clleHRuA2FlbQIxMABwZG9mBWJyaWQRMU1maDVQeGhWUHM0THUxRVpzcnRjBmFwcF9pZBAyMjIwMzkxNzg4MjAwODkyAAEfGVMCciOB3Rv_8_DvLZvzVHWoOlqPAR48qTPXHbv9HH-jdL0cE06pzmwydiU_aem_XfZ-dxvXPPA5GOyx2bE6rA#flexibility"
+        liveDemoText="Live Capstone Demo ↗"
         variant="warning"
       />
 
